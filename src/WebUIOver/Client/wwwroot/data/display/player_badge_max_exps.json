@@ -1,0 +1,37 @@
+﻿[
+  {
+    "BadgeId": 0, 
+    "MaxBadgeExp": 5, 
+    "MinLv": 0
+  }, 
+  {
+    "BadgeId": 1, 
+    "MaxBadgeExp": 190, 
+    "MinLv": 0
+  }, 
+  {
+    "BadgeId": 2, 
+    "MaxBadgeExp": 290, 
+    "MinLv": 0
+  }, 
+  {
+    "BadgeId": 3, 
+    "MaxBadgeExp": 590, 
+    "MinLv": 0
+  }, 
+  {
+    "BadgeId": 4, 
+    "MaxBadgeExp": 560, 
+    "MinLv": 200
+  }, 
+  {
+    "BadgeId": 5, 
+    "MaxBadgeExp": 960, 
+    "MinLv": 200
+  }, 
+  {
+    "BadgeId": 6, 
+    "MaxBadgeExp": 1480, 
+    "MinLv": 210
+  }
+]

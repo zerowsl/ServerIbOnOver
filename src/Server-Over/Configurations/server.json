@@ -1,0 +1,199 @@
+﻿{
+  "CardServerConfig": {
+    "IgnoreUploadSaving": false,
+    "NeedToDataPatchOfflineData": true,
+    "MaxReplaySaveSlotPerPlayer": 5,
+    "GameConfigurations": {
+      "TrainingMinutes": 12,
+      "FesConfigurations": {
+        "MondayType": "DualSelect",
+        "TuesdayType": "DualSelect",
+        "WednesdayType": "DualSelect",
+        "ThursdayType": "DualSelect",
+        "FridayType": "DualSelect",
+        "SaturdayType": "DualSelect",
+        "SundayType": "DualSelect"
+      },
+      "TriadConfigurations": {
+        "TargetMsList": [72],
+        "TimeAttackCourse": 212,
+        "HighScoreCourse": 212
+      },
+      
+      // 自定义新机体
+      "NewMobileSuits": [329], 
+      
+      // 自定义上修下修更新的机体
+      "UpdatedMobileSuits": [47, 62, 98, 122, 143, 185, 288, 290, 302, 310, 327]
+    },
+    
+    /** 自定义配置: 避免(省去)改数据库和页面..
+     */
+    "CustomConfigs": {
+      // 偏好机体最大上限。刷卡页和游戏里同时能生效。
+      "MaxFavouriteMs": 12,
+
+      // 刷卡时显示蓝色的'PLv.プーストキャンペーン開催中!'
+      // 默认关闭, 0=关闭, 1=开启
+      // 注意：开启后实际游戏中等级经验还是x1倍..仅仅装b用..
+      "PLvBoostPointBonus": 0, 
+
+      // 刷卡时显示橙色的'グルーブボイント 超ブースト中!'
+      // >=1.5 才会开启显示
+      // 注意：开启后实际游戏没发现变化，仅仅装b用..
+      "GpBoostRate": 1.5,
+      
+      // 对战中有cpu时,是否把cpu也记录到对战历史中,默认不记录.
+      "RecordCpusToBattleHistory": false,
+
+      // 试验功能：自定义stages?!
+      // 记得使用前备份游戏根目录29文件夹
+      "p36_stages": [
+        // stage1-3?,可选10星难度?!但是不能连玩stage..
+      	//0, 1, 2, 3
+        //1, 2, 3
+        //2, 2 // 进入关卡后黑屏
+        //1, 1, 2 // 进入关卡后黑屏
+
+        // stage1-2, 正常选择难度,能连玩stage
+        //1, 0
+        1, 0, 0 // use this as default
+        //2, 1, 0
+        //3, 2, 1, 0
+
+        // 只有stage1, 正常选择难度
+        //1
+        //1, 1
+        //2, 1
+      ],
+      
+      // 店外
+      "ClassMatchG": {
+        // 是否打开排位经验, 默认关闭.
+        "EnableRate": false, 
+        
+        // 以下这3个原ob的数值可能影响经验赢加多少输减多少...
+        "ConstantRate": 1, // 10
+        "WinScoreCoefficient": 20002, // 25000
+        "InitialRate": 1, // 1500
+        
+        // 这个值，让升级有小保质期，避免出现刚升级后反复降级升级的情况
+        "RateDiff": 10, 
+        
+        // 自定义店外单人, 关闭排位经验时才有效
+        "CustomSolo": {
+          // 店外段位 默认是蓝色Pilot
+          // 0|1=蓝色Pilot; 2=金色Valiant; 3=红色Ace; 4=紫色Extreme; 5及以后=名字和等级都没了?!
+          // 注意：段位过高小心被人打死啊..
+          "ClassId": 1,
+
+          // 店外等级.默认3
+          // 目前只能设置 0=无；1='Grade 10'；3='Grade 8'；11='Grade oo'
+          "GradeId": 3, 
+          
+          // Ex段无限之后是否显示随机排位，默认显示
+          "EnableRndNumOnExx": true
+        },
+
+        // 自定义店外团队, 关闭排位经验时才有效
+        "CustomTeam": {
+          // 店外段位 默认是金色Valiant.(团队是没Pilot的)
+          // 2=金色Valiant; 3=红色Ace; 4=紫色Extreme; 5及以后=名字和等级都没了?!
+          // 注意：段位过高小心被人打死啊..
+          "ClassId": 2,
+
+          // 店外等级.默认3
+          // 目前只能设置 0=无；1='Grade 10'；3='Grade 8'；11='Grade oo'
+          "GradeId": 3, 
+          
+          // Ex段无限之后是否显示随机排位，默认显示
+          "EnableRndNumOnExx": true
+        }
+      },
+      
+      // 'Custom Match'与(简易)房间
+      // 需要LM开启店外模式，对战菜单里右上角会变成紫色..
+      "Room": {
+        // 默认关闭
+        "Enable": false, 
+        // 可英文数字,可繁体中文
+        "Code": "", 
+        // 1=公开 2=私房
+        "TagType": 1, 
+        // 1 = SOLO, 2 = TEAM
+        "MatchingType": 1, 
+        // ??
+        "MatchingAttribute": 0, 
+        // 可用机体id
+        "SelectableMsIds": [], 
+        // 0=无机体限制 1=有机体限制
+        "RuleType": 0, 
+        // 复仇标识?
+        "RevengeFlag": false, 
+        // 可指定比赛时间单位秒, 0为不指定
+        "Timer": 230, 
+        // 活动fes编号
+        "FesRuleType": 0
+      }, 
+      
+      /** 试验功能：远程卡服店外 (用于店外对战匹配到某群服的players)
+       *  默认关闭，Enable=true为开启, Enable=false为关闭。
+       *  注意: 暂时不支持需要token的某些群服！！
+       *  地址需要前缀 http:// 或者 https://
+       *  可能会失败, 如果发现没反应，请多次按test键分别把LM和pcb重启。如果都不行，那就是大概真的不能连该群服了...
+       *  局域网联机，例如UU房，通常都是店内的，店内无需开启本功能。
+       */
+      "RemoteCardServerConfigs": {
+        "Enable": false, 
+        "Address": "http://"
+      },
+
+      /** 试验功能：自定义本地对战匹配规则
+       *  默认关闭，Enable=true为开启, Enable=false为关闭.需要stun服务.
+       *  此功能同时需要LM开启店外模式.
+       *  注意: 当开启'远程卡服店外'玩真人pvp时，本功能会无效。
+               目前发现'局域网联机-UU房'时，本功能可能会无效。
+       */
+      "LocalMatchingConfigs": {
+        "Enable": false, 
+        
+        // 是否优先使用远程卡服的stun服务, 默认关闭。
+        // 设置为true开启后，会使用上面'远程卡服店外'的地址。
+        // 如果远程卡服设置不正确或者没提供stun服务, 本功能会失败
+        "UseFromRemoteCardServer": false,
+        
+        // 本地店内外-单人对战2v2随机cpu (支持店外/混战/自定义/店内/Fes2v2,仅单人)
+        "Match2": {
+          // 进入对战后最大多少秒内匹配到cpu
+          "MaxApplyTimeSec": 20, // -1 20
+          "CheckingInterval": 10, // 2
+        }, 
+        
+        // matching服务 和 stun服务信息, 本地或你知道的公开的
+        // 默认使用服务为本地'/match2'用于本地店内外, stun要另外配置..
+        // 同样也可以根据原'EXVS2-POC'项目代码开发属于自己的自定义匹配微服务..
+        "ServerInfos": [
+          //{
+          //  "ServerType": 2, // SrvMatch
+          //  "Uri": "127.0.0.1:28080/match2",
+          //  "Port": 28080,
+          //  "AccountName": "",
+          //  "AccountPass": ""
+          //},
+          {
+            "ServerType": 0, // SrvStun
+            "Uri": "127.0.0.1", // 本地
+            "Port": 3478
+          }
+        ]
+      }
+
+    }
+  },
+  
+  // 自定义数据文件路径，注意路径'\'要改成'/'或者'\\'
+  "ConnectionStrings": {
+    "CardServer": "ServerIbOnOver.db"
+  }
+  
+}

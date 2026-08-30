@@ -1,0 +1,297 @@
+﻿@using WebUIOver.Client.Pages.Dialogs
+@using WebUIOver.Client.Services.Common
+@using WebUIOver.Client.Services.Name
+@using WebUIOver.Shared.Dto.Common
+@inherits BasicCustomizeComponent
+
+@inject ICommonDataService CommonDataService
+@inject IDialogService DialogService
+@inject INameService NameService
+
+<MudGrid xs="12">
+    <MudItem xs="12">
+        <MudCard Class="my-2" Elevation="5">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">
+                        @localizer["quick_start"]
+                        <pre style="display:inline;color: #f40806;font-weight: bold;font-size: smaller;">   注:不正确的配置可能会使游戏闪退!!</pre>
+                    </MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudStack Row>
+                        <MudProgressCircular @bind-Class="@ProgressContext.HideQuickStartProfileProgress" Color="Color.Default" Indeterminate="true" />
+                        <MudIconButton Icon="@Icons.Material.Filled.Save" Variant="Variant.Filled" OnClick="@SaveTask"
+                                       Color="Color.Primary" Size="Size.Large" aria-label="save"></MudIconButton>
+                    </MudStack>
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudStack>
+                    <MudItem xs="12">
+                        <MudGrid>
+                            <MudItem xs="3" sm="3">
+                                <MudSelect @bind-Value="CustomizeCardContext.QuickStartProfile.SaveMode" T="int"
+                                           Label="保存方式" Variant="Variant.Outlined">
+                                    @foreach (var item in GetSaveModes())
+                                    {
+                                        <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                                    }
+                                </MudSelect>
+                            </MudItem>
+                            <MudItem xs="9" sm="9">
+                                <MudStack Justify="Justify.Center" Style="min-height: 50px;">
+                                    <MudText>(关闭 也在此选项中)</MudText>
+                                </MudStack>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudGrid>
+                            <MudItem xs="3" sm="3">
+                                <MudForm>
+                                    <MudNumericField @bind-Value="CustomizeCardContext.QuickStartProfile.GameMode" T="uint"
+                                                  Immediate="true" HideSpinButtons="true"
+                                                  Variant="Variant.Outlined"
+                                                  Label="游戏模式" />
+                                </MudForm>
+                            </MudItem>
+                            <MudItem xs="9" sm="9">
+                                <MudStack Justify="Justify.Center" Style="min-height: 50px;">
+                                    <MudText>0=店外 1=混战 2=活动Fes 3=店内 4=自定义对战 5=练习模式 6=街机模式 7=训练场</MudText>
+                                </MudStack>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudGrid>
+                            <MudItem xs="3" sm="3">
+                                <MudForm>
+                                    <MudNumericField @bind-Value="CustomizeCardContext.QuickStartProfile.RuleType" T="uint"
+                                                  Immediate="true" HideSpinButtons="true"
+                                                  Variant="Variant.Outlined"
+                                                  Label="Rule类型" />
+                                </MudForm>
+                            </MudItem>
+                            @*<MudItem xs="3" sm="3">
+                                <MudStack Justify="Justify.Center" Style="min-height: 50px;">
+                                    <MudText></MudText>
+                                </MudStack>
+                            </MudItem>*@
+                            <MudItem xs="3" sm="3">
+                                <MudForm>
+                                    <MudNumericField @bind-Value="CustomizeCardContext.QuickStartProfile.TeamType" T="uint"
+                                                  Immediate="true" HideSpinButtons="true"
+                                                  Variant="Variant.Outlined"
+                                                  Label="Team类型" />
+                                </MudForm>
+                            </MudItem>
+                            <MudItem xs="3" sm="3">
+                                <MudStack Justify="Justify.Center" Style="min-height: 50px;">
+                                    <MudText>0=单人 1=组队</MudText>
+                                </MudStack>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+                    @* MstMobileSuitId and BurstType *@
+                    <MudItem xs="12">
+                        <MudGrid>
+                            <MudItem xs="7">
+                                <MudField Label="机体" Variant="Variant.Outlined">
+                                    @{
+                                        var mobileSuitImagePath = $"images/mobile_suits/{CustomizeCardContext.QuickStartProfile.MstMobileSuitId}.webp";
+                                    }
+                                    <div class="d-flex flex-grow-1 gap-4">
+                                        <div class="d-flex flex-none my-auto">
+                                            <MudImage ObjectPosition="ObjectPosition.Center" Src="@mobileSuitImagePath" Fluid="true" ObjectFit="ObjectFit.Cover" Width="120" />
+                                        </div>
+                                        <div class="d-flex my-auto">
+                                            <MudText>@NameService.GetMobileSuitName(CustomizeCardContext.QuickStartProfile.MstMobileSuitId) / @NameService.GetMobileSuitPilotName(CustomizeCardContext.QuickStartProfile.MstMobileSuitId)</MudText>
+                                        </div>
+                                    </div>
+                                </MudField>
+                            </MudItem>
+                            <MudItem xs="1">
+                                <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="min-height:100px;">
+                                    <MudIconButton Variant="Variant.Filled" Size="Size.Small" Icon="@Icons.Material.Filled.Edit" aria-label="edit"
+                                                   OnClick="() => OpenMobileSuitUiDialog1()" />
+                                </MudStack>
+                            </MudItem>
+                            <MudItem xs="4" sm="4">
+                                <MudSelect @bind-Value="CustomizeCardContext.QuickStartProfile.BurstType" T="uint"
+                                           Label="EX觉醒" Variant="Variant.Outlined">
+                                    @foreach (var item in GetBurstTypes())
+                                    {
+                                        <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                                    }
+                                </MudSelect>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+                    @* PartnerMobileSuitId and PartnerBurstType *@
+                    <MudItem xs="12">
+                        <MudGrid>
+                            <MudItem xs="7">
+                                <MudField Label="机体(队友)" Variant="Variant.Outlined">
+                                    @{
+                                        var mobileSuitImagePath = $"images/mobile_suits/{CustomizeCardContext.QuickStartProfile.PartnerMobileSuitId}.webp";
+                                    }
+                                    <div class="d-flex flex-grow-1 gap-4">
+                                        <div class="d-flex flex-none my-auto">
+                                            <MudImage ObjectPosition="ObjectPosition.Center" Src="@mobileSuitImagePath" Fluid="true" ObjectFit="ObjectFit.Cover" Width="120" />
+                                        </div>
+                                        <div class="d-flex my-auto">
+                                            <MudText>@NameService.GetMobileSuitName(CustomizeCardContext.QuickStartProfile.PartnerMobileSuitId) / @NameService.GetMobileSuitPilotName(CustomizeCardContext.QuickStartProfile.PartnerMobileSuitId)</MudText>
+                                        </div>
+                                    </div>
+                                </MudField>
+                            </MudItem>
+                            <MudItem xs="1">
+                                <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="min-height:100px;">
+                                    <MudIconButton Variant="Variant.Filled" Size="Size.Small" Icon="@Icons.Material.Filled.Edit" aria-label="edit"
+                                                   OnClick="() => OpenMobileSuitUiDialog2()" />
+                                </MudStack>
+                            </MudItem>
+                            <MudItem xs="4" sm="4">
+                                <MudSelect @bind-Value="CustomizeCardContext.QuickStartProfile.PartnerBurstType" T="uint"
+                                           Label="EX觉醒(队友)" Variant="Variant.Outlined">
+                                    @foreach (var item in GetBurstTypes())
+                                    {
+                                        <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                                    }
+                                </MudSelect>
+                            </MudItem>
+                        </MudGrid>
+                    </MudItem>
+                    @* BattleStageId *@
+                    <MudItem xs="12">
+                        <MudGrid>
+                            @{
+                                var stageId = CustomizeCardContext.QuickStartProfile.BattleStageId;
+                                var stageColumnLabel = localizer["stage"];
+
+                                var stageImagePath = $"images/stages/{stageId}.webp";
+                                var stage = CommonDataService.GetStageById(stageId);
+                                var stageName = stage?.Value ?? localizer["unknown_stage"];
+
+                                <MudItem xs="4" sm="5">
+                                    <MudField Label="@stageColumnLabel" Variant="Variant.Outlined">
+                                        @if (stage is not null)
+                                        {
+                                            <div class="d-flex justify-center">
+                                                <MudImage ObjectPosition="ObjectPosition.Center" Src="@stageImagePath" Fluid="true" ObjectFit="ObjectFit.Cover" Class="rounded-lg" Width="720" />
+                                            </div>
+                                        }
+                                        <div class="d-flex justify-center">
+                                            <MudText Align="Align.Center">@((MarkupString)stageName)</MudText>
+                                        </div>
+                                    </MudField>
+                                </MudItem>
+                                <MudItem xs="2" sm="1">
+                                    <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Style="min-height:50px;">
+                                        <MudIconButton Variant="Variant.Filled" Size="Size.Small" Icon="@Icons.Material.Filled.Edit" aria-label="edit"
+                                                       OnClick="() => OpenChangeStageDialog()" />
+                                    </MudStack>
+                                </MudItem>
+                            }
+                        </MudGrid>
+                    </MudItem>
+                </MudStack>
+            </MudCardContent>
+        </MudCard>
+
+    </MudItem>
+</MudGrid>
+
+@code{
+
+    static IEnumerable<IdValuePair1> GetSaveModes()
+    {
+        yield return new() { Id = -1, Value = "关闭" };
+        yield return new() { Id = 0, Value = "正常" };
+        yield return new() { Id = 1, Value = "相同游戏模式才保存" };
+        yield return new() { Id = 2, Value = "只设置不保存" };
+    }
+
+    static IEnumerable<IdValuePair> GetBurstTypes()
+    {
+        yield return new() { Id = 0, Value = "E觉" };
+        yield return new() { Id = 1, Value = "F觉" };
+        yield return new() { Id = 2, Value = "S觉" };
+    }
+
+    static readonly DialogOptions DialogOptions = new()
+    {
+        CloseOnEscapeKey = false,
+        BackdropClick = false,
+        FullWidth = true,
+        MaxWidth = MaxWidth.ExtraExtraLarge
+    };
+
+    private async Task OpenMobileSuitUiDialog1()
+    {
+        var parameters = new DialogParameters
+        {
+            { "Data", CustomizeCardContext.QuickStartProfile.MstMobileSuitId },
+            { "AggregatedMobileSuits", GetAggregatedMobileSuits() },
+            { "CanSelectRandom", true },
+        };
+
+        var dialog = await DialogService.ShowAsync<ChangeMobileSuitDialog>(localizer["dialogtitle_training_ms"], parameters, OPTIONS);
+        var result = (await dialog.Result)!;
+
+        if (!result.Canceled && result.Data != null)
+        {
+            CustomizeCardContext.QuickStartProfile.MstMobileSuitId = (uint)result.Data;
+            StateHasChanged();
+        }
+    }
+
+    private async Task OpenMobileSuitUiDialog2()
+    {
+        var parameters = new DialogParameters
+        {
+            { "Data", CustomizeCardContext.QuickStartProfile.PartnerMobileSuitId },
+            { "AggregatedMobileSuits", GetAggregatedMobileSuits() },
+            { "CanSelectRandom", true },
+        };
+
+        var dialog = await DialogService.ShowAsync<ChangeMobileSuitDialog>(localizer["dialogtitle_training_ms"], parameters, OPTIONS);
+        var result = (await dialog.Result)!;
+
+        if (!result.Canceled && result.Data != null)
+        {
+            CustomizeCardContext.QuickStartProfile.PartnerMobileSuitId = (uint)result.Data;
+            StateHasChanged();
+        }
+    }
+
+    private IReadOnlyList<MobileSuit> GetAggregatedMobileSuits()
+    {
+        return CustomizeCardContext.AggregetedMobileSuits
+            //.Where(ms => ms.Id < 50001 || ms.Id >= 65530)
+            .ToList();
+    }
+
+    private async Task OpenChangeStageDialog()
+    {
+        var parameters = new DialogParameters
+        {
+            { "Data", new[] { CustomizeCardContext.QuickStartProfile.BattleStageId } },
+            { "EnableImagePreview", true },
+            { "HasCategory", false },
+            { "SelectedString", "Selected Stage: "},
+            { "ImagePathPrefix", "images/stages"},
+            { "Mode", "Stages" }
+        };
+        var dialog = await DialogService.ShowAsync<ChangeGeneralPreviewDialog>(localizer["dialogtitle_stage"], parameters, DialogOptions);
+        var result = (await dialog.Result)!;
+
+        if (!result.Canceled && result.Data != null)
+        {
+            CustomizeCardContext.QuickStartProfile.BattleStageId = (result.Data as uint[])!.FirstOrDefault();
+            StateHasChanged();
+        }
+    }
+    
+}
