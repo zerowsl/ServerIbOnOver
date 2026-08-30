@@ -1,0 +1,7 @@
+使用双启动器时要去N卡控制面板把以下4个锁60帧，否则可能游戏内掉帧+背景一片蓝...
+如果是笔记本这样的有双显卡的，同时也要选’高性能显卡‘，并且进行游戏时要插上电源...
+游戏根目录下：
+vsac29_Release_LM.exe
+vsac29_Release.exe
+1-vsac29_Release-LM.exe
+1-vsac29_Release-Client.exe
