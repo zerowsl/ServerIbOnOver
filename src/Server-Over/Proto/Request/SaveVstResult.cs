@@ -140,8 +140,10 @@ public partial class Request
         [global::ProtoBuf.ProtoMember(20, Name = @"quick_start_info", IsRequired = true)]
         public QuickStartInfo QuickStartInfo { get; set; }
         
-        [global::ProtoBuf.ProtoMember(21, Name = @"tutorial_flag", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(21, Name = @"tutorial_flag", IsRequired = true)] //--
         public bool TutorialFlag { get; set; }
+        
+        // armor 21?
         
         [global::ProtoBuf.ProtoMember(22, Name = @"cpu_hp_auto_regen", IsRequired = true)]
         public uint CpuHpAutoRegen { get; set; }
@@ -151,6 +153,8 @@ public partial class Request
         public uint QuickFill { get; set; }
         [global::ProtoBuf.ProtoMember(25, Name = @"player1_hp_mode", IsRequired = true)]
         public uint Player1HpMode { get; set; }
+        
+        // quick_menu_num 25?
         
         [global::ProtoBuf.ProtoContract()]
         public partial class PlayResultGroup : global::ProtoBuf.IExtensible
