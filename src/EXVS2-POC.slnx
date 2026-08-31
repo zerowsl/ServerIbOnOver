@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="Win32" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Server-Over/Server-Over.csproj" />
+  <Project Path="WebUIOver/Client/WebUIOver.Client.csproj">
+    <Build Solution="Debug|Any CPU" Project="false" />
+  </Project>
+  <Project Path="WebUIOver/Shared/WebUIOver.Shared.csproj">
+    <Build Solution="Debug|Any CPU" Project="false" />
+  </Project>
+</Solution>
