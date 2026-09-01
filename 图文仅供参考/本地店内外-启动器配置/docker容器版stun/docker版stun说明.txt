@@ -1,6 +1,0 @@
-1.安装docker，可自行搜索查阅 windows下的wsl2如何安装docker ....
-
-2.参考命令 
-   docker run -d --name exvs2_local_stun -p 3478:3478/udp vl00at111/exvs2_local_stun
-   
-3.参考图配置 ...
