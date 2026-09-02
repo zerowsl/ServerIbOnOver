@@ -137,24 +137,23 @@ public partial class Request
         [global::ProtoBuf.ProtoMember(19, Name = @"time_rental_flag", IsRequired = true)]
         public bool TimeRentalFlag { get; set; }
 
-        [global::ProtoBuf.ProtoMember(20, Name = @"quick_start_info", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(20, Name = @"quick_start_info")]
         public QuickStartInfo QuickStartInfo { get; set; }
         
-        [global::ProtoBuf.ProtoMember(21, Name = @"tutorial_flag", IsRequired = true)] //--
+        [global::ProtoBuf.ProtoMember(10021, Name = @"tutorial_flag", IsRequired = true)] //--
         public bool TutorialFlag { get; set; }
         
-        // armor 21?
-        
-        [global::ProtoBuf.ProtoMember(22, Name = @"cpu_hp_auto_regen", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(21, Name = @"armor", IsRequired = true)]
+        public uint Player1HpMode { get; set; }
+        [global::ProtoBuf.ProtoMember(22, Name = @"cpu_auto_heal", IsRequired = true)]
         public uint CpuHpAutoRegen { get; set; }
         [global::ProtoBuf.ProtoMember(23, Name = @"ex_over_limit", IsRequired = true)]
         public uint ExOverLimit { get; set; }
-        [global::ProtoBuf.ProtoMember(24, Name = @"quick_fill", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(24, Name = @"fast_reload", IsRequired = true)]
         public uint QuickFill { get; set; }
-        [global::ProtoBuf.ProtoMember(25, Name = @"player1_hp_mode", IsRequired = true)]
-        public uint Player1HpMode { get; set; }
         
-        // quick_menu_num 25?
+        [global::ProtoBuf.ProtoMember(25, Name = @"quick_menu_num", IsRequired = true)]
+        public uint QuickMenuNum { get; set; }
         
         [global::ProtoBuf.ProtoContract()]
         public partial class PlayResultGroup : global::ProtoBuf.IExtensible

@@ -3045,22 +3045,6 @@ namespace nue.protocol.exvs
 
         }
 
-        [global::ProtoBuf.ProtoContract()]
-        public partial class SavePracticeResult : global::ProtoBuf.IExtensible
-        {
-            private global::ProtoBuf.IExtension __pbn__extensionData;
-            global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-                => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
-
-            [global::ProtoBuf.ProtoMember(1, Name = @"pilot_id", IsRequired = true)]
-            public uint PilotId { get; set; }
-
-            [global::ProtoBuf.ProtoMember(2, Name = @"session_id", IsRequired = true)]
-            public string SessionId { get; set; }
-
-            // ...
-        }
-        
         #region CheckCommunication
         // [global::ProtoBuf.ProtoContract()]
         // public partial class CheckCommunication : global::ProtoBuf.IExtensible
@@ -6448,7 +6432,7 @@ namespace nue.protocol.exvs
                 public uint SlotNum { get; set; }
 
                 [global::ProtoBuf.ProtoMember(6, Name = @"replay_service")]
-                public global::System.Collections.Generic.List<ReplayInfo> ReplayServices { get; } = new global::System.Collections.Generic.List<ReplayInfo>();
+                public global::System.Collections.Generic.List<ReplayInfo> ReplayServices { get; } = new();
 
                 [global::ProtoBuf.ProtoContract()]
                 public partial class ReplayConfig : global::ProtoBuf.IExtensible
@@ -6505,7 +6489,7 @@ namespace nue.protocol.exvs
                     public uint ReplayType { get; set; }
 
                     [global::ProtoBuf.ProtoMember(3, Name = @"pilots")]
-                    public global::System.Collections.Generic.List<PilotGroup> Pilots { get; } = new global::System.Collections.Generic.List<PilotGroup>();
+                    public global::System.Collections.Generic.List<PilotGroup> Pilots { get; } = new();
 
                     [global::ProtoBuf.ProtoMember(4, Name = @"played_at", IsRequired = true)]
                     public ulong PlayedAt { get; set; }
