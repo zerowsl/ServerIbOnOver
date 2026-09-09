@@ -165,7 +165,7 @@
         // 本地店内外-单人对战2v2随机cpu (支持店外/混战/自定义/店内/Fes2v2,仅单人)
         "Match2": {
           // 进入对战后最大多少秒内匹配到cpu
-          "MaxApplyTimeSec": 20
+          "MaxApplyTimeSec": 20,
           "CheckingInterval": 10
         }, 
         
