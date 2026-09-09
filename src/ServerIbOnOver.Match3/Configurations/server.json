@@ -44,9 +44,9 @@
           // 默认关闭，Enable=true为开启, Enable=false为关闭.
           "Enable": false,
           // 进入对战后最大多少秒内匹配到cpu
-          "MaxApplyTimeSec": 20, // -1 20
+          "MaxApplyTimeSec": 20,
           // 客户端轮询秒数
-          "CheckingInterval": 10, // 2
+          "CheckingInterval": 10
         }, 
         
         // 双人对战2v2随机cpu 
