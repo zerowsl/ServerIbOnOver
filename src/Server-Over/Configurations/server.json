@@ -165,8 +165,8 @@
         // 本地店内外-单人对战2v2随机cpu (支持店外/混战/自定义/店内/Fes2v2,仅单人)
         "Match2": {
           // 进入对战后最大多少秒内匹配到cpu
-          "MaxApplyTimeSec": 20, // -1 20
-          "CheckingInterval": 10, // 2
+          "MaxApplyTimeSec": 20
+          "CheckingInterval": 10
         }, 
         
         // matching服务 和 stun服务信息, 本地或你知道的公开的

@@ -23,13 +23,14 @@
     
     // 自定义配置: 避免(省去)改数据库和页面..
     "CustomConfigs": {
-      // 'Custom Match'与(简易)房间
-      // 需要LM开启店外模式，对战菜单里右上角会变成紫色..
-      "Room": {
+      // 用于匹配'Custom Match'与(简易)房间
+      "MatchRoom": {
         // 默认关闭
         "Enable": false, 
-        // 需要跟刷卡的sever.json相应配置一样
-        "WorldId": 1013
+        // 用于单人, 需要跟刷卡的sever.json相应配置一样
+        "SoloWorldId": 1013,
+        // 用于组队, 需要跟刷卡的sever.json相应配置一样
+        "TeamWorldId": 1014
       }, 
 
       /** 试验功能：自定义本地对战匹配规则
@@ -49,7 +50,7 @@
           "CheckingInterval": 10
         }, 
         
-        // 双人对战2v2随机cpu 
+        // 双人对战2v2随机cpu (没实现匹配限制)
         "Match3": {
           // 默认开启，Enable=true为开启, Enable=false为关闭.
           "Enable": true, 

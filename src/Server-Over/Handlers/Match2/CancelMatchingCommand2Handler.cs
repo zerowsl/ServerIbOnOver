@@ -8,7 +8,7 @@ namespace ServerOver.Handlers.Match;
 
 public record CancelMatchingCommand2(Request Request) : IRequest<Response>;
 
-public class CancelMatchingCommand2Handler(IMatchingCache matchCache, 
+public class CancelMatchingCommand2Handler(IMatchingCache matchingCache, 
     IOptions<CardServerConfig> options)
     : IRequestHandler<CancelMatchingCommand2, Response>
 {
@@ -30,7 +30,7 @@ public class CancelMatchingCommand2Handler(IMatchingCache matchCache,
             };
         }
         
-        await matchCache.RemoveClientByNodeId(matching.NodeId, matching.ApplyId);
+        await matchingCache.RemoveClientByNodeId(matching.NodeId, matching.ApplyId);
         
         var response = new Response
         {

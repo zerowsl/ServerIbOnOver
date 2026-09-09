@@ -22,7 +22,7 @@ public class LoadRoomQueryHandler : IRequestHandler<LoadRoomQuery, Response>
                 TagId = 1, 
                 RegistrationCode = "ggfj1", 
                 TagType = 1, 
-                MatchingType = 0, 
+                MatchingType = 2, 
                 StartDate = (ulong)DateTimeOffset.Parse($"{DateTime.Now:yyyy-MM-dd 00:00:00}").ToUnixTimeSeconds(), 
                 EndDate = (ulong)DateTimeOffset.Parse($"{DateTime.Now:yyyy-MM-dd 12:00:00}").ToUnixTimeSeconds(), 
                 CurrentNum = 1, 

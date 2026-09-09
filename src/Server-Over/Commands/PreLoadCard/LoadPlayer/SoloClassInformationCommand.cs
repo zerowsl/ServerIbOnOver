@@ -60,7 +60,7 @@ public class IbSoloClassInformationCommand(ServerDbContext context, CustomConfig
             loadPlayer.ClassIdSolo = customConfigs.ClassMatchG.CustomSolo.ClassId;
 
             var g = customConfigs.ClassMatchG.CustomSolo.GradeId;
-            if (g is not (0u or 1u or 3u or 11u)) g = GlobalVars.ClassRankGrade; // 限定0,1,3,11
+            if (g is not (0u or 1u or 3u or 11u)) g = GlobalVars.ClassRankGrade;
             loadPlayer.GradeSolo = g;
 
             SetTopPoint(loadPlayer);
