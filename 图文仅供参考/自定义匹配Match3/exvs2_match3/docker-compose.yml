@@ -1,0 +1,30 @@
+# 运行: cd "目录"; docker compose up -d
+# 运行时会自动加载同目录下的'.env'文件
+
+version: "3"
+
+services:
+  match3:
+    image: vl00at111/exvs2_match3:1.0
+    container_name: exvs2_match3
+    
+    # restart: always
+
+    # 主机:容器
+    ports:
+      - "28083:28083"
+      
+    #environment:
+    #  - USER_UID=1000
+    
+    volumes:
+      - ./Configurations:/app/Configurations
+    
+    networks:
+      - exvs2
+    #network_mode: host  # 使用主机网络. 如果不指定host,默认会自己建立网络..
+    
+# 可选：如果使用自定义网络，取消注释并创建网络
+networks:
+   exvs2:
+     external: true
