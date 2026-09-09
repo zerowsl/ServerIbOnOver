@@ -5,7 +5,7 @@ version: "3"
 
 services:
   match3:
-    image: vl00at111/exvs2_match3:1.0
+    image: vl00at111/exvs2_match3
     container_name: exvs2_match3
     
     # restart: always
