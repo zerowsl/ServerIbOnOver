@@ -50,7 +50,7 @@ public sealed class CustomConfigs
         public uint RuleType { get; set; } = 0;
         public bool RevengeFlag { get; set; }
         public uint Timer { get; set; } = 0;
-        public uint WorldId { get; set; } = 13;
+        public uint WorldId { get; set; } = 1013;
         public uint FesRuleType { get; set; } = 0;
     }
 }

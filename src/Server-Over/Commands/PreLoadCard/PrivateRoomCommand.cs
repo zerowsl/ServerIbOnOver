@@ -69,7 +69,7 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
             EndDate = (ulong)DateTimeOffset.Parse("2099-12-31").ToUnixTimeSeconds(),
             RuleType = privateRoom.RuleType, // 0 = Without MS Restriction, 1 = With MS Restriction
             SelectableMsIds = ArrayUtil.FromString(privateRoom.SelectableMsIds),
-            WorldId = 13,
+            WorldId = 1013,
             RevengeFlag = privateRoom.RevengeFlag
         };
     }

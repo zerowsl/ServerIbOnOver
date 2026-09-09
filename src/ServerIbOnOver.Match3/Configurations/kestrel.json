@@ -1,0 +1,16 @@
+﻿{
+  "Kestrel": {
+    "Endpoints": {
+      "BaseServer": {
+        "Url": "http://0.0.0.0:28083"
+      }
+    },
+    "Certificates": {
+      "Default": {
+        "Path": "Certificates/cert.pfx",
+        "Password": "",
+        "AllowInvalid": true
+      }
+    }
+  }
+}

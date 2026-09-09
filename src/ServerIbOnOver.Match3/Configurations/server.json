@@ -1,0 +1,69 @@
+﻿{
+  "CardServerConfig": {
+    "IgnoreUploadSaving": false,
+    "NeedToDataPatchOfflineData": true,
+    "MaxReplaySaveSlotPerPlayer": 5,
+    "GameConfigurations": {
+      "TrainingMinutes": 12,
+      "FesConfigurations": {
+        "MondayType": "DualSelect",
+        "TuesdayType": "DualSelect",
+        "WednesdayType": "DualSelect",
+        "ThursdayType": "DualSelect",
+        "FridayType": "DualSelect",
+        "SaturdayType": "DualSelect",
+        "SundayType": "DualSelect"
+      },
+      "TriadConfigurations": {
+        "TargetMsList": [72],
+        "TimeAttackCourse": 212,
+        "HighScoreCourse": 212
+      }
+    },
+    
+    // 自定义配置: 避免(省去)改数据库和页面..
+    "CustomConfigs": {
+      // 'Custom Match'与(简易)房间
+      // 需要LM开启店外模式，对战菜单里右上角会变成紫色..
+      "Room": {
+        // 默认关闭
+        "Enable": false, 
+        // 需要跟刷卡的sever.json相应配置一样
+        "WorldId": 1013
+      }, 
+
+      /** 试验功能：自定义本地对战匹配规则
+       *  默认关闭，Enable=true为开启, Enable=false为关闭.需要stun服务.
+       *  此功能同时需要LM开启店外模式.
+       */
+      "LocalMatchingConfigs": {
+        "Enable": true,
+        
+        // 单人对战2v2随机cpu (支持店外/混战/自定义/店内/Fes2v2,仅单人)
+        "Match2": {
+          // 默认关闭，Enable=true为开启, Enable=false为关闭.
+          "Enable": false,
+          // 进入对战后最大多少秒内匹配到cpu
+          "MaxApplyTimeSec": 20, // -1 20
+          // 客户端轮询秒数
+          "CheckingInterval": 10, // 2
+        }, 
+        
+        // 双人对战2v2随机cpu 
+        "Match3": {
+          // 默认开启，Enable=true为开启, Enable=false为关闭.
+          "Enable": true, 
+	  
+          // 客户端轮询秒数
+          "CheckingInterval": 2, 
+	  
+          // 0 is '1+cpu vs 1+cpu'
+          // 1 is '2 vs 2cpu', 配置为1时需要关闭'Match2'配置
+          "MatchMode": 1
+        }
+        
+      }
+
+    }
+  }
+}

@@ -65,7 +65,7 @@ public class SaveClassMatchCommand(ServerDbContext context, CardServerConfig con
         
         var (afterRate, afterClassId, afterGradeId) = (result.AfterRate, result.ClassIdTeam, result.GradeId);
         var isChanged = ComputeAfter(afterRate, ref afterClassId, ref afterGradeId, 1, result.ObtainedRate);
-        logger?.LogWarning("vsm_on solo after \"classId={afterClassId}, gradeId={afterGradeId}, rate={afterRate}\" obtained='{obtainedRate}'.", afterClassId, afterGradeId, afterRate, result.ObtainedRate);
+        logger?.LogWarning("vsm_on team after \"classId={afterClassId}, gradeId={afterGradeId}, rate={afterRate}\" obtained='{obtainedRate}'.", afterClassId, afterGradeId, afterRate, result.ObtainedRate);
         if (!isChanged)
         {
             return;

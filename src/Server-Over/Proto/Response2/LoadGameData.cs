@@ -126,7 +126,7 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(21, Name = @"vs_player_level_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
         public int p21 { get; set; } = 50; // 100
         [global::ProtoBuf.ProtoMember(22, Name = @"cpu_player_level_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
-        public int p22 { get; set; } = 25; // 50
+        public int p22 { get; set; } = 50; // 50
         [global::ProtoBuf.ProtoMember(23, Name = @"class_win_badge_point", IsRequired = true)]
         public uint p23 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(24, Name = @"class_lose_badge_point", IsRequired = true)]
