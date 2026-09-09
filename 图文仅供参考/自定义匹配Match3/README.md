@@ -17,7 +17,7 @@ docker compose up -d
 
 4. 配置并运行stun服务,详情参考[stun说明](../本地店内外-启动器配置/docker容器版stun/)
 
-5. 打开联机程序和配置启动器, 例如 UU , 获取你自己(或者开服务的那个人)的ip ...
+5. 打开联机程序和配置启动器, 例如 UU , 获取你自己(或者开服务的那个人)的ip ... <br/>
    [UU房获取ip](./UU房获取ip.png)
 
 6. 修改刷卡服务的‘server.json’文件里面的‘LocalMatchingConfigs’项配置, 看说明操作... <br/>
