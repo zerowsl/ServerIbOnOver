@@ -1,6 +1,6 @@
-1.安装docker，可自行搜索查阅 windows下的wsl2如何安装docker ....
+1. 安装docker，可自行搜索查阅 windows下的wsl2如何安装docker ....
 
-2.参考命令 
+2. 参考命令 
 ``` shell
 # 运行容器
 docker run -d --name exvs2_local_stun -p 3478:3478/udp vl00at111/exvs2_local_stun
@@ -9,6 +9,6 @@ docker run -d --name exvs2_local_stun -p 3478:3478/udp vl00at111/exvs2_local_stu
 wsl hostname -I
 ```
 
-![](./容器版可能需要wsl2的ip及其sever.json的配置.png)
+[容器版可能需要wsl2的ip及其sever.json的配置](./容器版可能需要wsl2的ip及其sever.json的配置.png)
 
 3.参考图[启动器配置](./(双)启动器配置.png) ...
