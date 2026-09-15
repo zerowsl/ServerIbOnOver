@@ -30,6 +30,7 @@ internal static partial class GlobalVars
 	internal static readonly string VsRouteBattleSaveDataDir = Path.Combine(Directory.GetCurrentDirectory(), "savedatas/vsrb").Replace('\\', '/').TrimEnd('/');
 #endif
 
+	internal static readonly bool CanUpPlayerBadgeExp = true;
     internal const int DefaultPlayerBadgeMaxExp = 5000000;
 	internal static readonly string PlayerBadgeExpsJsonFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/data/display/player_badge_max_exps.json").Replace('\\', '/').TrimEnd('/');
 
