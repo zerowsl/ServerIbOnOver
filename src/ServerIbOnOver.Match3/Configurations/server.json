@@ -58,7 +58,7 @@
           // 客户端轮询秒数
           "CheckingInterval": 2, 
 	  
-          // 0 is '1+cpu vs 1+cpu'
+          // 0 is '2v2' or '1+cpu vs 1+cpu'
           // 1 is '2 vs 2cpu', 配置为1时需要关闭'Match2'配置
           "MatchMode": 1
         }

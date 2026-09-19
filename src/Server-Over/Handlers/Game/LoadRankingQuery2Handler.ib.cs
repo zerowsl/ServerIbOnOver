@@ -110,7 +110,7 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
                     TitleTextId = 0,
                     CustomTxt = "486",
 					GroupName = "486", 
-                    FavMsId = 165,
+                    FavMsId = 310,
                     MsUsedNum = 1,
                     HomeLocName = "EXTREME",
                     HomeLocPref = 1,

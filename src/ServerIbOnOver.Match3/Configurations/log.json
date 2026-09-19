@@ -18,10 +18,10 @@
       }
     ],
     "WriteTo": [
-      {
-        "Name": "File",
-        "Args": { "path":  "./Logs/log-.txt", "rollingInterval": "Day" }
-      }
+      //{
+      //  "Name": "File",
+      //  "Args": { "path":  "./Logs/log-.txt", "rollingInterval": "Day" }
+      //}
     ]
   }
 }
