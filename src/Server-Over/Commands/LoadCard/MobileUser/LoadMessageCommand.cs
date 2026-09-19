@@ -20,8 +20,7 @@ public class LoadMessageCommand : ILoadCardMobileUserCommand
         var messageSetting = _context.MessageSettingDbSet
             .First(x => x.CardProfile == cardProfile);
 
-        //mobileUserGroup.MuteFlag = messageSetting.AllowReceiveMessage;
-        mobileUserGroup.MuteFlag = !messageSetting.AllowReceiveMessage;
+        mobileUserGroup.MuteFlag = messageSetting.AllowReceiveMessage;
         mobileUserGroup.MessagePosition = (CommandMessagePostion)messageSetting.MessagePosition;
         AppendMessages(mobileUserGroup, messageSetting);
     }

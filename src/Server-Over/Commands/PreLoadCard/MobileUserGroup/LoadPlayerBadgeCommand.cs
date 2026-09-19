@@ -4,13 +4,11 @@ using ServerOver.Persistence;
 
 namespace ServerOver.Commands.PreLoadCard.MobileUserGroup;
 
-public class LoadPlayerBadgeCommand(ServerDbContext context) : IPreLoadCard2Command
+public class LoadPlayerBadgeCommand(ServerDbContext context) : BasePreLoadCard2Command
 {
-    public void Fill(CardProfile cardProfile, Response2.PreLoadCard preLoadCard)
+    public override void Fill(CardProfile cardProfile, Response2.PreLoadCard.MobileUserGroup mobileUserGroup) 
     {
         var cardId = (uint)cardProfile.Id;
-        var mobileUserGroup = preLoadCard.User;
-        if (mobileUserGroup == null) return;
 
         //preLoadCard.User.PlayerBadgeId = preLoadCard?.load_player?.PrestigeId ?? 0u;
 

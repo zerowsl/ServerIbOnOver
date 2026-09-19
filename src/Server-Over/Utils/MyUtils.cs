@@ -1,4 +1,7 @@
-﻿using System.Text.Json;
+﻿using System.IO.Hashing;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
 
 namespace ServerOver.Utils;
 
@@ -36,5 +39,13 @@ internal static class MyUtils
                 logger.LogWarning(GlobalVars.LogFangDaoMai);
             }
         });
+    }
+
+    public static uint ToUintByCrc32(string str)
+    {
+        using var ha = SHA256.Create();
+        var by = ha.ComputeHash(Encoding.UTF8.GetBytes(str));
+        var i = Crc32.HashToUInt32(by);
+        return i;
     }
 }

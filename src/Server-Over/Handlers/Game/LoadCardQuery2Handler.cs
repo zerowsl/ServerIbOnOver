@@ -129,6 +129,11 @@ public class LoadCardQuery2Handler(ILogger<LoadCardQuery2Handler> _logger, Serve
 
         var baseAddress = request.BaseAddress;
 
+        if (r.load_card.pilot_data_group.TagTeams.Count > 0)
+        {
+            r2.load_card.mobile_user_group.TagTeams.AddRange(r.load_card.pilot_data_group.TagTeams);
+        }
+        
         List<ILoadCard2Command> cmds2 = [
             // pilot_data_group
             new LoadIbHighScoreInfosCommand(_context), // 刷卡后，开启stage高难度

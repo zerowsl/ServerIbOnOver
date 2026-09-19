@@ -17,7 +17,7 @@ internal static partial class GlobalVars
 	internal const uint NaviBoostRemains = 486;
 
 	internal const uint ClassRankGrade = 3;
-	internal static readonly int[] ExRankNums = [1, 618, 520, 61, 51, 52, 53, 233, 486, 505, 607, 287, 315, 88, 20, 110, 666, 17, 996, 999, 8, 616, 0];
+	internal static readonly int[] ExRankNums = [1, 618, 520, 61, 51, 52, 53, 233, 486, 505, 607, 287, 315, 88, 20, 110, 666, 17, 996, 999, 8, 616, 864, 0];
 	internal static uint PatternId { get; private set; } = 0;
 	internal const uint DefaultRateRange = 1000;
 	internal static uint RateDiff { get; private set; }

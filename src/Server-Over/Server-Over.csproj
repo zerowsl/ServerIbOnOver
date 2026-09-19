@@ -33,18 +33,17 @@
   <ItemGroup>
     <PackageReference Include="ErrorOr" Version="2.1.1" />
     <PackageReference Include="MediatR" Version="12.4.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="10.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.10">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.12">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
     <PackageReference Include="MinimalApis.Extensions" Version="0.11.0" />
-    <PackageReference Include="protobuf-net" Version="3.2.56" />
-    <PackageReference Include="protobuf-net.AspNetCore" Version="3.2.52" />
+    <PackageReference Include="protobuf-net.AspNetCore" Version="3.4.30" />
     <!--<PackageReference Include="Quartz" Version="3.7.0" />-->
     <!--<PackageReference Include="Quartz.Extensions.Hosting" Version="3.7.0" />-->
     <PackageReference Include="Riok.Mapperly" Version="4.3.1" />
@@ -54,6 +53,7 @@
     <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3mc" Version="2.1.11" />
     <PackageReference Include="Swan.Core" Version="7.0.0-beta.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+    <PackageReference Include="System.IO.Hashing" Version="10.0.12" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Certificates\root.pfx">

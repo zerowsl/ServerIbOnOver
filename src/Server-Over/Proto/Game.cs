@@ -305,49 +305,51 @@ namespace nue.protocol.exvs
 
     }
 
-    [global::ProtoBuf.ProtoContract()]
-    public partial class TagTeamGroup : global::ProtoBuf.IExtensible
-    {
-        private global::ProtoBuf.IExtension __pbn__extensionData;
-        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+    #region TagTeamGroup
+    //[global::ProtoBuf.ProtoContract()]
+    //public partial class TagTeamGroup : global::ProtoBuf.IExtensible
+    //{
+    //    private global::ProtoBuf.IExtension __pbn__extensionData;
+    //    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+    //        => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-        [global::ProtoBuf.ProtoMember(1, Name = @"id", IsRequired = true)]
-        public uint Id { get; set; }
+    //    [global::ProtoBuf.ProtoMember(1, Name = @"id", IsRequired = true)]
+    //    public uint Id { get; set; }
 
-        [global::ProtoBuf.ProtoMember(2, Name = @"name", IsRequired = true)]
-        public string Name { get; set; }
+    //    [global::ProtoBuf.ProtoMember(2, Name = @"name", IsRequired = true)]
+    //    public string Name { get; set; }
 
-        [global::ProtoBuf.ProtoMember(3, Name = @"partner_id", IsRequired = true)]
-        public uint PartnerId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(3, Name = @"partner_id", IsRequired = true)]
+    //    public uint PartnerId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(4, Name = @"background_parts_id", IsRequired = true)]
-        public uint BackgroundPartsId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(4, Name = @"background_parts_id", IsRequired = true)]
+    //    public uint BackgroundPartsId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(5, Name = @"effect_id", IsRequired = true)]
-        public uint EffectId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(5, Name = @"effect_id", IsRequired = true)]
+    //    public uint EffectId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(6, Name = @"emblem_id", IsRequired = true)]
-        public uint EmblemId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(6, Name = @"emblem_id", IsRequired = true)]
+    //    public uint EmblemId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(7, Name = @"skill_point", IsRequired = true)]
-        public uint SkillPoint { get; set; }
+    //    [global::ProtoBuf.ProtoMember(7, Name = @"skill_point", IsRequired = true)]
+    //    public uint SkillPoint { get; set; }
 
-        [global::ProtoBuf.ProtoMember(8, Name = @"skill_point_boost", IsRequired = true)]
-        public uint SkillPointBoost { get; set; }
+    //    [global::ProtoBuf.ProtoMember(8, Name = @"skill_point_boost", IsRequired = true)]
+    //    public uint SkillPointBoost { get; set; }
 
-        [global::ProtoBuf.ProtoMember(10, Name = @"bgm_id", IsRequired = true)]
-        public uint BgmId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(10, Name = @"bgm_id", IsRequired = true)]
+    //    public uint BgmId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(11, Name = @"name_color_id", IsRequired = true)]
-        public uint NameColorId { get; set; }
+    //    [global::ProtoBuf.ProtoMember(11, Name = @"name_color_id", IsRequired = true)]
+    //    public uint NameColorId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(12, Name = @"boost_remains", IsRequired = true)]
-        public uint BoostRemains { get; set; }
+    //    [global::ProtoBuf.ProtoMember(12, Name = @"boost_remains", IsRequired = true)]
+    //    public uint BoostRemains { get; set; }
 
-        [global::ProtoBuf.ProtoMember(19, Name = @"partner_name", IsRequired = true)]
-        public string PartnerName { get; set; }
-    }
+    //    [global::ProtoBuf.ProtoMember(19, Name = @"partner_name", IsRequired = true)]
+    //    public string PartnerName { get; set; }
+    //}
+    #endregion TagTeamGroup
 
     [global::ProtoBuf.ProtoContract()]
     public partial class LoadPlayer : global::ProtoBuf.IExtensible
@@ -423,13 +425,13 @@ namespace nue.protocol.exvs
         [global::ProtoBuf.ProtoMember(1, Name = @"title_text_id", IsRequired = true)]
         public uint TitleTextId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(3, Name = @"title_ornament_id", IsRequired = true)] // 2
+        [global::ProtoBuf.ProtoMember(1003, Name = @"title_ornament_id", IsRequired = true)] // 2
         public uint TitleOrnamentId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(4, Name = @"title_effect_id", IsRequired = true)] // 3
+        [global::ProtoBuf.ProtoMember(1004, Name = @"title_effect_id", IsRequired = true)] // 3
         public uint TitleEffectId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(5, Name = @"title_background_parts_id", IsRequired = true)] // 4
+        [global::ProtoBuf.ProtoMember(1005, Name = @"title_background_parts_id", IsRequired = true)] // 4
         public uint TitleBackgroundPartsId { get; set; }
 
         [global::ProtoBuf.ProtoMember(2, Name = @"custom_text")] // 5
@@ -1306,7 +1308,7 @@ namespace nue.protocol.exvs
             public void ResetGuestNavAnnivFlag() => __pbn__GuestNavAnnivFlag = null;
             private bool? __pbn__GuestNavAnnivFlag;
 
-            [global::ProtoBuf.ProtoMember(4, Name = @"level_max_disp_flag")]
+            [global::ProtoBuf.ProtoMember(4, Name = @"level_max_disp_flag")] //--
             public bool LevelMaxDispFlag
             {
                 get => __pbn__LevelMaxDispFlag.GetValueOrDefault();
@@ -1316,7 +1318,7 @@ namespace nue.protocol.exvs
             public void ResetLevelMaxDispFlag() => __pbn__LevelMaxDispFlag = null;
             private bool? __pbn__LevelMaxDispFlag;
 
-            [global::ProtoBuf.ProtoMember(5, Name = @"class_change_disp_flag")]
+            [global::ProtoBuf.ProtoMember(5, Name = @"class_change_disp_flag")] //--
             public bool ClassChangeDispFlag
             {
                 get => __pbn__ClassChangeDispFlag.GetValueOrDefault();
@@ -1326,7 +1328,7 @@ namespace nue.protocol.exvs
             public void ResetClassChangeDispFlag() => __pbn__ClassChangeDispFlag = null;
             private bool? __pbn__ClassChangeDispFlag;
 
-            [global::ProtoBuf.ProtoMember(6, Name = @"ex_tutorial_disp_flag")]
+            [global::ProtoBuf.ProtoMember(6, Name = @"ex_tutorial_disp_flag")] //?4
             public bool ExTutorialDispFlag
             {
                 get => __pbn__ExTutorialDispFlag.GetValueOrDefault();

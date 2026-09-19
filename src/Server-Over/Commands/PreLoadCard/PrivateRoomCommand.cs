@@ -19,7 +19,7 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
 
         preLoadCard.MatchingTag = new MatchingTag()
         {
-            Id = (uint)cardProfile.Id,
+            Id = MyUtils.ToUintByCrc32(config.CustomConfigs.Room.Code),
             TagName = config.CustomConfigs.Room.Code,
             TagType = config.CustomConfigs.Room.TagType,
             MatchingType = config.CustomConfigs.Room.MatchingType,
@@ -69,7 +69,7 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
             EndDate = (ulong)DateTimeOffset.Parse("2099-12-31").ToUnixTimeSeconds(),
             RuleType = privateRoom.RuleType, // 0 = Without MS Restriction, 1 = With MS Restriction
             SelectableMsIds = ArrayUtil.FromString(privateRoom.SelectableMsIds),
-            WorldId = 1013,
+            WorldId = privateRoom.MatchingType == 1 ? 1013u : 1014u,
             RevengeFlag = privateRoom.RevengeFlag
         };
     }

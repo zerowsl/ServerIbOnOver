@@ -203,8 +203,8 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(3, Name = @"open_record", IsRequired = true)]
             public uint OpenRecord { get; set; }
 
-            [global::ProtoBuf.ProtoMember(4, Name = @"open_echelon", IsRequired = true)]
-            public uint OpenEchelon { get; set; } // 是否显示player等级
+            [global::ProtoBuf.ProtoMember(4, Name = @"open_player_level", IsRequired = true)]
+            public uint OpenEchelon { get; set; }
 
             [global::ProtoBuf.ProtoMember(5, Name = @"open_skillpoint", IsRequired = true)]
             public bool OpenSkillpoint { get; set; }

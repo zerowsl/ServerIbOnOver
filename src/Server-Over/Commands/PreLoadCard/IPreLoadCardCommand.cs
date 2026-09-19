@@ -7,8 +7,3 @@ public interface IPreLoadCardCommand
 {
     void Fill(CardProfile cardProfile, Response.PreLoadCard preLoadCard);
 }
-
-public interface IPreLoadCard2Command
-{
-    void Fill(CardProfile cardProfile, Response2.PreLoadCard preLoadCard);
-}

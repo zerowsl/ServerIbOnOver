@@ -4,13 +4,13 @@ using ServerOver.Persistence;
 
 namespace ServerOver.Commands.LoadCard.PilotData;
 
-public class LoadIbHighScoreInfosCommand(ServerDbContext context) : ILoadCard2Command
+public class LoadIbHighScoreInfosCommand(ServerDbContext context) : BaseLoadCard2Command
 {
-    public void Fill(CardProfile cardProfile, Response2.LoadCard loadCard)
+    public override void Fill(CardProfile cardProfile, Response2.LoadCard.PilotDataGroup pilotDataGroup)
     {
         var m = context.VsRouteBattleStageHighScoreInfoDbSet.Where(x => x.CardId == cardProfile.Id && x.IsRecord && x.TotalClearTime > 0).ToArray();
 
-        loadCard.pilot_data_group.HighScoreInfos.AddRange(m.Select(x => new Response2.LoadCard.PilotDataGroup.HighScoreInfo()
+        pilotDataGroup.HighScoreInfos.AddRange(m.Select(x => new Response2.LoadCard.PilotDataGroup.HighScoreInfo()
         {
             Difficulty = x.Difficulty,
             ClearTime1 = x.ClearTime1,
@@ -24,9 +24,9 @@ public class LoadIbHighScoreInfosCommand(ServerDbContext context) : ILoadCard2Co
         }));
 
         // 刷卡后预先开启难度5
-        if (loadCard.pilot_data_group.HighScoreInfos.Count == 0)
+        if (pilotDataGroup.HighScoreInfos.Count == 0)
         {
-            loadCard.pilot_data_group.HighScoreInfos.Add(new Response2.LoadCard.PilotDataGroup.HighScoreInfo()
+            pilotDataGroup.HighScoreInfos.Add(new()
             {
                 Difficulty = 4,
                 ClearTime1 = 1800,

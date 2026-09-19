@@ -4,7 +4,6 @@
 //   Input: my.proto
 // </auto-generated>
 
-//#region Designer generated code
 #pragma warning disable CS0612, CS0618, CS1591, CS3021, IDE0079, IDE1006, RCS1036, RCS1057, RCS1085, RCS1192
 namespace nue.protocol.exvs;
 
@@ -367,9 +366,6 @@ public partial class Response2
             //[global::ProtoBuf.ProtoMember(10047, Name = @"triad_title_customize", IsRequired = true)] // 47
             //public TitleCustomize TriadTitleCustomize { get; set; }
 
-            [global::ProtoBuf.ProtoMember(36, Name = @"tag_teams")]
-            public global::System.Collections.Generic.List<TagTeamGroup2> TagTeams { get; } = new();
-
             [global::ProtoBuf.ProtoMember(27, Name = @"mute_flag", IsRequired = true)]
             public bool MuteFlag { get; set; }
 
@@ -387,10 +383,13 @@ public partial class Response2
             public CommandMessageGroup p33 { get; } = new();
             
             [global::ProtoBuf.ProtoMember(34, Name = @"command_message_auto_flag", IsRequired = true)]
-            public uint p34 { get; set; } = 1;
+            public uint p34 { get; set; } = 0;
             
             [global::ProtoBuf.ProtoMember(35, Name = "vs_route_battle_data")] // save_data_info
             public VsRouteBattleDataGroup VsRouteBattleData { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(36, Name = @"tag_teams")]
+            public global::System.Collections.Generic.List<TagTeamGroup> TagTeams { get; } = new();
             
             [global::ProtoBuf.ProtoMember(37, Name = @"group_id", IsRequired = true)]
             public uint group_id { get; set; } = 1;
@@ -438,32 +437,32 @@ public partial class Response2
                 global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
                     => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-                [global::ProtoBuf.ProtoMember(1, Name = @"command", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(1, Name = @"start_message_id", IsRequired = true)]
                 public uint Command { get; set; }
 
-                [global::ProtoBuf.ProtoMember(2, Name = @"message_text", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(2, Name = @"start_message_text", IsRequired = true)]
                 public string MessageText { get; set; } = "";
 
-                [global::ProtoBuf.ProtoMember(3, Name = @"unique_message_id", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(3, Name = @"up_message_id", IsRequired = true)]
                 public uint UniqueMessageId { get; set; }
 
-                [global::ProtoBuf.ProtoMember(4, Name = @"p4", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(4, Name = @"up_message_text", IsRequired = true)]
                 public string p4 { get; set; } = "";
-                [global::ProtoBuf.ProtoMember(5, Name = @"p5", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(5, Name = @"down_message_id", IsRequired = true)]
                 public uint p5 { get; set; } = 0;
-                [global::ProtoBuf.ProtoMember(6, Name = @"p6", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(6, Name = @"down_message_text", IsRequired = true)]
                 public string p6 { get; set; } = "";
-                [global::ProtoBuf.ProtoMember(7, Name = @"p7", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(7, Name = @"left_message_id", IsRequired = true)]
                 public uint p7 { get; set; } = 0;
-                [global::ProtoBuf.ProtoMember(8, Name = @"p8", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(8, Name = @"left_message_text", IsRequired = true)]
                 public string p8 { get; set; } = "";
-                [global::ProtoBuf.ProtoMember(9, Name = @"p9", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(9, Name = @"right_message_id", IsRequired = true)]
                 public uint p9 { get; set; } = 0;
-                [global::ProtoBuf.ProtoMember(10, Name = @"p10", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(10, Name = @"right_message_text", IsRequired = true)]
                 public string p10 { get; set; } = "";
-                [global::ProtoBuf.ProtoMember(11, Name = @"p11", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(11, Name = @"end_message_id", IsRequired = true)]
                 public uint p11 { get; set; } = 0;
-                [global::ProtoBuf.ProtoMember(12, Name = @"p12", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(12, Name = @"end_message_text", IsRequired = true)]
                 public string p12 { get; set; } = "";
 
             }
@@ -736,7 +735,7 @@ public partial class Response2
                 public uint Difficulty { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(3, Name = "stage_id", IsRequired = true)]
-                public uint StageId { get; set; } // 0<x<3
+                public uint StageId { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(4, Name = "boss1", IsRequired = true)]
                 public uint Boss1 { get; set; }
@@ -764,49 +763,4 @@ public partial class Response2
     }
 }
 
-[global::ProtoBuf.ProtoContract()]
-public partial class TagTeamGroup2 : global::ProtoBuf.IExtensible
-{
-    private global::ProtoBuf.IExtension __pbn__extensionData;
-    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-        => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
-
-    [global::ProtoBuf.ProtoMember(1, Name = @"id", IsRequired = true)]
-    public uint Id { get; set; }
-
-    [global::ProtoBuf.ProtoMember(2, Name = @"name", IsRequired = true)]
-    public string Name { get; set; }
-
-    [global::ProtoBuf.ProtoMember(3, Name = @"partner_id", IsRequired = true)]
-    public uint PartnerId { get; set; }
-
-    [global::ProtoBuf.ProtoMember(13, Name = @"background_parts_id", IsRequired = true)]
-    public uint BackgroundPartsId { get; set; }
-
-    [global::ProtoBuf.ProtoMember(14, Name = @"effect_id", IsRequired = true)]
-    public uint EffectId { get; set; }
-
-    [global::ProtoBuf.ProtoMember(15, Name = @"emblem_id", IsRequired = true)]
-    public uint EmblemId { get; set; }
-
-    [global::ProtoBuf.ProtoMember(16, Name = @"skill_point", IsRequired = true)]
-    public uint SkillPoint { get; set; }
-
-    [global::ProtoBuf.ProtoMember(17, Name = @"skill_point_boost", IsRequired = true)]
-    public uint SkillPointBoost { get; set; }
-
-    [global::ProtoBuf.ProtoMember(18, Name = @"bgm_id", IsRequired = true)]
-    public uint BgmId { get; set; }
-
-    //[global::ProtoBuf.ProtoMember(11, Name = @"name_color_id", IsRequired = true)]
-    //public uint NameColorId { get; set; }
-    //[global::ProtoBuf.ProtoMember(12, Name = @"boost_remains", IsRequired = true)]
-    //public uint BoostRemains { get; set; }
-
-    [global::ProtoBuf.ProtoMember(19, Name = @"partner_name", IsRequired = true)]
-    public string PartnerName { get; set; } = "";
-
-}
-
 #pragma warning restore CS0612, CS0618, CS1591, CS3021, IDE0079, IDE1006, RCS1036, RCS1057, RCS1085, RCS1192
-//#endregion

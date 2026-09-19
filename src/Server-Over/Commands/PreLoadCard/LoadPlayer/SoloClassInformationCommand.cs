@@ -46,15 +46,13 @@ public class SoloClassInformationCommand : IPreLoadPlayerCommand
 }
 
 public class IbSoloClassInformationCommand(ServerDbContext context, CustomConfigs customConfigs) 
-    : IPreLoadCard2Command
+    : BasePreLoadCard2Command
 {
-    public void Fill(CardProfile cardProfile, Response2.PreLoadCard preLoadCard)
+    public override void Fill(CardProfile cardProfile, Response2.PreLoadCard.LoadPlayer loadPlayer)
     {
         var cardId = cardProfile.Id;
-        var loadPlayer = preLoadCard.load_player;
-        if (loadPlayer == null) return;
         if (customConfigs.ClassMatchG == null) return;
-
+		
         if (!customConfigs.ClassMatchG.EnableRate)
         {
             loadPlayer.ClassIdSolo = customConfigs.ClassMatchG.CustomSolo.ClassId;

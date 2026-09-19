@@ -6,9 +6,9 @@ using Response2 = nue.protocol.exvs.Response2;
 namespace ServerOver.Commands.LoadCard.MobileUser;
 
 public class LoadQuickStartInfoCommand(ServerDbContext context)
-    : ILoadCard2Command
+    : BaseLoadCard2Command
 {
-    public void Fill(CardProfile cardProfile, Response2.LoadCard loadCard)
+    public override void Fill(CardProfile cardProfile, Response2.LoadCard.MobileUserGroup mobileUserGroup)
     {
         var cardId = cardProfile.Id;
         
@@ -20,6 +20,6 @@ public class LoadQuickStartInfoCommand(ServerDbContext context)
             return;
         }
         
-        loadCard.mobile_user_group.QuickStart = m.ToResponse2QuickStartGroup();
+        mobileUserGroup.QuickStart = m.ToResponse2QuickStartGroup();
     }
 }

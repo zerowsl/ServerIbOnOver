@@ -6,13 +6,11 @@ using ServerOver.Persistence;
 namespace ServerOver.Commands.PreLoadCard.MobileUserGroup;
 
 public class LoadGpBoostRateCommand(ServerDbContext context, CardServerConfig config) 
-    : IPreLoadCard2Command
+    : BasePreLoadCard2Command
 {
-    public void Fill(CardProfile cardProfile, Response2.PreLoadCard preLoadCard)
+    public override void Fill(CardProfile cardProfile, Response2.PreLoadCard.MobileUserGroup mobileUserGroup) 
     {
         var cardId = (uint)cardProfile.Id;
-        var mobileUserGroup = preLoadCard.User;
-        if (mobileUserGroup == null) return;
 
         if (mobileUserGroup.customize_group != null && config.CustomConfigs != null)
         {

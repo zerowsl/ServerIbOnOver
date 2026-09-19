@@ -32,11 +32,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.4.1" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
     <PackageReference Include="MinimalApis.Extensions" Version="0.11.0" />
-    <PackageReference Include="protobuf-net" Version="3.2.56" />
-    <PackageReference Include="protobuf-net.AspNetCore" Version="3.2.52" />
+    <PackageReference Include="protobuf-net.AspNetCore" Version="3.4.30" />
     <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
     <PackageReference Include="Serilog.Expressions" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />

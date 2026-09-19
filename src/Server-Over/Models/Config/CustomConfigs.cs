@@ -41,7 +41,7 @@ public sealed class CustomConfigs
     public sealed class RoomConfigs
     {
         public bool Enable { get; set; } = false;
-        
+
         public string Code { get; set; } = "";
         public uint TagType { get; set; }
         public uint MatchingType { get; set; }
@@ -50,7 +50,7 @@ public sealed class CustomConfigs
         public uint RuleType { get; set; } = 0;
         public bool RevengeFlag { get; set; }
         public uint Timer { get; set; } = 0;
-        public uint WorldId { get; set; } = 1013;
+        public uint WorldId => MatchingType == 1 ? 1013u : 1014u;
         public uint FesRuleType { get; set; } = 0;
     }
 }
