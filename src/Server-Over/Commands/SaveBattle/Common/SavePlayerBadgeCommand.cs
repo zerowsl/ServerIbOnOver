@@ -36,7 +36,6 @@ public class SavePlayerBadgeCommand(ServerDbContext context,
         {
             playerBadgeData.BadgeExp = 0;
 
-            // 好像并不会降级..
             //playerBadgeData.BadgeId = playerBadgeData.BadgeId == 0u ? 0u : (playerBadgeData.BadgeId - 1u);
         }
 
@@ -49,7 +48,6 @@ public class SavePlayerBadgeCommand(ServerDbContext context,
         }
         else
         {
-            // 有时候发现exp到达最大时也会升级..
             FixBadgeIdByExpMax(playerBadgeData, badgeDomain.PlayerLevelId);
         }
 
