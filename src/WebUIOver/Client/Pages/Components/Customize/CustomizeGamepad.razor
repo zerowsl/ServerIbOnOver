@@ -1,6 +1,7 @@
 ﻿@using WebUIOver.Client.Services.Name
 @using WebUIOver.Client.Services.Selector
 @using WebUIOver.Client.Services.Gamepad
+@using WebUIOver.Shared.Dto.Common
 @inherits BasicCustomizeComponent
 
 @inject ILogger<CustomizeCard> Logger
@@ -29,6 +30,22 @@
                     <MudItem xs="12"></MudItem>
                 </MudStack>
                 <MudGrid>
+                    <MudItem xs="6">
+                        <MudSelect Label="设置按键操作为键盘或手柄" @bind-Value="CustomizeCardContext.GamepadConfig.GamePadStyle" T="uint" Variant="Variant.Outlined">
+                            @foreach (var item in GetGamePadStyles())
+                            {
+                                <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudSelect Label="键位指令提示" @bind-Value="CustomizeCardContext.GamepadConfig.CommandDispConfig" T="uint" Variant="Variant.Outlined">
+                            @foreach (var item in GetCommandDispConfigs())
+                            {
+                                <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudItem>
                     <MudItem xs="6">
                         <MudSelect Label="@localizer["gamepadsquare"]" @bind-Value="CustomizeCardContext.GamepadConfig.XKey" T="uint" Variant="Variant.Outlined">
                             @foreach (var button in GamepadDataService.GetSortedGamepadOptionList())
@@ -114,3 +131,20 @@
         </MudCard>
     </MudItem>
 </MudGrid>
+
+@code{
+    static IEnumerable<IdValuePair> GetGamePadStyles()
+    {
+        yield return new() { Id = 0, Value = "无手柄 (默认键盘)" };
+        yield return new() { Id = 1, Value = "Lite Type" };
+        yield return new() { Id = 2, Value = "Normal Type (Default)" };
+        yield return new() { Id = 3, Value = "Normal Type (Custom)" };
+    }
+    
+    static IEnumerable<IdValuePair> GetCommandDispConfigs()
+    {
+        yield return new() { Id = 0, Value = "OFF" };
+        yield return new() { Id = 1, Value = "按键" };
+        yield return new() { Id = 2, Value = "操作名" };
+    }
+}

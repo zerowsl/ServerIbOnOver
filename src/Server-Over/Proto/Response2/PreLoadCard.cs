@@ -221,12 +221,15 @@ public partial class Response2
             //[global::ProtoBuf.ProtoMember(10, Name = @"challenge_mis_data")]
             //public global::System.Collections.Generic.List<ChallengeMisData> ChallengeMisDatas { get; } = new();
 
-            [global::ProtoBuf.ProtoMember(12, Name = @"game_pad_style", IsRequired = true)]
-            public uint pKeyconfigNumber { get; set; } = 2; // 3
+            [global::ProtoBuf.ProtoMember(10012, Name = @"keyconfig_number", IsRequired = true)]
+            public uint KeyconfigNumber { get; set; }
 
             [global::ProtoBuf.ProtoMember(11, Name = @"gp", IsRequired = true)]
             public uint Gp { get; set; }
-
+            
+            [global::ProtoBuf.ProtoMember(12, Name = @"game_pad_style", IsRequired = true)]
+            public uint GamePadStyle { get; set; }
+            
             [global::ProtoBuf.ProtoMember(13, Name = @"player_badge_id", IsRequired = true)]
             public uint PlayerBadgeId { get; set; }
             [global::ProtoBuf.ProtoMember(14, Name = @"player_badge_exp", IsRequired = true)]
@@ -280,10 +283,10 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(12, Name = @"guest_nav_anniv_flag", IsRequired = true)]
                 public bool GuestNavAnnivFlag { get; set; }
 
-                [global::ProtoBuf.ProtoMember(14, Name = @"Command_guide_display", IsRequired = true)]
-                public uint CommandGuideDisplay { get; set; }
+                [global::ProtoBuf.ProtoMember(14, Name = @"command_disp_config", IsRequired = true)]
+                public uint CommandDispConfig { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(15, Name = "gp_boost_rate")]
+                [global::ProtoBuf.ProtoMember(15, Name = "group_point_boost")]
                 public float GpBoostRate { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(16)]

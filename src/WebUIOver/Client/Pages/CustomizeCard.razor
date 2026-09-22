@@ -26,6 +26,7 @@ else
 
         <MudStack Row Class="align-self-end">
             <MudProgressCircular @bind-Class="@_progressContext.HideSaveAllProgress" Color="Color.Default" Indeterminate="true" />
+            <MudButton Href="@($"/Cards/ViewDetail/{ChipId}")" Variant="Variant.Filled" Color="Color.Primary">跳转到对战记录</MudButton>
             <MudButton Disabled="@_buttonStatusContext.SaveAllButtonDisabled" OnClick="@SaveAll" Variant="Variant.Filled" Color="@Color.Primary">@localizer["saveall"]</MudButton>
         </MudStack>
     </MudStack>

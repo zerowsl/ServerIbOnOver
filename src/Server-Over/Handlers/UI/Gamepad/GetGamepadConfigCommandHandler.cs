@@ -22,13 +22,18 @@ public class GetGamepadConfigCommandHandler : IRequestHandler<GetGamepadConfigCo
     {
         var cardProfile = _context.CardProfiles
             .Include(x => x.GamepadSetting)
+            .Include(x => x.PlayerProfile)
             .FirstOrDefault(x => x.AccessCode == request.AccessCode && x.ChipId == request.ChipId);
 
         if (cardProfile is null)
         {
             throw new InvalidCardDataException("Card Profile is invalid");
         }
-        
-        return Task.FromResult(cardProfile.GamepadSetting.ToGamepadConfig());
+
+        var r = cardProfile.GamepadSetting.ToGamepadConfig();
+        r.GamePadStyle = cardProfile.PlayerProfile.GamePadStyle;
+        r.CommandDispConfig = cardProfile.PlayerProfile.CommandDispConfig;
+
+        return Task.FromResult(r);
     }
 }

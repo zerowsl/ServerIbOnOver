@@ -17,7 +17,7 @@ public class PreLoadMobileUserBasicInformationCommand : IPreLoadMobileUserGroupC
     {
         mobileUserGroup.UserId = (uint)cardProfile.Id;
         mobileUserGroup.PlayerName = cardProfile.UserName;
-        mobileUserGroup.KeyconfigNumber = 3;
+        mobileUserGroup.KeyconfigNumber = 1;
         mobileUserGroup.Gp = cardProfile.Gp;
     }
 }

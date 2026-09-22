@@ -105,7 +105,7 @@ public partial class PreLoadCardQuery2Handler
         var mobileUserGroupCommands = new List<IPreLoadMobileUserGroupCommand>()
         {
             new PreLoadMobileUserBasicInformationCommand(_context),
-            new DisplaySettingCommand(_context),
+            //new DisplaySettingCommand(_context),
             new PreLoadTitleCommand(_context),
             new PreLoadTriadPartnerCommand(_context),
             new NaviSettingCommand(_context),
@@ -180,6 +180,7 @@ public partial class PreLoadCardQuery2Handler(ILogger<PreLoadCardQuery2Handler> 
                 new IbTeamClassInformationCommand(_context, _config.CustomConfigs),
 
                 // .pre_load_card.User
+                new DisplaySettingCommand(_context),
                 new LoadGpBoostRateCommand(_context, _config), 
                 new LoadPlayerBadgeCommand(_context),
             ];

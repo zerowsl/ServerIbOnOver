@@ -10,6 +10,7 @@
 <PageTitle>@localizer["viewcarddetailtitle"]</PageTitle>
 <MudStack Row Class="flex-column">
     <h1>@localizer["viewcarddetailtitle"]</h1>
+    <MudButton Class="align-self-end" Href="@($"/Cards/Customize/{ChipId}")" Variant="Variant.Filled" Color="Color.Primary">跳转到编辑页面</MudButton>
 </MudStack>
 
 @if (errorMessage is not null)

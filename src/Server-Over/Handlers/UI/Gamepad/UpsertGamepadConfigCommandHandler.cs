@@ -24,6 +24,7 @@ public class UpsertGamepadConfigCommandHandler : IRequestHandler<UpsertGamepadCo
         
         var cardProfile = _context.CardProfiles
             .Include(x => x.GamepadSetting)
+            .Include(x => x.PlayerProfile)
             .FirstOrDefault(x => x.AccessCode == updateRequest.AccessCode && x.ChipId == updateRequest.ChipId);
 
         if (cardProfile is null)
@@ -41,7 +42,10 @@ public class UpsertGamepadConfigCommandHandler : IRequestHandler<UpsertGamepadCo
         cardProfile.GamepadSetting.RtKey = updateRequest.GamepadConfig.RtKey;
         cardProfile.GamepadSetting.LsbKey = updateRequest.GamepadConfig.LsbKey;
         cardProfile.GamepadSetting.RsbKey = updateRequest.GamepadConfig.RsbKey;
-        
+
+        cardProfile.PlayerProfile.GamePadStyle = updateRequest.GamepadConfig.GamePadStyle;
+        cardProfile.PlayerProfile.CommandDispConfig = updateRequest.GamepadConfig.CommandDispConfig;
+
         _context.SaveChanges();
 
         return Task.FromResult(new BasicResponse

@@ -12,4 +12,6 @@ public class GamepadConfig
     public uint RtKey { get; set; } = 8;
     public uint LsbKey { get; set; } = 0;
     public uint RsbKey { get; set; } = 9;
+    public uint GamePadStyle { get; set; } = 0;
+    public uint CommandDispConfig { get; set; } = 0;
 }

@@ -29,8 +29,13 @@ public class PlayerProfile : BaseEntity
     [Required] 
     public uint FullLoadCardCount { get; set; } = 0;
     
-    [Required] 
+    [Required]
     public bool ExTutorialDispFlag { get; set; } = false;
-    
+
+    [Required]
+    public uint GamePadStyle { get; set; } = 0;
+    [Required]
+    public uint CommandDispConfig { get; set; } = 0;
+
     public virtual CardProfile CardProfile { get; set; } = null!;
 }

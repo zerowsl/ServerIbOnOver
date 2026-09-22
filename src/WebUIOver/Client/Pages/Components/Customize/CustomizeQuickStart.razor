@@ -79,18 +79,25 @@
                                 </MudStack>
                             </MudItem>*@
                             <MudItem xs="3" sm="3">
-                                <MudForm>
+                                @*<MudForm>
                                     <MudNumericField @bind-Value="CustomizeCardContext.QuickStartProfile.TeamType" T="uint"
                                                   Immediate="true" HideSpinButtons="true"
                                                   Variant="Variant.Outlined"
                                                   Label="出击类型" />
-                                </MudForm>
+                                </MudForm>*@
+                                <MudSelect @bind-Value="CustomizeCardContext.QuickStartProfile.TeamType" T="uint"
+                                           Label="出击类型" Variant="Variant.Outlined">
+                                    @foreach (var item in GetTeams())
+                                    {
+                                        <MudSelectItem Value="item.Id">@item.Value</MudSelectItem>
+                                    }
+                                </MudSelect>
                             </MudItem>
-                            <MudItem xs="3" sm="3">
+                            @*<MudItem xs="3" sm="3">
                                 <MudStack Justify="Justify.Center" Style="min-height: 50px;">
                                     <MudText>0=单人 1=组队</MudText>
                                 </MudStack>
-                            </MudItem>
+                            </MudItem>*@
                         </MudGrid>
                     </MudItem>
                     @* MstMobileSuitId and BurstType *@
@@ -212,7 +219,13 @@
         yield return new() { Id = 1, Value = "相同游戏模式才保存" };
         yield return new() { Id = 2, Value = "只设置不保存" };
     }
-
+    
+    static IEnumerable<IdValuePair> GetTeams()
+    {
+        yield return new() { Id = 0, Value = "单人" };
+        yield return new() { Id = 1, Value = "组队" };
+    }
+    
     static IEnumerable<IdValuePair> GetBurstTypes()
     {
         yield return new() { Id = 0, Value = "E觉" };
