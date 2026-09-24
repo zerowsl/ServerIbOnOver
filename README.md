@@ -4,7 +4,8 @@
 - 项目开始时间, 请看[内部初版修改开始时间图](./内部初版修改开始时间图.png)
 - 最初发布, 请看[v1版发布说明](./history/v1.0/发布说明.v1.md)
 ```
-下载:(bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
+下载地址1:(bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
+下载地址2：https://www.mediafire.com/folder/w3d6yd794no39/ServerIbOnOver
 
 data里的json文件为页面基础数据，感谢各路群友整理!!
 不带图包，图包都比程序大，图包请自行另外下载...
