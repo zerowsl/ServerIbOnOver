@@ -1,15 +1,15 @@
 ## ServerIbOnOver
-基于[原poc库](https://github.com/asesidaa/EXVS2-POC/)里的ob代码开发，AI辅助并人工对其修正，并通过监测游戏提交数据来对比修改.<br/>
+基于原[EXVS2-POC](https://github.com/asesidaa/EXVS2-POC/)库里的ob代码开发，AI辅助并人工对其修正，并通过监测游戏提交数据来对比修改.<br/>
 依赖库升级到net10,尽量在保留ob代码情况下,使用结果mapping的方式返回给客户端.
 - 项目开始时间, 请看[内部初版修改开始时间图](./内部初版修改开始时间图.png)
 - 最初发布, 请看[v1版发布说明](./history/v1.0/发布说明.v1.md)
-```
-下载地址1:(bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
-下载地址2：https://www.mediafire.com/folder/w3d6yd794no39/ServerIbOnOver
 
-data里的json文件为页面基础数据，感谢各路群友整理!!
-不带图包，图包都比程序大，图包请自行另外下载...
-```
+下载地址任选其一:
+- (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
+- [Mediafire](https://www.mediafire.com/file/ih574xeexs9pmer/ServerIbOnOver_v1.3.8.192.7z/file)
+
+data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
+不带图包，图包都比程序大，图包请自行另外下载... <br/>
 
 * 对应游戏1.04，刷卡默认地址：‘http://127.0.0.1:28080’
 * 如果你同时也游玩OB或者有多款ib刷卡，为避免刷卡页面冲突，那么你需要在‘kestrel.json’里改端口..
@@ -46,7 +46,7 @@ data里的json文件为页面基础数据，感谢各路群友整理!!
 
 * 快速启动
   1.游戏内支持快速启动加载和保存(暂不支持练习模式和训练场)
-  2.刷卡页面支持自定义修改，关闭也支持(详情请查看1.3.2更新)
+  2.刷卡页面支持自定义修改，关闭也支持 (详情请查看1.3.2更新)
   3.注意：不正确的配置可能会使游戏闪退..
 
 * 对战记录页面-修复与优化
