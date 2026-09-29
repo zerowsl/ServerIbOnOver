@@ -7,6 +7,7 @@ services:
   match3:
     image: vl00at111/exvs2_match3
     container_name: exvs2_match3
+    user: "0"
     
     # restart: always
 

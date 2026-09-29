@@ -6,7 +6,7 @@
 
 下载地址任选其一:
 - (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
-- [Mediafire](https://www.mediafire.com/file/ih574xeexs9pmer/ServerIbOnOver_v1.3.8.192.7z/file)
+- [Mediafire](https://www.mediafire.com/file/zbex0x1mj0s5kwk/ServerIbOnOver_v1.3.8.352.7z/file)
 
 data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 不带图包，图包都比程序大，图包请自行另外下载... <br/>
@@ -14,7 +14,7 @@ data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 * 对应游戏1.04，刷卡默认地址：‘http://127.0.0.1:28080’
 * 如果你同时也游玩OB或者有多款ib刷卡，为避免刷卡页面冲突，那么你需要在‘kestrel.json’里改端口..
 
-# 查看最近 [v1.3.8.192](./history/v1.3.8.192/发布说明.v1.3.8.192.md) 更新
+# 查看最近 [v1.3.8.352](./history/v1.3.8.352/发布说明.v1.3.8.352.md) 更新
 
 <b>旧功能具体描述请查看历史更新</b>
 
