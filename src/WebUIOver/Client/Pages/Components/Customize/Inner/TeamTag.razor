@@ -69,6 +69,8 @@
                            Label=""
                            LabelPlacement="Placement.Start"/>
             </MudItem>
+	    
+	    @* // ob
             <MudItem xs="9" sm="11">
                 <MudField Label="@localizer["teamtag_team_bgm"]" Variant="Variant.Outlined">
                     @{
@@ -199,8 +201,7 @@
             <MudItem xs="2" sm="1">
                 <MudIconButton Variant="Variant.Filled" Size="Size.Small" Icon="@Icons.Material.Filled.Edit" aria-label="edit"
                                OnClick="() => OpenChangeTeamEmblemsDialog(CurrentTeam)"/>
-            </MudItem>
-
+            </MudItem> *@
             <MudItem xs="12">
                 <MudButton Variant="Variant.Filled" Color="Color.Error" FullWidth="true" OnClick="PreRemoveTeam">@localizer["remove_team_button"]</MudButton>
             </MudItem>

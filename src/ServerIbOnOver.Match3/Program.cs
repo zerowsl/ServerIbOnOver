@@ -2,7 +2,7 @@
 using Microsoft.OpenApi;
 using Serilog;
 using ServerOver;
-using ServerOver.BackgroundServices;
+using ServerOver.BackgroundServices.Match3;
 using ServerOver.Caches;
 using ServerOver.Models.Config;
 
@@ -24,8 +24,10 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
     Console.Title = GlobalVars.Title;
-    
-    const string configurationsDirectory = "Configurations";
+
+    var configurationsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Configurations");
+    Log.Information($"cfg-dir='{configurationsDirectory}'");
+
     builder.Configuration.AddJsonFile($"{configurationsDirectory}/kestrel.json", optional: false)
         .AddJsonFile($"{configurationsDirectory}/log.json", optional: false)
         .AddJsonFile($"{configurationsDirectory}/server.json", optional: false);

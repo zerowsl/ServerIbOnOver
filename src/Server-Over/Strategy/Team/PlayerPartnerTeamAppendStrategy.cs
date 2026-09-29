@@ -5,18 +5,11 @@ using ServerOver.Persistence;
 
 namespace ServerOver.Strategy.Team;
 
-public class PlayerPartnerTeamAppendStrategy : ITagTeamAppendStrategy
+public class PlayerPartnerTeamAppendStrategy(ServerDbContext context) : ITagTeamAppendStrategy
 {
-    private readonly ServerDbContext _context;
-
-    public PlayerPartnerTeamAppendStrategy(ServerDbContext context)
-    {
-        _context = context;
-    }
-
     public void Append(CardProfile cardProfile, List<TagTeamGroup> tagTeams)
     {
-        _context.TagTeamDataDbSet
+        context.TagTeamDataDbSet
             .Where(x => x.TeammateCardId == cardProfile.Id)
             .ToList()
             .ForEach(tagTeam =>
@@ -33,15 +26,17 @@ public class PlayerPartnerTeamAppendStrategy : ITagTeamAppendStrategy
                     EmblemId = tagTeam.EmblemId,
                     BgmId = tagTeam.BgmId,
                     NameColorId = tagTeam.NameColorId,
-                    BoostRemains = TeamConstants.BoostRemains
+                    BoostRemains = TeamConstants.BoostRemains,
+                    //GroupTagPoint = (uint)tagTeam.OnlineRankPoint,
                 });
             });
 
         var partnerIds = tagTeams.Select(x => (int)x.PartnerId).Distinct().ToArray();
-        var partners = partnerIds.Length == 0 ? [] : _context.CardProfiles.Where(x => partnerIds.Contains(x.Id)).ToArray();
-        var partnerLvs = partnerIds.Length == 0 ? [] : _context.PlayerLevelDbSet.Where(x => partnerIds.Contains(x.CardId)).ToArray();
-        var partnerBadges = partnerIds.Length == 0 ? [] : _context.PlayerBadgeDbSet.Where(x => partnerIds.Contains((int)x.CardId)).ToArray();
-        var partnerTeamClasses = partnerIds.Length == 0 ? [] : _context.TeamClassMatchGRecordDbSet.Where(x => partnerIds.Contains(x.CardId)).ToArray();
+        var partners = partnerIds.Length == 0 ? [] : context.CardProfiles.Where(x => partnerIds.Contains(x.Id)).ToArray();
+        var partnerLvs = partnerIds.Length == 0 ? [] : context.PlayerLevelDbSet.Where(x => partnerIds.Contains(x.CardId)).ToArray();
+        var partnerBadges = partnerIds.Length == 0 ? [] : context.PlayerBadgeDbSet.Where(x => partnerIds.Contains((int)x.CardId)).ToArray();
+        var partnerTeamClasses = partnerIds.Length == 0 ? [] : context.TeamClassMatchGRecordDbSet.Where(x => partnerIds.Contains(x.CardId)).ToArray();
+        var onlinePairs = partnerIds.Length == 0 ? [] : context.OnlinePairDbSet.Where(x => x.CardId == x.CardId).ToArray();
 
         tagTeams.ForEach(tagTeam =>
         {
@@ -60,6 +55,8 @@ public class PlayerPartnerTeamAppendStrategy : ITagTeamAppendStrategy
                 tagTeam.PartnerClassId = g.ClassId;
                 tagTeam.PartnerGradeId = g.GradeId;
             }
+
+            tagTeam.TagStatus = onlinePairs.Any(x => x.TeamId == tagTeam.Id) ? 1u : 0u;
         });
     }
 }
