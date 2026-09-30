@@ -153,7 +153,7 @@ public class CheckMatchingCommand2Handler(IMatchingCache matchingCache,
             //33u => 1, // 房1人 custom match // pcb还是会匹配3个cpu然后会闪退..
 			_ => 0
 		};
-		if (c == 0 && _cardServerConfig.CustomConfigs.Room?.Enable == true && worldId == _cardServerConfig.CustomConfigs.Room.WorldId)
+		if (c == 0 && _cardServerConfig.CustomConfigs.Room?.Enable == true && (worldId == _cardServerConfig.CustomConfigs.Room.WorldId || worldId > 100u))
 		{
 			c = 3;
 		}

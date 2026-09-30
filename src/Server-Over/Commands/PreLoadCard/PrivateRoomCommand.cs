@@ -19,7 +19,6 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
 
         preLoadCard.MatchingTag = new MatchingTag()
         {
-            Id = MyUtils.ToUintByCrc32(config.CustomConfigs.Room.Code),
             TagName = config.CustomConfigs.Room.Code,
             TagType = config.CustomConfigs.Room.TagType,
             MatchingType = config.CustomConfigs.Room.MatchingType,
@@ -27,11 +26,19 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
             EndDate = (ulong)DateTimeOffset.Parse("2099-12-31").ToUnixTimeSeconds(),
             RuleType = config.CustomConfigs.Room.RuleType,
             SelectableMsIds = config.CustomConfigs.Room.SelectableMsIds,
-            WorldId = config.CustomConfigs.Room.WorldId,
+            WorldId = config.CustomConfigs.Room.WorldId, //
             RevengeFlag = config.CustomConfigs.Room.RevengeFlag,
             Timer = config.CustomConfigs.Room.Timer,
             FesRuleType = config.CustomConfigs.Room.FesRuleType
         };
+        var str = $"{preLoadCard.MatchingTag.TagName}:t{preLoadCard.MatchingTag.TagType}:m{preLoadCard.MatchingTag.MatchingType}";
+        preLoadCard.MatchingTag.Id = preLoadCard.MatchingTag.WorldId = MyUtils.ToUintByCrc32(str);
+        if (preLoadCard.MatchingTag.Id <= 100) 
+        {
+            // 为了加快匹配速度与准确,避免跟游戏自带的店外店内一样的值,
+            // 房间id和worldId小于100,直接刷卡失败...
+            throw new Exception("The roomid of gen is less than 100, please change the room code !!");
+        }
     }
 
     private void FillByDb(CardProfile cardProfile, Response.PreLoadCard preLoadCard)
