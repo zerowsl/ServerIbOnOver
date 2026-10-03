@@ -1,0 +1,46 @@
+# 运行: cd "目录"; docker compose up -f docker-compose-x64-with-match3-stun.yaml -d
+# 适用于x64(pc)作为服务器的docker-compose部署，整合match3和stun
+# 镜像默认就是最新版本号...
+
+version: "3"
+
+services:
+  stun:
+    image: vl00at111/exvs2_local_stun
+    container_name: exvs2_local_stun
+    user: "0"
+    restart: always
+    ports:
+      - "3478:3478/udp"
+    networks:
+      - exvs2
+
+  match3:
+    image: vl00at111/exvs2_match3
+    container_name: exvs2_match3
+    user: "0"
+    restart: always
+    ports:
+      - "28083:28083"
+      
+    #environment:
+    #  - USER_UID=1000
+    
+    volumes:
+      - ./Configurations:/app/Configurations
+      
+    networks:
+      - exvs2
+
+# 自定义网络
+networks:
+  # 2选1, 不存在就创建，存在就报错
+  exvs2:
+    driver: bridge
+    name: exvs2
+  
+  # 2选1，存在就使用，不存在就报错
+  #exvs2:
+  #  external: true
+  #  name: exvs2
+  

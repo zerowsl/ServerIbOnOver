@@ -1,0 +1,45 @@
+# 运行: cd "目录"; docker compose up -f docker-compose-arm64v8-with-match3-stun.yaml -d
+# 适用于arm64(安卓)作为服务器的docker-compose部署，整合match3和stun
+# 镜像请自行修改最新版本号...
+
+version: "3"
+
+services:
+  stun:
+    image: vl00at111/exvs2_local_stun:1.1-arm64v8
+    container_name: exvs2_local_stun
+    user: "0"
+    restart: always
+    ports:
+      - "3478:3478/udp"
+    networks:
+      - exvs2
+
+  match3:
+    image: vl00at111/exvs2_match3:1.2-arm64v8
+    container_name: exvs2_match3
+    user: "0"
+    restart: always
+    ports:
+      - "28083:28083"
+      
+    #environment:
+    #  - USER_UID=1000
+    
+    volumes:
+      - ./Configurations:/app/Configurations
+      
+    networks:
+      - exvs2
+
+# 自定义网络
+networks:
+  # 2选1, 不存在就创建，存在就报错
+  exvs2:
+    driver: bridge
+    name: exvs2
+  
+  # 2选1，存在就使用，不存在就报错
+  #exvs2:
+  #  external: true
+  #  name: exvs2
