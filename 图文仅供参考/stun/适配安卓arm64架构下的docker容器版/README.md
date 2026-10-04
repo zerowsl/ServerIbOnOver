@@ -1,5 +1,5 @@
 在局域网下，你不是win11无法开启镜像网络模式，<br/>
-或者你手机牛逼可以运行手机版ib... <br/>
+或者你手机牛逼可以运行手机版ib(手机都用来玩ib了，装个docker又怎么了)... <br/>
 如需要开启stun，此时可以尝试arm64的容器版stun...
 
 1. 安卓无root的容器app，可以安装这个[Podroid](https://github.com/ExTV/Podroid)

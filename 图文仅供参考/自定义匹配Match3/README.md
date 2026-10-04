@@ -7,4 +7,4 @@
 # 其他参考
 - [单人店外ClassMatchG下的1(+cpu)vs1(+cpu)](./单人店外ClassMatchG下的1(+cpu)vs1(+cpu).png)
 - [双人店外ClassMatchG下的2v2cpu](./双人店外ClassMatchG下的2v2cpu.png)
-<!--<details><summary></summary>被雪藏了的可能有bug的店外无限制匹配真人2v2...</details>-->
+- <details><summary>...</summary>被雪藏了的可能有bug的局域网店外无限制匹配真人2v2, 需要吧某参数改成4...</details>
