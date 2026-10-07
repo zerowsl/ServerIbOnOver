@@ -4,7 +4,6 @@
 //   Input: my.proto
 // </auto-generated>
 
-//#region Designer generated code
 #pragma warning disable CS0612, CS0618, CS1591, CS3021, IDE0079, IDE1006, RCS1036, RCS1057, RCS1085, RCS1192
 namespace nue.protocol.exvs;
 
@@ -179,11 +178,11 @@ public partial class Response2
 			public uint grade_1_team { get; set; }
             
             [global::ProtoBuf.ProtoMember(148, IsRequired = true)]
-            public uint p148 { get; set; } = 4;
+            public uint p148 { get; set; } = 8;
             [global::ProtoBuf.ProtoMember(149, IsRequired = true)]
-            public uint p149 { get; set; } = 8;
+            public uint p149 { get; set; } = 6;
             [global::ProtoBuf.ProtoMember(150, IsRequired = true)]
-            public uint p150 { get; set; } = 6;
+            public uint p150 { get; set; } = 4;
             
         }
 
@@ -437,4 +436,3 @@ public partial class Response2
 }
 
 #pragma warning restore CS0612, CS0618, CS1591, CS3021, IDE0079, IDE1006, RCS1036, RCS1057, RCS1085, RCS1192
-//#endregion

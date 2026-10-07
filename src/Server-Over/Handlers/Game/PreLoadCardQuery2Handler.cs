@@ -105,7 +105,7 @@ public partial class PreLoadCardQuery2Handler
         var mobileUserGroupCommands = new List<IPreLoadMobileUserGroupCommand>()
         {
             new PreLoadMobileUserBasicInformationCommand(_context),
-            //new DisplaySettingCommand(_context),
+            //new DisplaySettingCommand(_context), // ob
             new PreLoadTitleCommand(_context),
             new PreLoadTriadPartnerCommand(_context),
             new NaviSettingCommand(_context),

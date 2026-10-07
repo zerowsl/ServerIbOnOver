@@ -68,6 +68,7 @@ public partial class Response2
 
             [global::ProtoBuf.ProtoMember(5, Name = @"practice_info", IsRequired = true)]
             public PracticeGroup PracticeInfo { get; set; } = new();
+            
             [global::ProtoBuf.ProtoMember(6, Name = "high_score_info")]
 			public global::System.Collections.Generic.List<HighScoreInfo> HighScoreInfos { get; } = new();
             
@@ -293,17 +294,13 @@ public partial class Response2
             // public global::System.Collections.Generic.List<CommandMessageGroup> PlayingMessages { get; } = new();
             // [global::ProtoBuf.ProtoMember(5, Name = @"result_messages")]
             // public global::System.Collections.Generic.List<CommandMessageGroup> ResultMessages { get; } = new();
-            //
-            // [global::ProtoBuf.ProtoMember(31, Name = @"online_shuffle_playing_messages")]
-            // public global::System.Collections.Generic.List<CommandMessageGroup> OnlineShufflePlayingMessages { get; } = new();
-            //
-            // [global::ProtoBuf.ProtoMember(32, Name = @"online_shuffle_result_messages")]
-            // public global::System.Collections.Generic.List<CommandMessageGroup> OnlineShuffleResultMessages { get; } = new();
-            //
             // [global::ProtoBuf.ProtoMember(16, Name = @"opening_messages")]
             // public global::System.Collections.Generic.List<CommandMessageGroup> OpeningMessages { get; } = new();
-            //
-            // [global::ProtoBuf.ProtoMember(33, Name = @"online_shuffle_opening_messages")]
+            // [global::ProtoBuf.ProtoMember(6, Name = @"online_shuffle_playing_messages")]
+            // public global::System.Collections.Generic.List<CommandMessageGroup> OnlineShufflePlayingMessages { get; } = new();
+            // [global::ProtoBuf.ProtoMember(7, Name = @"online_shuffle_result_messages")]
+            // public global::System.Collections.Generic.List<CommandMessageGroup> OnlineShuffleResultMessages { get; } = new();
+            // [global::ProtoBuf.ProtoMember(17, Name = @"online_shuffle_opening_messages")]
             // public global::System.Collections.Generic.List<CommandMessageGroup> OnlineShuffleOpeningMessages { get; } = new();
 
             [global::ProtoBuf.ProtoMember(8, Name = @"mst_mobile_suit_id", IsRequired = true)]
@@ -375,12 +372,12 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(30, Name = @"pcoin_ticket_num", IsRequired = true)]
             public uint p30 { get; set; } = 0;
             
-            [global::ProtoBuf.ProtoMember(31, Name = @"solo_command_messages")]
-            public CommandMessageGroup p31 { get; } = new();
-            [global::ProtoBuf.ProtoMember(32, Name = @"team_command_messages")]
-            public CommandMessageGroup p32 { get; } = new();
-            [global::ProtoBuf.ProtoMember(33, Name = @"instant_team_command_messages")]
-            public CommandMessageGroup p33 { get; } = new();
+            [global::ProtoBuf.ProtoMember(31, Name = @"solo_command_messages", IsRequired = true)]
+            public CommandMessageData p31 { get; } = new();
+            [global::ProtoBuf.ProtoMember(32, Name = @"team_command_messages", IsRequired = true)]
+            public CommandMessageData p32 { get; } = new();
+            [global::ProtoBuf.ProtoMember(33, Name = @"instant_team_command_messages", IsRequired = true)]
+            public CommandMessageData p33 { get; } = new();
             
             [global::ProtoBuf.ProtoMember(34, Name = @"command_message_auto_flag", IsRequired = true)]
             public uint p34 { get; set; } = 0;
@@ -430,43 +427,65 @@ public partial class Response2
                 public uint p5 { get; set; } = 0;
             }
 
+            #region // CommandMessageGroup
+            // [global::ProtoBuf.ProtoContract()]
+            // public partial class CommandMessageGroup : global::ProtoBuf.IExtensible
+            // {
+            //     private global::ProtoBuf.IExtension __pbn__extensionData;
+            //     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            //         => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+            //
+            //     [global::ProtoBuf.ProtoMember(1, Name = @"command", IsRequired = true)]
+            //     public uint Command { get; set; }
+            //
+            //     [global::ProtoBuf.ProtoMember(2, Name = @"message_text", IsRequired = true)]
+            //     public string MessageText { get; set; } = "";
+            //
+            //     [global::ProtoBuf.ProtoMember(3, Name = @"unique_message_id", IsRequired = true)]
+            //     public uint UniqueMessageId { get; set; }
+            //
+            // }
+            #endregion // CommandMessageGroup
+
             [global::ProtoBuf.ProtoContract()]
-            public partial class CommandMessageGroup : global::ProtoBuf.IExtensible
+            public partial class CommandMessageData : global::ProtoBuf.IExtensible
             {
                 private global::ProtoBuf.IExtension __pbn__extensionData;
                 global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
                     => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
                 [global::ProtoBuf.ProtoMember(1, Name = @"start_message_id", IsRequired = true)]
-                public uint Command { get; set; }
-
+                public uint start_message_id { get; set; }
                 [global::ProtoBuf.ProtoMember(2, Name = @"start_message_text", IsRequired = true)]
-                public string MessageText { get; set; } = "";
+                public string start_message_text { get; set; } = "";
 
                 [global::ProtoBuf.ProtoMember(3, Name = @"up_message_id", IsRequired = true)]
-                public uint UniqueMessageId { get; set; }
-
+                public uint up_message_id { get; set; }
                 [global::ProtoBuf.ProtoMember(4, Name = @"up_message_text", IsRequired = true)]
-                public string p4 { get; set; } = "";
+                public string up_message_text { get; set; } = "";
+                
                 [global::ProtoBuf.ProtoMember(5, Name = @"down_message_id", IsRequired = true)]
-                public uint p5 { get; set; } = 0;
+                public uint down_message_id { get; set; } = 0;
                 [global::ProtoBuf.ProtoMember(6, Name = @"down_message_text", IsRequired = true)]
-                public string p6 { get; set; } = "";
+                public string down_message_text { get; set; } = "";
+                
                 [global::ProtoBuf.ProtoMember(7, Name = @"left_message_id", IsRequired = true)]
-                public uint p7 { get; set; } = 0;
+                public uint left_message_id { get; set; } = 0;
                 [global::ProtoBuf.ProtoMember(8, Name = @"left_message_text", IsRequired = true)]
-                public string p8 { get; set; } = "";
+                public string left_message_text { get; set; } = "";
+                
                 [global::ProtoBuf.ProtoMember(9, Name = @"right_message_id", IsRequired = true)]
-                public uint p9 { get; set; } = 0;
+                public uint right_message_id { get; set; } = 0;
                 [global::ProtoBuf.ProtoMember(10, Name = @"right_message_text", IsRequired = true)]
-                public string p10 { get; set; } = "";
+                public string right_message_text { get; set; } = "";
+                
                 [global::ProtoBuf.ProtoMember(11, Name = @"end_message_id", IsRequired = true)]
-                public uint p11 { get; set; } = 0;
+                public uint end_message_id { get; set; } = 0;
                 [global::ProtoBuf.ProtoMember(12, Name = @"end_message_text", IsRequired = true)]
-                public string p12 { get; set; } = "";
+                public string end_message_text { get; set; } = "";
 
             }
-
+            
             [global::ProtoBuf.ProtoContract()]
             public partial class GamepadGroup : global::ProtoBuf.IExtensible
             {

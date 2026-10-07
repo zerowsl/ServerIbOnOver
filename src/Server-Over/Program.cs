@@ -32,7 +32,7 @@ try
     Console.Title = GlobalVars.Title;
     ProgramArgs.From(args);
     
-    const string configurationsDirectory = "Configurations";
+    var configurationsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Configurations");
     builder.Configuration.AddJsonFile($"{configurationsDirectory}/kestrel.json", optional: false)
         .AddJsonFile($"{configurationsDirectory}/log.json", optional: false)
         .AddJsonFile($"{configurationsDirectory}/server.json", optional: false);
