@@ -1,10 +1,10 @@
 ## ServerIbOnOver
 基于原[EXVS2-POC](https://github.com/asesidaa/EXVS2-POC/)库里的ob代码开发，AI辅助并人工对其修正，并通过监测游戏提交数据来对比修改.<br/>
-依赖库升级到net10,尽量在保留ob代码情况下,使用结果mapping的方式返回给客户端.
+依赖库升级到net10,有些实现尽量在保留ob代码情况下，在返回给客户端前，再一次mapping到新结果才再返回给客户端...
 - 项目开始时间, 请看[内部初版修改开始时间图](./内部初版修改开始时间图.png)
 - 最初发布, 请看[v1版发布说明](./history/v1.0/发布说明.v1.md)
 
-下载地址任选其一:
+下载地址以下任选其一:
 - (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
 - [Mediafire](https://www.mediafire.com/file/zbex0x1mj0s5kwk/ServerIbOnOver_v1.3.8.352.7z/file)
 
