@@ -10,6 +10,6 @@
 - <details>
     <summary>...</summary>
     
-    被雪藏了的可能有bug的[局域网店外无限制匹配真人2v2](./media/局域网店外ClassMatchG无匹配限制真人2v2.png), 需要吧某参数改成4...
+    被雪藏了的可能有bug的[局域网店外ClassMatchG无限制匹配真人2v2](./media/局域网店外ClassMatchG无匹配限制真人2v2.png), 需要吧某参数改成4...
 
   </details>

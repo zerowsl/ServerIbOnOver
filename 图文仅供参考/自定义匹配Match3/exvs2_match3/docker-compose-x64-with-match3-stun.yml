@@ -9,7 +9,7 @@ services:
     image: vl00at111/exvs2_local_stun
     container_name: exvs2_local_stun
     user: "0"
-    restart: always
+    restart: unless-stopped
     ports:
       - "3478:3478/udp"
     networks:
@@ -19,12 +19,12 @@ services:
     image: vl00at111/exvs2_match3
     container_name: exvs2_match3
     user: "0"
-    restart: always
+    restart: unless-stopped
     ports:
       - "28083:28083"
       
-    #environment:
-    #  - USER_UID=1000
+    environment:
+      - TZ=Asia/Shanghai
     
     volumes:
       - ./Configurations:/app/Configurations
