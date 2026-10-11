@@ -7,7 +7,7 @@
 3. 启动并进入终端运行命令启动容器
 ```shell
 # 启动容器，其中1.1是版本号，如有新版要替换成新版
-docker run -d --name exvs2_local_stun -p 3478:3478/udp vl00at111/exvs2_local_stun:1.1-arm64v8
+docker run -d --name exvs2-local-stun -p 3478:3478/udp vl00at111/exvs2-local-stun:1.1-arm64v8
 ```
 4. 下载并安装[uu安卓版手机app](https://uu.163.com/), 官网点手游加速会看到安卓版下载...
 5. 进入uu房间，同一个账号是可以跟pc端一起进入同一间房的

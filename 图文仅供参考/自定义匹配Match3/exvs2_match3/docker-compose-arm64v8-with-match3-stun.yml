@@ -6,8 +6,8 @@ version: "3"
 
 services:
   stun:
-    image: vl00at111/exvs2_local_stun:1.1-arm64v8
-    container_name: exvs2_local_stun
+    image: vl00at111/exvs2-local-stun:1.1-arm64v8
+    container_name: exvs2-local-stun
     user: "0"
     restart: unless-stopped
     ports:
@@ -16,8 +16,8 @@ services:
       - exvs2
 
   match3:
-    image: vl00at111/exvs2_match3:1.2-arm64v8
-    container_name: exvs2_match3
+    image: vl00at111/exvs2-match3:1.2.2-arm64v8
+    container_name: exvs2-match3
     user: "0"
     restart: unless-stopped
     ports:

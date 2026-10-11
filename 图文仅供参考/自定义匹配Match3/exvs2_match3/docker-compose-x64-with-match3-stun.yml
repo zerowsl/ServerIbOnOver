@@ -6,8 +6,8 @@ version: "3"
 
 services:
   stun:
-    image: vl00at111/exvs2_local_stun
-    container_name: exvs2_local_stun
+    image: vl00at111/exvs2-local-stun
+    container_name: exvs2-local-stun
     user: "0"
     restart: unless-stopped
     ports:
@@ -16,8 +16,8 @@ services:
       - exvs2
 
   match3:
-    image: vl00at111/exvs2_match3
-    container_name: exvs2_match3
+    image: vl00at111/exvs2-match3
+    container_name: exvs2-match3
     user: "0"
     restart: unless-stopped
     ports:
@@ -43,4 +43,3 @@ networks:
   #exvs2:
   #  external: true
   #  name: exvs2
-  

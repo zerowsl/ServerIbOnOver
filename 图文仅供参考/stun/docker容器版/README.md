@@ -2,8 +2,8 @@
 
 2. 参考命令 
 ``` shell
-# 运行容器
-docker run -d --name exvs2_local_stun -p 3478:3478/udp vl00at111/exvs2_local_stun
+# 运行容器(x64)
+docker run -d --name exvs2-local-stun -p 3478:3478/udp vl00at111/exvs2-local-stun
 
 # 如果单机情况下,主机用127.0.0.1访问不了时,需要WSL2的ip访问,Powershell或cmd里运行获取该ip..
 wsl hostname -I
