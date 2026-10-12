@@ -1,9 +1,11 @@
 (手机都用来玩模拟器和ib了，装个docker又怎么了)... <br>
 
+# 安卓无root简易搭建整合match3和stun
+
 1. 安卓无root的容器app，可以安装这个[Podroid](https://github.com/ExTV/Podroid)最新版 <br>
    安装后自带docker和docker-compose ..
 
-2. 安装app后设置，记得[打开端口和下载文件夹共享](../../stun/适配安卓arm64架构下的docker容器版/Podroid打开端口.jpg)
+2. 安装app后设置，记得[打开端口和打开下载文件夹共享](../../stun/适配安卓arm64架构下的docker容器版/Podroid打开端口.jpg)
 
 3. 可选修改‘exvs2-match3’文件夹里面的配置文件 <br>
    并把‘exvs2-match3’文件夹放到 手机的Download目录(一般是/sdcard/Download) 里去
@@ -23,7 +25,8 @@ docker compose up -f docker-compose-arm64v8-with-match3-stun.yaml -d
 
 6. 下载并安装[uu安卓版手机app](https://uu.163.com/), 官网点手游加速会看到安卓版下载...
 
-7. 开启或进入uu房间，同一个账号是可以跟pc端一起进入同一间房的
+7. 开启或进入uu房间，同一个账号是可以跟pc端一起进入同一间房的 <br>
+   [UU房获取ip](../media/UU房获取ip.png)
 
 8. pc和手机浏览器都可以访问以下地址测试是否安装成功, match3默认端口是28083 <br>
    http://172.19.163.2:28083/test (ip是上面获得你开服务的uu的ip) <br>
