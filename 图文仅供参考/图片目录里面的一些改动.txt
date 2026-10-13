@@ -1,0 +1,6 @@
+刷卡图片目录依旧为 {刷卡根目录}/wwwroot/images
+images 里面有一些改动，改动如下：
+1. 用户等级由于ib变更为1-999-无限, 目录变为 player_level/ib/
+2. 本刷卡对战记录页面支持区分是否店外，非店外显示徽章，图片位置为 player_badge/{id}.webp
+    店外显示店外等级，图片位置为 class/{ClassId}/{GradeId}.webp
+    但是目前没找到图......
