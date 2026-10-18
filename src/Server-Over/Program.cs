@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi;
 using Serilog;
 using ServerOver;
+using ServerOver.BackgroundServices;
 using ServerOver.Caches;
 using ServerOver.Common.Validation;
 using ServerOver.Middlewares;
@@ -67,7 +68,12 @@ try
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
         c.DocInclusionPredicate((docName, description) => true);
     });
-
+    
+    if (bool.TryParse(builder.Configuration["CardServerConfig:CustomConfigs:ClearUpTooMuchBattleHistory"], out var b1) && b1)
+    {
+        builder.Services.AddHostedService<ClearUpTooMuchBattleHistoryBgService>();
+    }
+    
     builder.Services.AddMemoryCache();
 	builder.Services.AddSingleton<IMatchingCache, MatchingCache>();
     builder.Services.AddSingleton<ICardIdPcbSerialCache, CardIdPcbSerialCache>();

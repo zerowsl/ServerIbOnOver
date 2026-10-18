@@ -20,8 +20,13 @@ internal static partial class GlobalVars
                 PrimaryPort = int.TryParse(args[1], out var _p1) ? _p1 : PrimaryPort;
                 break;
 			case 1:
+				IPAddress = IPAddress.TryParse(Environment.GetEnvironmentVariable("BIND_ADDRESS"), out var _ip) ? _ip : IPAddress;
                 PrimaryPort = int.TryParse(args[0], out var _p) ? _p : PrimaryPort;
                 break;
+            case 0:
+            	IPAddress = IPAddress.TryParse(Environment.GetEnvironmentVariable("BIND_ADDRESS"), out var _ip) ? _ip : IPAddress;
+            	PrimaryPort = int.TryParse(Environment.GetEnvironmentVariable("BIND_PORT"), out var _p) ? _p : PrimaryPort;
+            	break;
 		}
     }
 }

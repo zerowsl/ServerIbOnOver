@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using ServerOver;
 
 [assembly: AssemblyTitle("ServerIbOnOver")]
-[assembly: AssemblyDescription("ib刷卡服务魔改ob系列.单机有限版")]
+[assembly: AssemblyDescription("ServerIbOnOver")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]

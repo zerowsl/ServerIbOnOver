@@ -6,7 +6,8 @@ public sealed class CustomConfigs
     public uint PLvBoostPointBonus { get; set; }
     public float GpBoostRate { get; set; }
 
-    public bool RecordCpusToBattleHistory { get; set; } = false;
+    public bool RecordCpusToBattleHistory { get; set; }
+    public bool ClearUpTooMuchBattleHistory { get; set; }
 
     public uint[]? p36_stages { get; set; } = null;
     
