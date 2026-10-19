@@ -4,6 +4,9 @@
 * [开服务的(一般是房主)配置操作](./uu/1.开服务的(一般是房主)配置操作.md)
 * [房内其他人配置操作](./uu/2.房内其他人配置操作.md)
 
+注意：
+* 本地同屏多开，可能不能激活match服务而无法进行店外匹配。因为本地同屏时多数启动器会把LM的配置里的DisableSocketHook设置为false..
+
 # 其他参考
 - [单人店外ClassMatchG下的1(+cpu)vs1(+cpu)](./media/单人店外ClassMatchG下的1(+cpu)vs1(+cpu).png)
 - [双人店外ClassMatchG下的2v2cpu](./media/双人店外ClassMatchG下的2v2cpu.png)

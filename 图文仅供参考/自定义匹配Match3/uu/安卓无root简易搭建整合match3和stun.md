@@ -33,3 +33,5 @@ docker compose up -f docker-compose-arm64v8-with-match3-stun.yaml -d
    http://10.95.96.4:28083/test (ip是你app的ip)
 
 9. 后续操作依旧...
+
+10. [运行状况参考](../media/安卓下match3运行状况.jpg)
