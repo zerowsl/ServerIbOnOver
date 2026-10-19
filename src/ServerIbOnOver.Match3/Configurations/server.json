@@ -1,10 +1,6 @@
 ﻿{
   "CardServerConfig": {
-    "IgnoreUploadSaving": false,
-    "NeedToDataPatchOfflineData": true,
-    "MaxReplaySaveSlotPerPlayer": 5,
     "GameConfigurations": {
-      "TrainingMinutes": 12,
       "FesConfigurations": {
         "MondayType": "DualSelect",
         "TuesdayType": "DualSelect",
@@ -13,11 +9,6 @@
         "FridayType": "DualSelect",
         "SaturdayType": "DualSelect",
         "SundayType": "DualSelect"
-      },
-      "TriadConfigurations": {
-        "TargetMsList": [72],
-        "TimeAttackCourse": 212,
-        "HighScoreCourse": 212
       }
     },
     

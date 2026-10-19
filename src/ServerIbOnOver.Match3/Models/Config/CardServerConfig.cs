@@ -6,8 +6,8 @@ public class CardServerConfig
 {
     public const string CARD_SERVER_SECTION = "CardServerConfig";
     
-    public bool DisableTelop { get; set; } = false;
-    public uint MaxReplaySaveSlotPerPlayer { get; set; }
+    //public bool DisableTelop { get; set; } = false;
+    //public uint MaxReplaySaveSlotPerPlayer { get; set; }
 
     public GameConfigurations GameConfigurations { get; set; } = new();
 

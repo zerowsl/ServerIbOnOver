@@ -11,7 +11,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateBootstrapLogger();
 
 Log.Information("+=====================================+");
-Log.Information("+              EXVS2-POC              +");
+Log.Information("+             exvs2-match3            +");
 Log.Information("+                                     +");
 Log.Information("+ Disclaimer:                         +");
 Log.Information("+ FREE SOFTWARE, BEWARE OF SCAMMERS!  +");
