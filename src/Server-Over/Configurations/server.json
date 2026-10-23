@@ -46,7 +46,7 @@
       // 对战中有cpu时,是否把cpu也记录到对战历史中,默认不记录.
       "RecordCpusToBattleHistory": false,
       
-      // 原ob对战历史页面只显示前100条，并且不分页，也没定时清理功能..
+      // 原ob对战历史页面只显示前100条，并且只显示10页，也没定时清理功能..
       // 开启这个功能会定时清理每个用户的对战历史时间按倒序排列多于120条的记录.
       "ClearUpTooMuchBattleHistory": false, 
 
