@@ -85,6 +85,13 @@ public class LoadGameDataQuery2Handler(IMediator mediator, IOptions<CardServerCo
                 PointBonus = 1
             };
         }
+        
+        if (r2.load_game_data.FesSetting != null)
+        {
+            r2.load_game_data.FesSetting.PlayableStartDate = r2.load_game_data.FesSetting.StartDate;
+            r2.load_game_data.FesSetting.PlayableEndDate = r2.load_game_data.FesSetting.EndDate;
+        }
+        
 
         return r2;
     }

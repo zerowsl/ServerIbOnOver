@@ -47,23 +47,23 @@ public partial class Response2
             //[global::ProtoBuf.ProtoMember(10006, Name = @"total_triad_score", IsRequired = true)] // 6
             //public uint TotalTriadScore { get; set; }
 
-            [global::ProtoBuf.ProtoMember(17, Name = @"total_triad_wanted_defeat_num", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(1017, Name = @"total_triad_wanted_defeat_num", IsRequired = true)]
             public uint TotalTriadWantedDefeatNum { get; set; }
 
             [global::ProtoBuf.ProtoMember(4, Name = @"training", IsRequired = true)]
             public TrainingSettingGroup Training { get; set; }
 
-            [global::ProtoBuf.ProtoMember(9, Name = @"total_triad_scene_play_num", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(1009, Name = @"total_triad_scene_play_num", IsRequired = true)]
             public uint TotalTriadScenePlayNum { get; set; }
 
             //[global::ProtoBuf.ProtoMember(10)]
             //public PilotClassMatch pilot_class_match { get; set; }
 
-            [global::ProtoBuf.ProtoMember(11, Name = @"last_obtained_score", DataFormat = global::ProtoBuf.DataFormat.ZigZag)]
+            [global::ProtoBuf.ProtoMember(1011, Name = @"last_obtained_score", DataFormat = global::ProtoBuf.DataFormat.ZigZag)]
             //[global::ProtoBuf.ProtoMember(11, Name = @"last_obtained_score")]
             public int LastObtainedScore { get; set; }
 
-            [global::ProtoBuf.ProtoMember(12, Name = @"license_tracker_score", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(1012, Name = @"license_tracker_score", IsRequired = true)]
             public uint LicenseTrackerScore { get; set; }
 
             [global::ProtoBuf.ProtoMember(5, Name = @"practice_info", IsRequired = true)]
@@ -352,7 +352,7 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(29, Name = @"quick_start")]
             public QuickStartGroup QuickStart { get; set; }
             
-            [global::ProtoBuf.ProtoMember(44, Name = @"triad_team_name", IsRequired = true)] // 44
+            [global::ProtoBuf.ProtoMember(10044, Name = @"triad_team_name", IsRequired = true)] // 44
             public string TriadTeamName { get; set; }
 
             [global::ProtoBuf.ProtoMember(10045, Name = @"triad_background_parts_id", IsRequired = true)] // 45
@@ -366,7 +366,7 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(27, Name = @"mute_flag", IsRequired = true)]
             public bool MuteFlag { get; set; }
 
-            [global::ProtoBuf.ProtoMember(43, Name = @"support_ticket_remains")]
+            [global::ProtoBuf.ProtoMember(10043, Name = @"support_ticket_remains")]
             public uint SupportTicketRemains { get; set; }
             
             [global::ProtoBuf.ProtoMember(30, Name = @"pcoin_ticket_num", IsRequired = true)]
@@ -401,8 +401,21 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(42, Name = "group_emblem_effect_id")]
             public uint p42 { get; set; }
             
-            [global::ProtoBuf.ProtoMember(48)]
-            public uint p48 { get; set; } = 486;
+            [global::ProtoBuf.ProtoMember(43, Name = @"on_compe_user_info")]
+            public OnCompeUserInfoGroup OnCompeUserInfo { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(44, Name = @"battle_option_1")]
+            public uint battle_option_1 { get; set; } = 0;
+            [global::ProtoBuf.ProtoMember(45, Name = @"battle_option_2")]
+            public uint battle_option_2 { get; set; } = 0;
+            [global::ProtoBuf.ProtoMember(46, Name = @"battle_option_3")]
+            public uint battle_option_3 { get; set; } = 0;
+            
+            [global::ProtoBuf.ProtoMember(47, Name = @"marker_color_id", IsRequired = true)]
+            public uint marker_color_id { get; set; } = 0;
+            
+            [global::ProtoBuf.ProtoMember(486)]
+            public uint p486 { get; set; } = 486;
 
             [global::ProtoBuf.ProtoContract()]
             public partial class CustomizeGroup : global::ProtoBuf.IExtensible
@@ -420,11 +433,11 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(3, Name = @"default_bgm_play_method", IsRequired = true)]
                 public uint DefaultBgmPlayMethod { get; set; }
 
-                [global::ProtoBuf.ProtoMember(4, Name = @"stage_randoms")]
+                [global::ProtoBuf.ProtoMember(1004, Name = @"stage_randoms")]
                 public uint[] StageRandoms { get; set; }
 
                 [global::ProtoBuf.ProtoMember(5, Name = @"bgm_safe_mode", IsRequired = true)]
-                public uint p5 { get; set; } = 0;
+                public uint bgm_safe_mode { get; set; } = 0;
             }
 
             #region // CommandMessageGroup
@@ -725,17 +738,17 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(3, Name = "team_type", IsRequired = true)]
                 public uint TeamType { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(4, Name = "mobile_suit_id", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(4, Name = "mobile_suit_id_0", IsRequired = true)]
                 public uint MstMobileSuitId { get; set; }
-                [global::ProtoBuf.ProtoMember(5, Name = "burst_type", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(5, Name = "burst_type_1", IsRequired = true)]
                 public uint BurstType { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(6, Name = "mobile_suit_id2", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(6, Name = "mobile_suit_id_1", IsRequired = true)]
                 public uint PartnerMobileSuitId { get; set; }
-                [global::ProtoBuf.ProtoMember(7, Name = "burst_type2", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(7, Name = "burst_type_2", IsRequired = true)]
                 public uint PartnerBurstType { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(8, Name = "battle_stage_id", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(8, Name = "stage_id", IsRequired = true)]
                 public uint BattleStageId { get; set; }
                 
             }
@@ -756,26 +769,41 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(3, Name = "stage_id", IsRequired = true)]
                 public uint StageId { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(4, Name = "boss1", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(4, Name = "boss_id_1", IsRequired = true)]
                 public uint Boss1 { get; set; }
-                [global::ProtoBuf.ProtoMember(5, Name = "boss2", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(5, Name = "boss_id_2", IsRequired = true)]
                 public uint Boss2 { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(6, Name = "team_cost_max", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(6, Name = "max_gauge", IsRequired = true)]
                 public uint TeamCostMax { get; set; }
                 
-                [global::ProtoBuf.ProtoMember(7, Name = "team_cost_curr", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(7, Name = "current_gauge", IsRequired = true)]
                 public uint TeamCostCurr { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(8, Name = "mobile_suit_id", IsRequired = true)]
                 public uint MobileSuitId { get; set; }
 
-                [global::ProtoBuf.ProtoMember(9, Name = "chips", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(9, Name = "custom_chip_ids", IsRequired = true)]
                 public uint[] Chips { get; set; } = [];
                 
-                [global::ProtoBuf.ProtoMember(10, Name = "url", IsRequired = true)]
+                [global::ProtoBuf.ProtoMember(10, Name = "save_data_url", IsRequired = true)]
                 public string Url { get; set; } = "";
 
+            }
+            
+            [global::ProtoBuf.ProtoContract()]
+            public partial class OnCompeUserInfoGroup : global::ProtoBuf.IExtensible
+            {
+                private global::ProtoBuf.IExtension __pbn__extensionData;
+                global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+                    => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+                [global::ProtoBuf.ProtoMember(1, Name = "on_compe_point", IsRequired = true)]
+                public uint on_compe_point { get; set; }
+                
+                [global::ProtoBuf.ProtoMember(2, Name = "current_rank", IsRequired = true)]
+                public uint current_rank { get; set; }
+                
             }
             
         }

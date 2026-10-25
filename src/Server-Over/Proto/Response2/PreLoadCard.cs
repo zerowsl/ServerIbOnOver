@@ -176,6 +176,9 @@ public partial class Response2
 			public uint grade_1_solo { get; set; }
 			[global::ProtoBuf.ProtoMember(43, Name = "grade_1_team", IsRequired = true)]
 			public uint grade_1_team { get; set; }
+			
+			[global::ProtoBuf.ProtoMember(44, Name = "top_point_double_num", IsRequired = true)]
+			public uint TopPointDoubleNum { get; set; } = 0;
             
             [global::ProtoBuf.ProtoMember(148, IsRequired = true)]
             public uint p148 { get; set; } = 8;
@@ -359,8 +362,8 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(2, Name = @"ms_used_num", IsRequired = true)]
                 public uint MsUsedNum { get; set; }
 
-                [global::ProtoBuf.ProtoMember(6, Name = @"open_skillpoint")] // 3
-                public bool OpenSkillpoint { get; set; }
+                //[global::ProtoBuf.ProtoMember(1006, Name = @"open_skillpoint")] // 3
+                //public bool OpenSkillpoint { get; set; }
 
                 [global::ProtoBuf.ProtoMember(8, Name = @"gauge_design_id", IsRequired = true)] // 4
                 public uint GaugeDesignId { get; set; }
@@ -371,8 +374,8 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(4, Name = @"bgm_play_method", IsRequired = true)] // 6
                 public uint BgmPlayMethod { get; set; }
 
-                [global::ProtoBuf.ProtoMember(7, Name = @"battle_nav_id")] // 7
-                public uint BattleNavId { get; set; }
+                //[global::ProtoBuf.ProtoMember(1007, Name = @"battle_nav_id")] // 7
+                //public uint BattleNavId { get; set; }
 
                 [global::ProtoBuf.ProtoMember(5, Name = @"burst_type", IsRequired = true)] // 8
                 public uint BurstType { get; set; }

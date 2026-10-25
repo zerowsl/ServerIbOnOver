@@ -66,6 +66,15 @@ public partial class MatchingTag : global::ProtoBuf.IExtensible
     
     [global::ProtoBuf.ProtoMember(12, Name = @"fes_rule_type")]
     public uint FesRuleType { get; set; }
+    
+    [global::ProtoBuf.ProtoMember(13, Name = @"randomstage_only_flag", IsRequired = true)]
+    public uint randomstage_only_flag { get; set; } = 0;
+    
+    [global::ProtoBuf.ProtoMember(14, Name = @"oncompe_matching_flag", IsRequired = true)]
+    public uint oncompe_matching_flag { get; set; } = 0;
+    
+    [global::ProtoBuf.ProtoMember(15, Name = @"mobile_suit_blocklist", IsRequired = true)]
+    public uint[] MobileSuitBlocklist { get; set; } = [];
 }
 
 #pragma warning restore CS0612, CS0618, CS1591, CS3021, IDE0079, IDE1006, RCS1036, RCS1057, RCS1085, RCS1192

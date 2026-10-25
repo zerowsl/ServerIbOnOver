@@ -4,12 +4,12 @@ namespace ServerOver;
 
 internal static partial class GlobalVars
 {
-	internal const string Version = "1.3.8.477";
+	internal const string Version = "1.3.9.101";
     internal const string Title0 = $"ServerIbOnOver v{Version}";
     internal const string Title = $"ib刷卡服务魔改ob系列.单机有限版.v{Version} - 自由软件,免费使用,提防倒卖,小心受骗";
 	internal const string LogFangDaoMai = "自由軟件，免費使用，提防倒賣，小心受騙 !!!";
 	
-	internal const uint LoadGameDataVer = 10427; // 1.04.27.77635
+	internal const uint LoadGameDataVer = 11330; // 1.13.30.106547
 	
 	internal const long Ttl4CardIdPcbSerial = 600; // sec
 	internal static readonly bool IsTtlSlide1 = true;

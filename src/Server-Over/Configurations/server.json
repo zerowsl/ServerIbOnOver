@@ -21,7 +21,7 @@
       },
       
       // 自定义新机体
-      "NewMobileSuits": [329], 
+      "NewMobileSuits": [335], 
       
       // 自定义上修下修更新的机体
       "UpdatedMobileSuits": [47, 62, 98, 122, 143, 185, 288, 290, 302, 310, 327]

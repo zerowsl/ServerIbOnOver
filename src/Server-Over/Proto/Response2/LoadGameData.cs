@@ -84,13 +84,13 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(10043, Name = @"player_level_exp_3", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
         public int PlayerLevelExp3 { get; set; }
         
-        [global::ProtoBuf.ProtoMember(44, Name = @"wanted_attack_level", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(10044, Name = @"wanted_attack_level", IsRequired = true)]
         public uint WantedAttackLevel { get; set; }
-        [global::ProtoBuf.ProtoMember(45, Name = @"wanted_ps_attack_level", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(10045, Name = @"wanted_ps_attack_level", IsRequired = true)]
         public uint WantedPsAttackLevel { get; set; }
-        [global::ProtoBuf.ProtoMember(46, Name = @"wanted_ps_defence_level", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(10046, Name = @"wanted_ps_defence_level", IsRequired = true)]
         public uint WantedPsDefenceLevel { get; set; }
-        [global::ProtoBuf.ProtoMember(47, Name = @"wanted_down_level", IsRequired = true)] // 47
+        [global::ProtoBuf.ProtoMember(10047, Name = @"wanted_down_level", IsRequired = true)] // 47
         public uint WantedDownLevel { get; set; }
 
 
@@ -114,9 +114,9 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(18, Name = "player_point_bonus_setting")] // 53
         public PlayerPointBonusEvent _PlayerPointBonusSetting { get; set; }
 
-        [global::ProtoBuf.ProtoMember(10055, Name = @"player_level_exp_4", IsRequired = true)] // 55
-        public uint player_level_exp_4 { get; set; } = 350;
-
+        //[global::ProtoBuf.ProtoMember(10055, Name = @"player_level_exp_4", IsRequired = true)] // 55
+        //public uint player_level_exp_4 { get; set; } = 350;
+        
         //[global::ProtoBuf.ProtoMember(10056, Name = @"p_level_bonus_rate", IsRequired = true)] // 56
         //public float PLevelBonusRate { get; set; }
 
@@ -157,7 +157,12 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(36, Name = @"stages", IsRequired = true)] // root_pattern_id
         public uint[] Stages { get; set; }
 
-
+        [global::ProtoBuf.ProtoMember(37, Name = @"on_compe_setting")]
+        public OnCompeSetting on_compe_setting { get; set; }
+        
+        [global::ProtoBuf.ProtoMember(38, Name = @"gpu_health_check_report_available_flag", IsRequired = true)]
+        public uint gpu_health_check_report_available_flag { get; set; }
+        
         [global::ProtoBuf.ProtoContract()]
         public partial class OnVsInfo : global::ProtoBuf.IExtensible
         {
@@ -311,7 +316,11 @@ public partial class Response2
 
             [global::ProtoBuf.ProtoMember(7, Name = @"mobile_suit_blocklist")]
             public uint[] MobileSuitBlocklists { get; set; }
-
+            
+            [global::ProtoBuf.ProtoMember(8, Name = @"playable_start_date", IsRequired = true)]
+            public ulong PlayableStartDate { get; set; }
+            [global::ProtoBuf.ProtoMember(9, Name = @"playable_end_date", IsRequired = true)]
+            public ulong PlayableEndDate { get; set; }
         }
 
         [global::ProtoBuf.ProtoContract()]
@@ -402,6 +411,42 @@ public partial class Response2
             public uint UpDefaultExp { get; set; }
             [global::ProtoBuf.ProtoMember(3, Name = @"down_default_exp", IsRequired = true)]
             public uint DownDefaultExp { get; set; } = 0;
+        }
+        
+        [global::ProtoBuf.ProtoContract()]
+        public partial class OnCompeSetting : global::ProtoBuf.IExtensible
+        {
+            private global::ProtoBuf.IExtension __pbn__extensionData;
+            global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+                => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+            
+            [global::ProtoBuf.ProtoMember(1, Name = @"playable_start_date", IsRequired = true)]
+            public ulong PlayableStartDate { get; set; }
+            [global::ProtoBuf.ProtoMember(2, Name = @"playable_end_date", IsRequired = true)]
+            public ulong PlayableEndDate { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(3, Name = @"matching_type", IsRequired = true)]
+            public uint MatchingType { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(4, Name = @"modifier_value", IsRequired = true)]
+            public uint ModifierValue { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(5, Name = @"fixed_value", IsRequired = true)]
+            public uint FixedValue { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(6, Name = @"win1_value", IsRequired = true)]
+            public uint Win1Value { get; set; }
+            [global::ProtoBuf.ProtoMember(7, Name = @"win2_value", IsRequired = true)]
+            public uint Win2Value { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(8, Name = @"cutoff_value", IsRequired = true)]
+            public uint CutoffValue { get; set; }
+            
+            [global::ProtoBuf.ProtoMember(9, Name = @"rank_threshold_a", IsRequired = true)]
+            public uint rank_threshold_a { get; set; }
+            [global::ProtoBuf.ProtoMember(10, Name = @"rank_threshold_s", IsRequired = true)]
+            public uint rank_threshold_s { get; set; }
+            
         }
     }
 
