@@ -132,6 +132,7 @@ public partial class Request
             // public uint GuardNum { get; set; }
             
             // 22 guest_nav_boost_flag
+            // 27 battle_option
             
             [global::ProtoBuf.ProtoContract()]
             public partial class GroupPartner : global::ProtoBuf.IExtensible

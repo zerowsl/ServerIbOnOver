@@ -190,6 +190,36 @@
     "Clues": ""
   },
   {
+    "Id": 39,
+    "Value": "HADES",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 40,
+    "Value": "宇宙海賊",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 41,
+    "Value": "GBN",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 42,
+    "Value": "Zガンダムバイオセンサー",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 43,
+    "Value": "ネオ・ジオン",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
     "ID": 44,
     "Value": "IBパスVol.1",
     "Existence": "IB",
@@ -200,5 +230,125 @@
     "Value": "IBパスVol.2",
     "Existence": "IB",
     "Clues": "インフィニットブーストパスvol.2でstage:50"
+  },
+  {
+    "Id": 46,
+    "Value": "IBパスVol.3",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 47,
+    "Value": "IBパスVol.4",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 48,
+    "Value": "IBパスVol.5",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 54,
+    "Value": "ギャプラン",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 55,
+    "Value": "キュベレイパピヨン",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 56,
+    "Value": "セラヴィーガンダム",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 57,
+    "Value": "GQuuuuuuX",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 60,
+    "Value": "TX-ff104 アリュゼウス",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 61,
+    "Value": "レッドフレーム（全部載せ）",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 62,
+    "Value": "サザビー",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 63,
+    "Value": "ガンダム・バルバトスルプスレクス",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 71,
+    "Value": "EXVS.プレイヤーズリンク報酬（2026冬）",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 72,
+    "Value": "メタリック",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 73,
+    "Value": "クリアカラー",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 74,
+    "Value": "正月（2026）",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 75,
+    "Value": "TOKYOShowdown優勝",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 76,
+    "Value": "TOKYOShowdown準優勝",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 77,
+    "Value": "EXVS.プレイヤーズリンク報酬（2026春）",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 78,
+    "Value": "TOKYOShowdown本戦出場",
+    "Existence": "IB",
+    "Clues": ""
+  },
+  {
+    "Id": 79,
+    "Value": "ウォドムポッド+",
+    "Existence": "IB",
+    "Clues": ""
   }
 ]

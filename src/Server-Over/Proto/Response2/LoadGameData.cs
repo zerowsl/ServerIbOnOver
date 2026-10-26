@@ -161,7 +161,7 @@ public partial class Response2
         public OnCompeSetting on_compe_setting { get; set; }
         
         [global::ProtoBuf.ProtoMember(38, Name = @"gpu_health_check_report_available_flag", IsRequired = true)]
-        public uint gpu_health_check_report_available_flag { get; set; }
+        public uint gpu_health_check_report_available_flag { get; set; } = 0;
         
         [global::ProtoBuf.ProtoContract()]
         public partial class OnVsInfo : global::ProtoBuf.IExtensible

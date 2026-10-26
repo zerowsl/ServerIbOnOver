@@ -1753,5 +1753,18 @@
     "SeriesCN": "机动战士高达 EXTREME VS.2 INFINITE BOOST",
     "SeriesTC": "機動戰士高達 EXTREME VS.2 INFINITE BOOST",
     "SeriesTC2": "機動戰士鋼彈 EXTREME VS.2 INFINITE BOOST"
+  },
+  {
+    "Id": 141,
+    "ValueJP": "[THE SORCERY OF NYMPH CIRCE] SUITE-No.3: SUI",
+    "Value": "[THE SORCERY OF NYMPH CIRCE] SUITE-No.3: SUI",
+    "ValueCN": "[THE SORCERY OF NYMPH CIRCE] SUITE-No.3: SUI",
+    "ValueTC": "[THE SORCERY OF NYMPH CIRCE] SUITE-No.3: SUI",
+    "ValueTC2": "[THE SORCERY OF NYMPH CIRCE] SUITE-No.3: SUI",
+    "SeriesJP": "機動戦士ガンダム 閃光のハサウェイ(劇場版)  ",
+    "Series": "Mobile Suit Gundam: Hathaway's Flash(movie)",
+    "SeriesCN": "机动战士高达 闪光的哈萨维(剧场版)",
+    "SeriesTC": "機動戰士高達 閃光之凱薩衛(剧场版)",
+    "SeriesTC2": "機動戰士鋼彈 閃光的哈薩威(剧场版)"
   }
 ]

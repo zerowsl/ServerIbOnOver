@@ -16,7 +16,7 @@ public class ReleasedContentCommand : ILoadGameDataCommand
     {
         var releasedMobileSuits = Enumerable.Range(1, 400).Select(i => (uint)i).ToArray();
         var releasedNavis = Enumerable.Range(1, 60).Select(i => (uint)i).ToArray();
-        var newMobileSuits = _config.GameConfigurations.NewMobileSuits ?? new[] { 329u };
+        var newMobileSuits = _config.GameConfigurations.NewMobileSuits ?? new[] { 335u };
         var updatedMobileSuits = _config.GameConfigurations.UpdatedMobileSuits ?? [
             3u, 7u, 13u, 37u, 54u, 58u,
             62u, 80u, 92u, 105u, 107u, 108u,

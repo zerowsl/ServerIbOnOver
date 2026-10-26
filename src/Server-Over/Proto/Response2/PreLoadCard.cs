@@ -240,8 +240,8 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(15, Name = @"auth_flag", IsRequired = true)]
             public bool _AuthFlag { get; set; } = true;
             
-            [global::ProtoBuf.ProtoMember(16, IsRequired = true)]
-            public uint p16 { get; set; } = 486;
+            [global::ProtoBuf.ProtoMember(116, IsRequired = true)]
+            public uint p116 { get; set; } = 486;
 
             [global::ProtoBuf.ProtoContract()]
             public partial class CustomizeGroup : global::ProtoBuf.IExtensible

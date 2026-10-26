@@ -2038,5 +2038,431 @@
     "Value": "EVO JAPAN 2025 ベスト8",
     "Existence": "OBv27",
     "Category": "大会"
+  },
+  {
+    "Id": 350,
+    "Value": "プレイヤーレベル報酬 Lv.100",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 351,
+    "Value": "プレイヤーレベル報酬 Lv.300",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 352,
+    "Value": "プレイヤーレベル報酬 Lv.500",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 353,
+    "Value": "プレイヤーレベル報酬 Lv.700",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 354,
+    "Value": "プレイヤーレベル報酬 Lv.900",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 355,
+    "Value": "プレイヤーレベル報酬 Lv.∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 356,
+    "Value": "EXVS.2OB 機体熟練度★16機体専用背景",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 357,
+    "Value": "EXVS.2OB 機体熟練度★11機体専用背景",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 358,
+    "Value": "EXVS.2OB 機体熟練度★6機体専用背景",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 359,
+    "Value": "「GUNDAM × MIKU Anniversary Special Project」コラボアイテム",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 360,
+    "Value": "Background 360",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 361,
+    "Value": "Background 361",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 362,
+    "Value": "Background 362",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 363,
+    "Value": "Background 363",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 364,
+    "Value": "Background 364",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 365,
+    "Value": "Background 365",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 366,
+    "Value": "Background 366",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 367,
+    "Value": "Background 367",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 368,
+    "Value": "Background 368",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 369,
+    "Value": "Background 369",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 370,
+    "Value": "Background 370",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 371,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 372,
+    "Value": "インフィニットブーストパスstage:40",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 373,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 374,
+    "Value": "インフィニットブーストパスstage:40",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 375,
+    "Value": "インフィニットブーストパスstage:20",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 376,
+    "Value": "インフィニットブーストパスstage:20",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 377,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 378,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 379,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 380,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 381,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 382,
+    "Value": "インフィニットブーストパスstage:70",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 391,
+    "Value": "EXTREMEクラスGrade∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 392,
+    "Value": "EXTREMEクラスGrade5以上",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 393,
+    "Value": "EXTREMEクラス",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 394,
+    "Value": "EXTREMEクラスGrade∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 395,
+    "Value": "EXTREMEクラスGrade5以上",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 396,
+    "Value": "EXTREMEクラス",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 397,
+    "Value": "EXTREMEクラスGrade∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 398,
+    "Value": "EXTREMEクラスGrade5以上",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 399,
+    "Value": "EXTREMEクラス",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 400,
+    "Value": "EXTREMEクラスGrade∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 401,
+    "Value": "EXTREMEクラスGrade5以上",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 402,
+    "Value": "EXTREMEクラス",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 403,
+    "Value": "EXTREMEクラスGrade∞",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 404,
+    "Value": "EXTREMEクラスGrade5以上",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 405,
+    "Value": "EXTREMEクラス",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 421,
+    "Value": "1機体で機体熟練度★LEGEND",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 422,
+    "Value": "OPEN部門優勝チーム（4名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 423,
+    "Value": "OPEN部門準優勝チーム（4名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 424,
+    "Value": "OPEN部門第3位チーム（8名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 425,
+    "Value": "GGGP×RAGE　KVイラスト",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 426,
+    "Value": "GGGP2024　優勝イラスト",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 427,
+    "Value": "Crazy Racoon所属プロゲーマー（2名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 428,
+    "Value": "DetonatioN FocusMe所属プロゲーマー（2名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 429,
+    "Value": "ZETA DIVISION所属プロゲーマー（2名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 430,
+    "Value": "REJECT所属プロゲーマー（2名）",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 431,
+    "Value": "EXVS.2 IB TOKYO Showdownウォームアップマッチ報酬",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 432,
+    "Value": "EXVS.2 IB TOKYO Showdown　優勝",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 433,
+    "Value": "EXVS.2 IB TOKYO Showdown　準優勝",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 434,
+    "Value": "EXVS.2 IB TOKYO Showdown　本戦出場",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 435,
+    "Value": "マルイポップアップストア購入者特典",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 436,
+    "Value": "EVO JAPAN 2026 優勝",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 437,
+    "Value": "EVO JAPAN 2026 準優勝",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 438,
+    "Value": "EVO JAPAN 2026 本戰出場",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 439,
+    "Value": "エクストリームファン投票_ダブルオークアンタ フルセイバー",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 440,
+    "Value": "エクストリームファン投票_GQuuuuuuX",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 441,
+    "Value": "エクストリームファン投票_ガンダムエクシア",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 442,
+    "Value": "エクストリームファン投票_イフリート改",
+    "Existence": "IB",
+    "Category": ""
+  },
+  {
+    "Id": 443,
+    "Value": "EVO JAPAN 2026試遊イベント",
+    "Existence": "IB",
+    "Category": ""
   }
 ]

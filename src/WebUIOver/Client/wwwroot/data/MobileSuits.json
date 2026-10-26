@@ -74,7 +74,15 @@
         "Value": "OB→IB引継ぎキャンペーン"
       },
       {
-      	"Id": 11,
+        "Id": 4,
+        "Value": "GGGP記念"
+      },
+      {
+        "Id": 5,
+        "Value": "FBポーズド"
+      },
+      {
+        "Id": 11,
         "Value": "G-3カラー"
       }
     ]
@@ -110,6 +118,10 @@
       {
         "Id": 1,
         "Value": "EXVS.ポーズド"
+      },
+      {
+        "Id": 1,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -395,6 +407,16 @@
     "SeriesTC": "機動戰士Z高達",
     "SeriesTC2": "機動戰士Z鋼彈",
     "Cost": 2500,
+    "Skins": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "鹵獲カラー"
+      }
+    ],
     "Costumes": [
       {
         "Id": 0,
@@ -421,6 +443,10 @@
       {
         "Id": 3,
         "Value": "アーセナルベースコラボ"
+      },
+      {
+        "Id": 11,
+        "Value": "鹵獲カラー"
       }
     ]
   },
@@ -851,6 +877,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBOINポーズド"
       }
     ]
   },
@@ -1457,6 +1487,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -1505,6 +1539,10 @@
       {
         "Id": 2,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "EXVSポーズド"
       }
     ]
   },
@@ -2107,6 +2145,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -2355,6 +2397,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -2389,6 +2435,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 1,
+        "Value": "EXVSポーズド"
       }
     ]
   },
@@ -2433,6 +2483,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -2481,6 +2535,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBOnポーズド"
       }
     ]
   },
@@ -2967,6 +3025,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -3045,6 +3107,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -3641,6 +3707,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -4005,6 +4075,10 @@
       {
         "Id": 3,
         "Value": "イベントKVポーズド"
+      },
+      {
+        "Id": 4,
+        "Value": "エクストリームファン投票"
       }
     ]
   },
@@ -4097,6 +4171,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -4179,6 +4257,16 @@
       {
         "Id": 1,
         "Value": "スーツ"
+      }
+    ],
+    "Poses": [
+      {
+        "Id": 0,
+        "Value": "IBポーズド"
+      },
+      {
+        "Id": 1,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -4341,6 +4429,16 @@
     "SeriesTC": "機動戰士高達00",
     "SeriesTC2": "機動戰士鋼彈00",
     "Cost": 2500,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "CB制服"
+      }
+    ],
     "Poses": [
       {
         "Id": 0,
@@ -4616,7 +4714,7 @@
       },
       {
         "Id": 1,
-        "Value": "ドレス"
+        "Value": "私服"
       }
     ],
     "Poses": [
@@ -4737,7 +4835,7 @@
     "PilotSeiyuuTC2": "宮野真守",
     "Series": "Mobile Suit Gundam 00 The Movie -Awakening of the Trailblazer-",
     "SeriesJP": "劇場版 機動戦士ガンダム00 -A wakening of the Trailblazer-",
-    "SeriesCN": "剧场版 机动战士高达00 -觉醒的先驱者-",
+    "SeriesCN": "剧场版 机动战士高达00 -先驱者的觉醒-",
     "SeriesTC": "劇場版 機動戰士高達00 -先驅者的覺醒-",
     "SeriesTC2": "劇場版 機動戰士鋼彈00 -先驅者的覺醒-",
     "Cost": 3000,
@@ -4785,7 +4883,7 @@
     "PilotSeiyuuTC2": "神谷浩史",
     "Series": "Mobile Suit Gundam 00 The Movie -Awakening of the Trailblazer-",
     "SeriesJP": "劇場版 機動戦士ガンダム00 -A wakening of the Trailblazer-",
-    "SeriesCN": "剧场版 机动战士高达00 -觉醒的先驱者-",
+    "SeriesCN": "剧场版 机动战士高达00 -先驱者的觉醒-",
     "SeriesTC": "劇場版 機動戰士高達00 -先驅者的覺醒-",
     "SeriesTC2": "劇場版 機動戰士鋼彈00 -先驅者的覺醒-",
     "Cost": 2500,
@@ -4833,7 +4931,7 @@
     "PilotSeiyuuTC2": "中村悠一",
     "Series": "Mobile Suit Gundam 00 The Movie -Awakening of the Trailblazer-",
     "SeriesJP": "劇場版 機動戦士ガンダム00 -A wakening of the Trailblazer-",
-    "SeriesCN": "剧场版 机动战士高达00 -觉醒的先驱者-",
+    "SeriesCN": "剧场版 机动战士高达00 -先驱者的觉醒-",
     "SeriesTC": "劇場版 機動戰士高達00 -先驅者的覺醒-",
     "SeriesTC2": "劇場版 機動戰士鋼彈00 -先驅者的覺醒-",
     "Cost": 2500,
@@ -4855,6 +4953,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -4899,6 +5001,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "エクストリームファン投票"
       }
     ]
   },
@@ -4921,7 +5027,7 @@
     "PilotSeiyuuTC2": "三木真一郎",
     "Series": "Mobile Suit Gundam 00 The Movie -Awakening of the Trailblazer-",
     "SeriesJP": "劇場版 機動戦士ガンダム00 -A wakening of the Trailblazer-",
-    "SeriesCN": "剧场版 机动战士高达00 -觉醒的先驱者-",
+    "SeriesCN": "剧场版 机动战士高达00 -先驱者的觉醒-",
     "SeriesTC": "劇場版 機動戰士高達00 -先驅者的覺醒-",
     "SeriesTC2": "劇場版 機動戰士鋼彈00 -先驅者的覺醒-",
     "Cost": 3000,
@@ -4943,6 +5049,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -4965,10 +5075,20 @@
     "PilotSeiyuuTC2": "吉野裕行 & 小笠原亞里沙",
     "Series": "Mobile Suit Gundam 00 The Movie -Awakening of the Trailblazer-",
     "SeriesJP": "劇場版 機動戦士ガンダム00 -A wakening of the Trailblazer-",
-    "SeriesCN": "剧场版 机动战士高达00 -觉醒的先驱者-",
+    "SeriesCN": "剧场版 机动战士高达00 -先驱者的觉醒-",
     "SeriesTC": "劇場版 機動戰士高達00 -先驅者的覺醒-",
     "SeriesTC2": "劇場版 機動戰士鋼彈00 -先驅者的覺醒-",
     "Cost": 3000,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "私服"
+      }
+    ],
     "Poses": [
       {
         "Id": 0,
@@ -5163,8 +5283,8 @@
     "Value": "Unicorn Gundam Banshee",
     "ValueJP": "バンシィ",
     "ValueCN": "报丧女妖",
-    "ValueTC": "獨角獸高達2號機報喪女妖",
-    "ValueTC2": "獨角獸鋼彈2號機報喪女妖",
+    "ValueTC": "報喪女妖",
+    "ValueTC2": "報喪女妖",
     "Pilot": "Marida Cruz",
     "PilotJP": "マリーダ・クルス",
     "PilotCN": "玛莉妲·库鲁斯",
@@ -5210,7 +5330,7 @@
     "Id": 173,
     "Value": "Rozen Zulu",
     "ValueJP": "ローゼン・ズール",
-    "ValueCN": "玫瑰·祖鲁",
+    "ValueCN": "罗森·祖鲁",
     "ValueTC": "羅森·祖魯",
     "ValueTC2": "羅森·祖魯",
     "Pilot": "Angelo Sauper",
@@ -5247,6 +5367,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -5303,8 +5427,8 @@
     "Value": "Unicorn Gundam Banshee Norn",
     "ValueJP": "バンシィ・ノルン",
     "ValueCN": "报丧女妖·命运女神",
-    "ValueTC": "獨角獸高達2號機報喪女妖·命運女神",
-    "ValueTC2": "獨角獸鋼彈2號機報喪女妖·命運女神",
+    "ValueTC": "報喪女妖·命運女神",
+    "ValueTC2": "報喪女妖·命運女神",
     "Pilot": "Riddhe Marcenas",
     "PilotJP": "リディ・マーセナス",
     "PilotCN": "利迪·马瑟纳斯",
@@ -5381,6 +5505,10 @@
       {
         "Id": 2,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "FBポーズド"
       },
       {
         "Id": 11,
@@ -5725,6 +5853,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -6175,6 +6307,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "エクストリームファン投票"
       }
     ]
   },
@@ -6767,6 +6903,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -6921,6 +7061,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -7843,6 +7987,10 @@
       {
         "Id": 2,
         "Value": "EXVS.2ポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "IBポーズドB"
       }
     ]
   },
@@ -8025,6 +8173,10 @@
       {
         "Id": 1,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.2ポーズド"
       }
     ]
   },
@@ -8171,7 +8323,7 @@
     "PilotSeiyuuTC2": "櫻井孝宏",
     "Series": "Mobile Suit Gundam Side Story: Missing Link",
     "SeriesJP": "機動戦士ガンダム外伝 ミッシングリンク",
-    "SeriesCN": "机动战士高达外传 失落的节点",
+    "SeriesCN": "机动战士高达外传 MISSING LINK",
     "SeriesTC": "機動戰士高達外傳 MISSING LINK",
     "SeriesTC2": "機動戰士鋼彈外傳 MISSING LINK",
     "Cost": 2000,
@@ -8205,7 +8357,7 @@
     "PilotSeiyuuTC2": "安元洋貴",
     "Series": "Mobile Suit Gundam Side Story: Missing Link",
     "SeriesJP": "機動戦士ガンダム外伝 ミッシングリンク",
-    "SeriesCN": "机动战士高达外传 失落的节点",
+    "SeriesCN": "机动战士高达外传 MISSING LINK",
     "SeriesTC": "機動戰士高達外傳 MISSING LINK",
     "SeriesTC2": "機動戰士鋼彈外傳 MISSING LINK",
     "Cost": 2000,
@@ -8919,6 +9071,14 @@
       {
         "Id": 1,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 2,
+        "Value": "GGGP纪念"
+      },
+      {
+        "Id": 3,
+        "Value": "EXVS.2ポーズド"
       }
     ]
   },
@@ -9041,6 +9201,14 @@
       {
         "Id": 1,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 2,
+        "Value": "XBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "IBポーズドB"
       }
     ]
   },
@@ -9101,6 +9269,16 @@
     "SeriesTC": "機動戰士高達 鐵血的孤兒",
     "SeriesTC2": "機動戰士鋼彈 鐵血孤兒",
     "Cost": 2000,
+    "Skins": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "厄災戦時カラー"
+      }
+    ],
     "Costumes": [
       {
         "Id": 0,
@@ -9122,7 +9300,11 @@
       },
       {
         "Id": 2,
-        "Value": "EXVS.2ポーズド"
+        "Value": "XBポーズド"
+      },
+      {
+        "Id": 11,
+        "Value": "厄災戦時カラー"
       }
     ]
   },
@@ -10451,7 +10633,7 @@
     "PilotSeiyuuTC2": "能登麻美子",
     "Series": "Mobile Suit Gundam Side Story: Missing Link",
     "SeriesJP": "機動戦士ガンダム外伝 ミッシングリンク",
-    "SeriesCN": "机动战士高达外传 失落的节点",
+    "SeriesCN": "机动战士高达外传 MISSING LINK",
     "SeriesTC": "機動戰士高達外傳 MISSING LINK",
     "SeriesTC2": "機動戰士鋼彈外傳 MISSING LINK",
     "Cost": 2500,
@@ -10577,10 +10759,234 @@
     "PilotSeiyuuTC2": "土屋神葉",
     "Series": "Mobile Suit Gundam GQuuuuuuX",
     "SeriesJP": "機動戦士Gundam GQuuuuuuX",
-    "SeriesCN": "机动战士高达GQuuuuuuX",
+    "SeriesCN": "机动战士高达 GQuuuuuuX",
     "SeriesTC": "機動戰士高達 GQuuuuuuX",
     "SeriesTC2": "機動戰士鋼彈 GQuuuuuuX",
     "Cost": 2000
+  },
+  {
+    "Id": 330,
+    "Value": "Gaplant",
+    "ValueJP": "ギャプラン",
+    "ValueCN": "加布兰",
+    "ValueTC": "卡博羅",
+    "ValueTC2": "蓋布蘭",
+    "Pilot": "Rosamia Badam",
+    "PilotJP": "ロザミア・バダム",
+    "PilotCN": "罗莎米亚·巴达姆",
+    "PilotTC": "羅莎米亞‧巴達姆",
+    "PilotTC2": "羅莎米亞‧巴達姆",
+    "PilotSeiyuu": "Fujii Kayoko",
+    "PilotSeiyuuJP": "藤井佳代子",
+    "PilotSeiyuuCN": "藤井佳代子",
+    "PilotSeiyuuTC": "藤井佳代子",
+    "PilotSeiyuuTC2": "藤井佳代子",
+    "Series": "Mobile Suit Z Gundam",
+    "SeriesJP": "機動戦士Zガンダム",
+    "SeriesCN": "机动战士Z高达",
+    "SeriesTC": "機動戰士Z高達",
+    "SeriesTC2": "機動戰士Z鋼彈",
+    "Cost": 2000,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "ティターンズ制服"
+      }
+    ]
+  },
+  {
+    "Id": 331,
+    "Value": "QUBELEY PAPILLON",
+    "ValueJP": "キュベレイパピヨン",
+    "ValueCN": "蝶影卡碧尼",
+    "ValueTC": "蝶影卡碧尼",
+    "ValueTC2": "花蝶丘貝雷",
+    "Pilot": "Aila Jyrkiäinen",
+    "PilotJP": "ユウキ・タツヤ",
+    "PilotCN": "艾拉・尤基艾宁",
+    "PilotTC": "雅娜・尤洛基艾寧",
+    "PilotTC2": "艾拉・尤基艾寧",
+    "PilotSeiyuu": "Saori Hayami",
+    "PilotSeiyuuJP": "早見沙織",
+    "PilotSeiyuuCN": "早见沙织",
+    "PilotSeiyuuTC": "早見沙織",
+    "PilotSeiyuuTC2": "早見沙織",
+    "Series": "Gundam Build Fighters",
+    "SeriesJP": "ガンダムビルドファイターズ",
+    "SeriesCN": "高达创战者",
+    "SeriesTC": "高達創戰者",
+    "SeriesTC2": "鋼彈創鬥者",
+    "Cost": 2500,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "私服"
+      }
+    ],
+    "Poses": [
+      {
+        "Id": 0,
+        "Value": "IBポーズド"
+      },
+      {
+        "Id": 1,
+        "Value": "IBポーズドB"
+      }
+    ]
+  },
+  {
+    "Id": 332,
+    "Value": "GQuuuuuuX",
+    "ValueJP": "GQuuuuuuX",
+    "ValueCN": "GQuuuuuuX",
+    "ValueTC": "GQuuuuuuX",
+    "ValueTC2": "GQuuuuuuX",
+    "Pilot": "Amate Yuzuriha",
+    "PilotJP": "アマテ・ユズリハ",
+    "PilotCN": "天手让叶",
+    "PilotTC": "天手讓葉",
+    "PilotTC2": "天手讓葉",
+    "PilotSeiyuu": "Tomoyo Kurosawa",
+    "PilotSeiyuuJP": "黒沢ともよ",
+    "PilotSeiyuuCN": "黑泽朋世",
+    "PilotSeiyuuTC": "黑澤朋世",
+    "PilotSeiyuuTC2": "黑澤朋世",
+    "Series": "Mobile Suit Gundam GQuuuuuuX",
+    "SeriesJP": "機動戦士Gundam GQuuuuuuX",
+    "SeriesCN": "机动战士高达 GQuuuuuuX",
+    "SeriesTC": "機動戰士高達 GQuuuuuuX",
+    "SeriesTC2": "機動戰士鋼彈 GQuuuuuuX",
+    "Cost": 2500,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "ハイバリーハウス学園制服"
+      }
+    ],
+    "Poses": [
+      {
+        "Id": 0,
+        "Value": "IBポーズド"
+      },
+      {
+        "Id": 1,
+        "Value": "エクストリームファン投票"
+      }
+    ]
+  },
+  {
+    "Id": 333,
+    "Value": "Seravee Gundam",
+    "ValueJP": "セラヴィーガンダム",
+    "ValueCN": "炽天使高达",
+    "ValueTC": "熾天使高達",
+    "ValueTC2": "熾天使鋼彈",
+    "Pilot": "Tieria Āde",
+    "PilotJP": "ティエリア・アーデ",
+    "PilotCN": "提耶利亚·厄德",
+    "PilotTC": "迪尼亞·艾迪",
+    "PilotTC2": "提耶利亞·厄德",
+    "PilotSeiyuu": "Kamiya Hiroshi",
+    "PilotSeiyuuJP": "神谷浩史",
+    "PilotSeiyuuCN": "神谷浩史",
+    "PilotSeiyuuTC": "神谷浩史",
+    "PilotSeiyuuTC2": "神谷浩史",
+    "Series": "Mobile Suit Gundam 00",
+    "SeriesJP": "機動戦士ガンダム00",
+    "SeriesCN": "机动战士高达00",
+    "SeriesTC": "機動戰士高達00",
+    "SeriesTC2": "機動戰士鋼彈00",
+    "Cost": 2500,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "ドレス"
+      }
+    ]
+  },
+  {
+    "Id": 334,
+    "Value": "TX-ff104 Alyzeus",
+    "ValueJP": "TX-ff104 アリュゼウス",
+    "ValueCN": "TX-ff104 阿利宙斯",
+    "ValueTC": "TX-ff104 阿利宙斯",
+    "ValueTC2": "TX-ff104 阿利宙斯",
+    "Pilot": "Lane Aime",
+    "PilotJP": "レーン・エイム",
+    "PilotCN": "雷恩·艾姆",
+    "PilotTC": "雷恩·艾姆",
+    "PilotTC2": "連恩·艾姆",
+    "PilotSeiyuu": "Soma Saito",
+    "PilotSeiyuuJP": "斉藤壮馬",
+    "PilotSeiyuuCN": "齐藤壮马",
+    "PilotSeiyuuTC": "斉藤壮馬",
+    "PilotSeiyuuTC2": "斉藤壮馬",
+    "Series": "Mobile Suit Gundam: Hathaway\\u0027s Flash(movie)",
+    "SeriesJP": "機動戦士ガンダム 閃光のハサウェイ(劇場版) ",
+    "SeriesCN": "机动战士高达 闪光的哈萨维(剧场版)",
+    "SeriesTC": "機動戰士高達 閃光之凱薩衛(剧场版)",
+    "SeriesTC2": "機動戰士鋼彈 閃光的哈薩威(剧场版)",
+    "Cost": 3000,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "地球連邦軍制服"
+      }
+    ]
+  },
+  {
+    "Id": 335,
+    "Value": "Wodom Pod+",
+    "ValueJP": "ウォドムポッド＋",
+    "ValueCN": "沃多姆荚舱＋",
+    "ValueTC": "沃多姆艙＋",
+    "ValueTC2": "渥頓戰艇＋",
+    "Pilot": "May",
+    "PilotJP": "メイ",
+    "PilotCN": "芽依",
+    "PilotTC": "美兒",
+    "PilotTC2": "小梅",
+    "PilotSeiyuu": "Mai Fuchigami",
+    "PilotSeiyuuJP": "渕上舞",
+    "PilotSeiyuuCN": "渕上舞",
+    "PilotSeiyuuTC": "渕上舞",
+    "PilotSeiyuuTC2": "渕上舞",
+    "Series": "Gundam Build Divers Re:Rise",
+    "SeriesJP": "ガンダムビルドダイバーズRe:Rise",
+    "SeriesCN": "高达创形者 再起",
+    "SeriesTC": "高達創戰潛行者Re:RISE",
+    "SeriesTC2": "鋼彈創鬥者 潛網大戰Re:RISE",
+    "Cost": 2500,
+    "Costumes": [
+      {
+        "Id": 0,
+        "Value": "デフォルト"
+      },
+      {
+        "Id": 1,
+        "Value": "ジャケットなし"
+      }
+    ]
   },
   {
     "Id": 50001,
@@ -11369,7 +11775,7 @@
     "PilotSeiyuuTC2": "/",
     "Series": "Mobile Suit Gundam Side Story: Missing Link",
     "SeriesJP": "機動戦士ガンダム外伝 ミッシングリンク",
-    "SeriesCN": "机动战士高达外传 失落的节点",
+    "SeriesCN": "机动战士高达外传 MISSING LINK",
     "SeriesTC": "機動戰士高達外傳 MISSING LINK",
     "SeriesTC2": "機動戰士鋼彈外傳 MISSING LINK",
     "Cost": 0
@@ -11585,7 +11991,7 @@
     "PilotSeiyuuTC2": "/",
     "Series": "Mobile Suit Gundam GQuuuuuuX",
     "SeriesJP": "機動戦士Gundam GQuuuuuuX",
-    "SeriesCN": "机动战士高达GQuuuuuuX",
+    "SeriesCN": "机动战士高达 GQuuuuuuX",
     "SeriesTC": "機動戰士高達 GQuuuuuuX",
     "SeriesTC2": "機動戰士鋼彈 GQuuuuuuX",
     "Cost": 0

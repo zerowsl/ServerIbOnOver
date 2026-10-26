@@ -39,7 +39,8 @@ public partial class TagTeamGroup : global::ProtoBuf.IExtensible
     public uint PartnerGradeId { get; set; }
     [global::ProtoBuf.ProtoMember(19, Name = @"partner_name", IsRequired = true)]
     public string PartnerName { get; set; } = "";
-
+    
+    // 20 on_compe_flag
 
     [global::ProtoBuf.ProtoMember(10004, Name = @"background_parts_id", IsRequired = true)] // 4
     public uint BackgroundPartsId { get; set; }

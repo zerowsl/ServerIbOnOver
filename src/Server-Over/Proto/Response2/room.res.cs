@@ -95,7 +95,7 @@ public partial class Response
             
             [global::ProtoBuf.ProtoMember(11, Name = @"class_id_min", IsRequired = true)]
             public uint ClassIdMin { get; set; }
-            [global::ProtoBuf.ProtoMember(12, Name = @"class_id_min", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(12, Name = @"class_id_max", IsRequired = true)]
             public uint ClassIdMax { get; set; }
             
             [global::ProtoBuf.ProtoMember(13, Name = @"grade_id_min", IsRequired = true)]
