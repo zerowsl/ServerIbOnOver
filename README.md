@@ -5,7 +5,7 @@
 
 下载地址以下任选其一:
 - (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
-- [Mediafire](https://www.mediafire.com/file/yqvyo1h8rne9rpv/ServerIbOnOver_v1.3.9.102.7z/file)
+- [Mediafire](https://www.mediafire.com/file/aituv1yc9mlycvv/ServerIbOnOver_v1.3.9.102.7z/file)
 
 data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 不带图包，图包都比程序大，图包请自行另外下载... <br/>
