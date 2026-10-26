@@ -2,22 +2,21 @@
 基于原[EXVS2-POC](https://github.com/asesidaa/EXVS2-POC/)库里的ob代码开发，AI辅助并人工对其修正，并通过监测游戏提交数据来对比修改.<br/>
 依赖库升级到net10,有些实现尽量在保留ob代码情况下，在返回给客户端前，再一次mapping到新结果才再返回给客户端...
 - 项目开始时间, 请看[内部初版修改开始时间图](./内部初版修改开始时间图.png)
-- 最初发布, 请看[v1版发布说明](./history/v1.0/发布说明.v1.md)
 
 下载地址以下任选其一:
 - (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
-- [Mediafire](https://www.mediafire.com/file/7jpmm2pvjbilnq9/ServerIbOnOver_v1.3.9.101.7z/file)
+- [Mediafire](https://www.mediafire.com/file/yqvyo1h8rne9rpv/ServerIbOnOver_v1.3.9.102.7z/file)
 
 data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 不带图包，图包都比程序大，图包请自行另外下载... <br/>
 
-* 本刷卡1.3.8及之前，对应游戏1.04 <br/>
+* 1.3.8及之前，对应游戏1.04 <br/>
   1.3.9之后, 对应游戏1.13 <br/>
 * 刷卡默认地址：‘http://127.0.0.1:28080’
 * 如果你同时也游玩ob或者有多款ib刷卡，为避免刷卡页面冲突，那么你需要在‘kestrel.json’里改端口..<br/>
   并可能需要[清理缓存](./图文仅供参考/清理浏览器缓存.txt)..
 
-# 查看最近 [v1.3.9.101](./history/v1.3.9.101/发布说明.v1.3.9.101.md) 更新
+# 查看最近 [v1.3.9.102](./history/v1.3.9.102/发布说明.v1.3.9.102.md) 更新
 
 <b>旧功能具体描述请查看历史更新</b>
 
