@@ -2859,7 +2859,7 @@ namespace nue.protocol.exvs
             [global::ProtoBuf.ProtoMember(19, Name = @"user_id", IsRequired = true)]
             public uint UserId { get; set; }
 
-            [global::ProtoBuf.ProtoMember(20, Name = @"quick_tag_flag", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(20, Name = @"quick_tag_flag", IsRequired = true)] //--
             public bool QuickTagFlag { get; set; }
 
             [global::ProtoBuf.ProtoMember(21, Name = @"instant_team_flag", IsRequired = true)]
@@ -2888,10 +2888,10 @@ namespace nue.protocol.exvs
             public void ResetOnlineMatchingMode() => __pbn__OnlineMatchingMode = null;
             private OnlineMatchingMode? __pbn__OnlineMatchingMode;
 
-            [global::ProtoBuf.ProtoMember(27, Name = @"cpu_mode", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(27, Name = @"cpu_mode", IsRequired = true)] //--
             public bool CpuMode { get; set; }
 
-            [global::ProtoBuf.ProtoMember(28, Name = @"training_mode", IsRequired = true)]
+            [global::ProtoBuf.ProtoMember(28, Name = @"training_mode", IsRequired = true)] //--
             public TrainingMode TrainingMode { get; set; }
 
             [global::ProtoBuf.ProtoMember(29, Name = @"class_id_solo")]
@@ -2948,7 +2948,9 @@ namespace nue.protocol.exvs
             public bool ShouldSerializeRentalBackNum() => __pbn__RentalBackNum != null;
             public void ResetRentalBackNum() => __pbn__RentalBackNum = null;
             private uint? __pbn__RentalBackNum;
-
+            
+            [global::ProtoBuf.ProtoMember(38, Name = @"maker_color_id")]
+            public uint MakerColorId { get; set; }
         }
 
         [global::ProtoBuf.ProtoContract()]
@@ -5575,6 +5577,21 @@ namespace nue.protocol.exvs
                 public bool ShouldSerializeSupportTicketRemains() => __pbn__SupportTicketRemains != null;
                 public void ResetSupportTicketRemains() => __pbn__SupportTicketRemains = null;
                 private uint? __pbn__SupportTicketRemains;
+
+                [global::ProtoBuf.ProtoMember(10039, Name = "group_plate_id")]
+                public uint TriadGroupPlateId { get; set; }
+                [global::ProtoBuf.ProtoMember(10040, Name = "group_emblem_base_id")]
+                public uint TriadGroupEmblemBaseId { get; set; }
+                [global::ProtoBuf.ProtoMember(10041, Name = "group_emblem_parts_id")]
+                public uint TriadGroupEmblemPartsId { get; set; }
+                [global::ProtoBuf.ProtoMember(10042, Name = "group_emblem_effect_id")]
+                public uint TriadGroupEmblemEffectId { get; set; }
+                [global::ProtoBuf.ProtoMember(10044, Name = @"battle_option_1")]
+                public uint BattleOption1 { get; set; }
+                [global::ProtoBuf.ProtoMember(10045, Name = @"battle_option_2")]
+                public uint BattleOption2 { get; set; }
+                [global::ProtoBuf.ProtoMember(10046, Name = @"battle_option_3")]
+                public uint BattleOption3 { get; set; }
 
                 [global::ProtoBuf.ProtoContract()]
                 public partial class CustomizeGroup : global::ProtoBuf.IExtensible

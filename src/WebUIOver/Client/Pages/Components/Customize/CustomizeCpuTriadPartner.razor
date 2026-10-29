@@ -56,6 +56,7 @@
                             </MudItem>
                         </MudGrid>
                     </MudItem>
+                    @* // ob
                     <MudItem xs="12">
                         <MudGrid>
                             <MudItem xs="12" sm="6">
@@ -77,7 +78,8 @@
                                 <MudSlider @bind-Value="CustomizeCardContext.CpuTriadPartner.AiLevel" ValueLabel="true" Variant="Variant.Filled" Min="0" Max="100">@localizer["triad_ai"]</MudSlider>
                             </MudItem>
                         </MudGrid>
-                    </MudItem>
+                    </MudItem> *@
+                    @* // ob
                     <MudItem xs="12">
                         <MudGrid>
                             <MudItem xs="12" sm="6">
@@ -99,6 +101,33 @@
                                 </MudSelect>
                             </MudItem>
                         </MudGrid>
+                    </MudItem> *@
+                    <MudItem xs="12">
+                        <MudPaper Outlined="true" Class="pa-4" Style="border: 1px solid var(--mud-palette-gray-default);">
+                            <MudGrid>
+                                <MudItem xs="24" sm="12">
+                                    <MudText>以下3个选项, 可以加强队友cpu能力. 暂填数字, 0代表不启用..</MudText>
+                                </MudItem>
+                                <MudItem xs="8" sm="4">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.Skill1" T="uint"
+                                                      Immediate="true" HideSpinButtons="true"
+                                                      Variant="Variant.Outlined"
+                                                      Label="选项1" />
+                                </MudItem>
+                                <MudItem xs="8" sm="4">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.Skill2" T="uint"
+                                                      Immediate="true" HideSpinButtons="true"
+                                                      Variant="Variant.Outlined"
+                                                      Label="选项2" />
+                                </MudItem>
+                                <MudItem xs="8" sm="4">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.Skill3" T="uint"
+                                                      Immediate="true" HideSpinButtons="true"
+                                                      Variant="Variant.Outlined"
+                                                      Label="选项3" />
+                                </MudItem>
+                            </MudGrid>
+                        </MudPaper>
                     </MudItem>
                     <MudItem xs="12">
                         <MudField Label="@localizer["triad_bursttype"]" Variant="Variant.Outlined">
@@ -137,6 +166,7 @@
                                       Label="@localizer["triad_teamname"]"
                                       Validation="NameValidator.ValidateTeamName" />
                     </MudItem>
+                    @* // ob
                     <MudItem xs="12">
                         <MudGrid>
                             <MudItem xs="10" sm="11" Class="my-auto">
@@ -162,6 +192,39 @@
                                                OnClick="() => OpenChangeTeamBackgroundsDialog(CustomizeCardContext.CpuTriadPartner)"/>
                             </MudItem>
                         </MudGrid>
+                    </MudItem> *@
+                    <MudItem xs="12">
+                        <MudPaper Outlined="true" Class="pa-4" Style="border: 1px solid var(--mud-palette-gray-default);">
+                            <MudGrid>
+                                <MudItem xs="24" sm="12">
+                                    <MudText>以下4个选项, 可以使街机队名起效. 暂填数字, 0代表没效果..</MudText>
+                                </MudItem>
+                                <MudItem xs="6" sm="3">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupPlateId" T="uint"
+                                                     Immediate="true" HideSpinButtons="true"
+                                                     Variant="Variant.Outlined"
+                                                     Label="plate" />
+                                </MudItem>
+                                <MudItem xs="6" sm="3">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemBaseId" T="uint"
+                                                     Immediate="true" HideSpinButtons="true"
+                                                     Variant="Variant.Outlined"
+                                                     Label="emblem_base" />
+                                </MudItem>
+                                <MudItem xs="6" sm="3">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemPartsId" T="uint"
+                                                     Immediate="true" HideSpinButtons="true"
+                                                     Variant="Variant.Outlined"
+                                                     Label="emblem_parts" />
+                                </MudItem>
+                                <MudItem xs="6" sm="3">
+                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemEffectId" T="uint"
+                                                     Immediate="true" HideSpinButtons="true"
+                                                     Variant="Variant.Outlined"
+                                                     Label="emblem_effect" />
+                                </MudItem>
+                            </MudGrid>
+                        </MudPaper>
                     </MudItem>
                 </MudStack>
             </MudCardContent>

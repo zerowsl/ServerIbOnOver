@@ -47,11 +47,18 @@ public class TriadPartner : BaseEntity
     [Required]
     public uint MsSkill2 { get; set; } = 0;
 
+    public uint MsSkill3 { get; set; } = 0;
+
     [Required]
     public string TriadTeamName { get; set; } = "EXTREME TEAM";
     
     [Required]
     public uint TriadBackgroundPartsId { get; set; } = 0;
-    
+
+    public uint GroupPlateId { get; set; } = 0;
+    public uint GroupEmblemBaseId { get; set; } = 0;
+    public uint GroupEmblemPartsId { get; set; } = 0;
+    public uint GroupEmblemEffectId { get; set; } = 0;
+
     public virtual CardProfile CardProfile { get; set; } = null!;
 }

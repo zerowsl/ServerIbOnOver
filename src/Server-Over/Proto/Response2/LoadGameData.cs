@@ -67,7 +67,6 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(12, Name = @"score_display_interval")] // 36
         public uint[] ScoreDisplayIntervals { get; set; }
 
-
         [global::ProtoBuf.ProtoMember(10037, Name = @"base_win_point", IsRequired = true)] // 37
         public uint BaseWinPoint { get; set; }
         [global::ProtoBuf.ProtoMember(10038, Name = @"base_lose_point", IsRequired = true)]
@@ -78,12 +77,10 @@ public partial class Response2
         public uint WinResultTopBonus { get; set; }
         [global::ProtoBuf.ProtoMember(10041, Name = @"lose_result_top_bonus", IsRequired = true)]
         public uint LoseResultTopBonus { get; set; }
-        
         [global::ProtoBuf.ProtoMember(10042, Name = @"player_level_exp_2", IsRequired = true)]
         public uint PlayerLevelExp2 { get; set; }
         [global::ProtoBuf.ProtoMember(10043, Name = @"player_level_exp_3", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
         public int PlayerLevelExp3 { get; set; }
-        
         [global::ProtoBuf.ProtoMember(10044, Name = @"wanted_attack_level", IsRequired = true)]
         public uint WantedAttackLevel { get; set; }
         [global::ProtoBuf.ProtoMember(10045, Name = @"wanted_ps_attack_level", IsRequired = true)]
@@ -92,7 +89,6 @@ public partial class Response2
         public uint WantedPsDefenceLevel { get; set; }
         [global::ProtoBuf.ProtoMember(10047, Name = @"wanted_down_level", IsRequired = true)] // 47
         public uint WantedDownLevel { get; set; }
-
 
         [global::ProtoBuf.ProtoMember(13, Name = @"fes_setting")] // 48
         public XrossFesSetting FesSetting { get; set; }
@@ -116,25 +112,24 @@ public partial class Response2
 
         //[global::ProtoBuf.ProtoMember(10055, Name = @"player_level_exp_4", IsRequired = true)] // 55
         //public uint player_level_exp_4 { get; set; } = 350;
-        
         //[global::ProtoBuf.ProtoMember(10056, Name = @"p_level_bonus_rate", IsRequired = true)] // 56
         //public float PLevelBonusRate { get; set; }
 
         [global::ProtoBuf.ProtoMember(20, Name = @"mobile_suit_blocklist", IsRequired = true)] // 57
         public uint[] MobileSuitBlocklists { get; set; }
 
-        [global::ProtoBuf.ProtoMember(21, Name = @"vs_player_level_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
-        public int p21 { get; set; } = 50; // 100
-        [global::ProtoBuf.ProtoMember(22, Name = @"cpu_player_level_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
-        public int p22 { get; set; } = 50; // 50
+        [global::ProtoBuf.ProtoMember(21, Name = @"vs_player_level_point", IsRequired = true)]
+        public uint p21 { get; set; } = 100;
+        [global::ProtoBuf.ProtoMember(22, Name = @"cpu_player_level_point", IsRequired = true)]
+        public uint p22 { get; set; } = 100;
         [global::ProtoBuf.ProtoMember(23, Name = @"class_win_badge_point", IsRequired = true)]
         public uint p23 { get; set; } = 0;
-        [global::ProtoBuf.ProtoMember(24, Name = @"class_lose_badge_point", IsRequired = true)]
-        public uint p24 { get; set; } = 0;
+        [global::ProtoBuf.ProtoMember(24, Name = @"class_lose_badge_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
+        public int p24 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(25, Name = @"class_win_badge_bonus1", IsRequired = true)]
         public uint p25 { get; set; } = 0;
-        [global::ProtoBuf.ProtoMember(26, Name = @"class_win_badge_bonus2", IsRequired = true)]
-        public uint p26 { get; set; } = 0;
+        [global::ProtoBuf.ProtoMember(26, Name = @"class_win_badge_bonus2", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
+        public int p26 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(27, Name = @"class_lose_badge_bonus", IsRequired = true)]
         public uint p27 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(28, Name = @"root_win_badge_point1", IsRequired = true)]
@@ -145,8 +140,8 @@ public partial class Response2
         public uint p30 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(31, Name = @"root_win_badge_point4", IsRequired = true)]
         public uint p31 { get; set; } = 0;
-        [global::ProtoBuf.ProtoMember(32, Name = @"root_lose_badge_point", IsRequired = true)]
-        public uint p32 { get; set; } = 0;
+        [global::ProtoBuf.ProtoMember(32, Name = @"root_lose_badge_point", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
+        public int p32 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(33, Name = @"root_difficulty_badge_bonus1", IsRequired = true)]
         public uint p33 { get; set; } = 0;
         [global::ProtoBuf.ProtoMember(34, Name = @"root_difficulty_badge_bonus2", IsRequired = true)]
@@ -301,7 +296,6 @@ public partial class Response2
 
             [global::ProtoBuf.ProtoMember(2, Name = @"start_date", IsRequired = true)]
             public ulong StartDate { get; set; }
-
             [global::ProtoBuf.ProtoMember(3, Name = @"end_date", IsRequired = true)]
             public ulong EndDate { get; set; }
 
@@ -429,7 +423,7 @@ public partial class Response2
             public uint MatchingType { get; set; }
             
             [global::ProtoBuf.ProtoMember(4, Name = @"modifier_value", IsRequired = true)]
-            public uint ModifierValue { get; set; }
+            public float ModifierValue { get; set; }
             
             [global::ProtoBuf.ProtoMember(5, Name = @"fixed_value", IsRequired = true)]
             public uint FixedValue { get; set; }

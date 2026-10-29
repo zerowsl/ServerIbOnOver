@@ -10,5 +10,6 @@ public static partial class CpuTriadPartnerMapper
     [MapProperty(nameof(TriadPartner.MstMobileSuitId), nameof(CpuTriadPartner.MobileSuitId))]
     [MapProperty(nameof(TriadPartner.MsSkill1), nameof(CpuTriadPartner.Skill1))]
     [MapProperty(nameof(TriadPartner.MsSkill2), nameof(CpuTriadPartner.Skill2))]
+    [MapProperty(nameof(TriadPartner.MsSkill3), nameof(CpuTriadPartner.Skill3))]
     public static partial CpuTriadPartner ToCpuTriadPartner(this TriadPartner triadPartner);
 }

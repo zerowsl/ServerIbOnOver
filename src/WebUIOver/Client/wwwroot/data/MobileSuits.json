@@ -156,6 +156,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -194,6 +198,10 @@
       {
         "Id": 2,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -204,7 +212,7 @@
     "ValueCN": "强人",
     "ValueTC": "强人",
     "ValueTC2": "强人",
-    "Pilot": "M'qube",
+    "Pilot": "M'sqube",
     "PilotJP": "マ・クベ",
     "PilotCN": "马·克贝",
     "PilotTC": "馬·克貝",
@@ -232,6 +240,10 @@
       {
         "Id": 2,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -273,7 +285,7 @@
     "Id": 7,
     "Value": "Zaku II Ground Type",
     "ValueJP": "ザクII",
-    "ValueCN": "扎古2",
+    "ValueCN": "扎古 II",
     "ValueTC": "渣古II",
     "ValueTC2": "薩克II",
     "Pilot": "Cucuruz Doan",
@@ -311,7 +323,7 @@
     "Id": 8,
     "Value": "Char's Zaku II",
     "ValueJP": "シャア専用ザクII",
-    "ValueCN": "夏亚专用扎古2",
+    "ValueCN": "夏亚专用扎古 II",
     "ValueTC": "馬沙專用渣古II",
     "ValueTC2": "夏亞專用薩克II",
     "Pilot": "Char Aznable",
@@ -337,6 +349,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -459,7 +475,7 @@
     "ValueTC2": "百式",
     "Pilot": "Quattro Bajeena",
     "PilotJP": "クワトロ・バジーナ",
-    "PilotCN": "柯特罗·巴吉纳",
+    "PilotCN": "克瓦特罗·巴吉纳",
     "PilotTC": "古華多羅·巴茲拿",
     "PilotTC2": "克瓦特羅·巴吉納",
     "PilotSeiyuu": "Ikeda Shūichi",
@@ -495,6 +511,10 @@
       {
         "Id": 2,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -936,7 +956,7 @@
     "Id": 39,
     "Value": "Zaku III Custom",
     "ValueJP": "ザクIII改",
-    "ValueCN": "扎古3改",
+    "ValueCN": "扎古 III改",
     "ValueTC": "渣古III 特裝型",
     "ValueTC2": "薩克III改",
     "Pilot": "Mashymre Cello",
@@ -944,7 +964,7 @@
     "PilotCN": "玛修曼·塞罗",
     "PilotTC": "馬士文·世羅",
     "PilotTC2": "馬休曼·賽羅",
-    "PilotSeiyuu": "Horiuchi Ken'yū",
+    "PilotSeiyuu": "Horiuchi Ken'syū",
     "PilotSeiyuuJP": "堀内賢雄",
     "PilotSeiyuuCN": "堀内贤雄",
     "PilotSeiyuuTC": "堀内賢雄",
@@ -1201,6 +1221,10 @@
       {
         "Id": 2,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -1283,6 +1307,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "FBポーズドB"
       }
     ]
   },
@@ -1317,6 +1345,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS2.ポーズド"
       }
     ]
   },
@@ -1409,6 +1441,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -1453,6 +1489,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -1723,6 +1763,10 @@
       {
         "Id": 2,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 3,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -1771,6 +1815,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -1815,6 +1863,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -1858,6 +1910,10 @@
       },
       {
         "Id": 1,
+        "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
         "Value": "FBポーズド"
       }
     ]
@@ -2111,6 +2167,10 @@
       {
         "Id": 2,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 3,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -2446,7 +2506,7 @@
     "Id": 98,
     "Value": "Tallgeese III",
     "ValueJP": "トールギスIII",
-    "ValueCN": "托鲁基斯3",
+    "ValueCN": "托鲁基斯Ⅲ",
     "ValueTC": "多魯基斯III",
     "ValueTC2": "托爾吉斯III",
     "Pilot": "Zechs Merquise",
@@ -2640,7 +2700,7 @@
     "PilotCN": "加米尔·尼特",
     "PilotTC": "舒文·尼特",
     "PilotTC2": "賈米爾·尼特",
-    "PilotSeiyuu": "Horiuchi Ken'yū",
+    "PilotSeiyuu": "Horiuchi Ken'syū",
     "PilotSeiyuuJP": "堀内賢雄",
     "PilotSeiyuuCN": "堀内贤雄",
     "PilotSeiyuuTC": "堀內賢雄",
@@ -2851,6 +2911,10 @@
       {
         "Id": 1,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -3073,6 +3137,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "XBポーズド"
       }
     ]
   },
@@ -3475,6 +3543,10 @@
       {
         "Id": 1,
         "Value": "EXVS.ポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -3523,6 +3595,10 @@
       {
         "Id": 2,
         "Value": "EXVSポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "XBポーズド"
       }
     ]
   },
@@ -3619,6 +3695,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.2ポーズド"
       }
     ]
   },
@@ -4127,6 +4207,10 @@
       {
         "Id": 2,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -4190,7 +4274,7 @@
     "PilotCN": "洛克昂·史特拉托斯 (莱尔·狄兰迪)",
     "PilotTC": "洛奧·史當斯 (萊爾·狄蘭提)",
     "PilotTC2": "洛克昂·史特拉托斯 (萊爾·狄蘭迪)",
-    "PilotSeiyuu": "Miki Shin'ichirō",
+    "PilotSeiyuu": "Miki Shin'sichirō",
     "PilotSeiyuuJP": "三木眞一郎",
     "PilotSeiyuuCN": "三木真一郎",
     "PilotSeiyuuTC": "三木真一郎",
@@ -4223,6 +4307,10 @@
       {
         "Id": 2,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -4267,6 +4355,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -4359,6 +4451,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -4447,6 +4543,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -5275,6 +5375,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -5323,6 +5427,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -5529,10 +5637,10 @@
   {
     "Id": 181,
     "Value": "Zaku II Custom",
-    "ValueJP": "ザクII改",
-    "ValueCN": "扎古2改",
-    "ValueTC": "渣古2改",
-    "ValueTC2": "薩克II改",
+    "ValueJP": "ザクII 改",
+    "ValueCN": "扎古 II 改",
+    "ValueTC": "渣古 II 改",
+    "ValueTC2": "薩克 II改",
     "Pilot": "Bernard Wiseman",
     "PilotJP": "バーナード・ワイズマン",
     "PilotCN": "巴纳德·维兹曼",
@@ -5671,6 +5779,10 @@
       {
         "Id": 2,
         "Value": "アーセナルベースコラボ"
+      },
+      {
+        "Id": 3,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -5743,6 +5855,10 @@
       {
         "Id": 1,
         "Value": "MBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -5891,6 +6007,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -6019,6 +6139,10 @@
       {
         "Id": 3,
         "Value": "IBポーズドB"
+      },
+      {
+        "Id": 4,
+        "Value": "FBポーズド"
       }
     ]
   },
@@ -6273,6 +6397,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBONポーズド"
       }
     ]
   },
@@ -6359,6 +6487,10 @@
       {
         "Id": 2,
         "Value": "GGGP2024"
+      },
+      {
+        "Id": 3,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -6597,6 +6729,10 @@
       {
         "Id": 2,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -6983,6 +7119,10 @@
       {
         "Id": 2,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 3,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -7017,6 +7157,10 @@
       {
         "Id": 1,
         "Value": "FBポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "MBポーズド"
       }
     ]
   },
@@ -7527,6 +7671,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "FBポーズド"
       },
       {
         "Id": 11,
@@ -8613,6 +8761,10 @@
       {
         "Id": 1,
         "Value": "MBONポーズド"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.2ポーズド"
       }
     ]
   },
@@ -8827,6 +8979,10 @@
       {
         "Id": 1,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 2,
+        "Value": "EXVS.ポーズド"
       }
     ]
   },
@@ -9547,6 +9703,10 @@
       {
         "Id": 1,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 2,
+        "Value": "XBポーズド"
       }
     ]
   },
@@ -9611,6 +9771,10 @@
       {
         "Id": 4,
         "Value": "OBポーズドB"
+      },
+      {
+        "Id": 5,
+        "Value": "XBポーズド"
       },
       {
         "Id": 11,
@@ -10937,7 +11101,7 @@
     "PilotSeiyuuCN": "齐藤壮马",
     "PilotSeiyuuTC": "斉藤壮馬",
     "PilotSeiyuuTC2": "斉藤壮馬",
-    "Series": "Mobile Suit Gundam: Hathaway\\u0027s Flash(movie)",
+    "Series": "Mobile Suit Gundam: Hathaway'ss Flash(movie)",
     "SeriesJP": "機動戦士ガンダム 閃光のハサウェイ(劇場版) ",
     "SeriesCN": "机动战士高达 闪光的哈萨维(剧场版)",
     "SeriesTC": "機動戰士高達 閃光之凱薩衛(剧场版)",
@@ -10957,10 +11121,10 @@
   {
     "Id": 335,
     "Value": "Wodom Pod+",
-    "ValueJP": "ウォドムポッド＋",
-    "ValueCN": "沃多姆荚舱＋",
-    "ValueTC": "沃多姆艙＋",
-    "ValueTC2": "渥頓戰艇＋",
+    "ValueJP": "ウォドムポッド+",
+    "ValueCN": "沃多姆荚舱+",
+    "ValueTC": "沃多姆艙+",
+    "ValueTC2": "渥頓戰艇+",
     "Pilot": "May",
     "PilotJP": "メイ",
     "PilotCN": "芽依",

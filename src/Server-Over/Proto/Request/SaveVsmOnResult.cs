@@ -35,7 +35,7 @@ public partial class Request
         [global::ProtoBuf.ProtoMember(6, Name = @"network_report", IsRequired = true)]
         public NetworkReport NetworkReport { get; set; }
         
-        // gpu_health_check_report
+        // 7 gpu_health_check_report
         
         [global::ProtoBuf.ProtoContract()]
         public partial class PlayResultGroup : global::ProtoBuf.IExtensible
@@ -287,6 +287,7 @@ public partial class Request
 
             // 71 group_tag_point
             // 72 group_id
+            //? 76 on_compe_result
 
             [global::ProtoBuf.ProtoContract()]
             public partial class ClassMatchResult : global::ProtoBuf.IExtensible
@@ -327,6 +328,30 @@ public partial class Request
                 [global::ProtoBuf.ProtoMember(2, Name = @"cond_2_numbers")]
                 public uint[] Cond2Numbers { get; set; }
 
+            }
+            
+            [global::ProtoBuf.ProtoContract()]
+            public partial class OnCompeResult : global::ProtoBuf.IExtensible
+            {
+                private global::ProtoBuf.IExtension __pbn__extensionData;
+                global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+                    => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+                [global::ProtoBuf.ProtoMember(1, Name = @"before_oncompe_point", IsRequired = true)]
+                public uint before_oncompe_point { get; set; }
+
+                [global::ProtoBuf.ProtoMember(2, Name = @"after_oncompe_point", IsRequired = true)]
+                public uint after_oncompe_point { get; set; }
+                
+                [global::ProtoBuf.ProtoMember(3, Name = @"before_partner_oncompe_point", IsRequired = true)]
+                public uint before_partner_oncompe_point { get; set; }
+                
+                [global::ProtoBuf.ProtoMember(4, Name = @"before_foe1_oncompe_point", IsRequired = true)]
+                public uint before_foe1_oncompe_point { get; set; }
+                
+                [global::ProtoBuf.ProtoMember(5, Name = @"before_foe2_oncompe_point", IsRequired = true)]
+                public uint before_foe2_oncompe_point { get; set; }
+                
             }
 
         }

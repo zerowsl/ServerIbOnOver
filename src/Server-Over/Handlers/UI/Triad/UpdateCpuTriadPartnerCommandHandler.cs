@@ -34,6 +34,7 @@ public class UpdateCpuTriadPartnerCommandHandler : IRequestHandler<UpdateCpuTria
         triadPartner.MstMobileSuitId = updateRequest.CpuTriadPartner.MobileSuitId;
         triadPartner.MsSkill1 = updateRequest.CpuTriadPartner.Skill1;
         triadPartner.MsSkill2 = updateRequest.CpuTriadPartner.Skill2;
+        triadPartner.MsSkill3 = updateRequest.CpuTriadPartner.Skill3;
         triadPartner.BurstType = (uint)updateRequest.CpuTriadPartner.BurstType;
         triadPartner.ArmorLevel = (uint)updateRequest.CpuTriadPartner.ArmorLevel;
         triadPartner.ShootAttackLevel = (uint)updateRequest.CpuTriadPartner.ShootAttackLevel;
@@ -43,6 +44,10 @@ public class UpdateCpuTriadPartnerCommandHandler : IRequestHandler<UpdateCpuTria
         triadPartner.AiLevel = (uint)updateRequest.CpuTriadPartner.AiLevel;
         triadPartner.TriadTeamName = updateRequest.CpuTriadPartner.TriadTeamName;
         triadPartner.TriadBackgroundPartsId = updateRequest.CpuTriadPartner.TriadBackgroundPartsId;
+        triadPartner.GroupPlateId = updateRequest.CpuTriadPartner.GroupPlateId;
+        triadPartner.GroupEmblemBaseId = updateRequest.CpuTriadPartner.GroupEmblemBaseId;
+        triadPartner.GroupEmblemPartsId = updateRequest.CpuTriadPartner.GroupEmblemPartsId;
+        triadPartner.GroupEmblemEffectId = updateRequest.CpuTriadPartner.GroupEmblemEffectId;
         
         _context.SaveChanges();
 

@@ -2754,6 +2754,18 @@ namespace ServerOver.Migrations
                     b.Property<uint>("ExGaugeLevel")
                         .HasColumnType("INTEGER");
 
+                    b.Property<uint>("GroupEmblemBaseId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("GroupEmblemEffectId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("GroupEmblemPartsId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("GroupPlateId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<uint>("InfightAttackLevel")
                         .HasColumnType("INTEGER");
 
@@ -2761,6 +2773,9 @@ namespace ServerOver.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<uint>("MsSkill2")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("MsSkill3")
                         .HasColumnType("INTEGER");
 
                     b.Property<uint>("MstMobileSuitId")

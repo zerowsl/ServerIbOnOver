@@ -40,7 +40,7 @@ public partial class Request
             public uint StageId { get; set; }
             [global::ProtoBuf.ProtoMember(3, Name = @"phase_id", IsRequired = true)]
             public uint PhaseId { get; set; }
-            [global::ProtoBuf.ProtoMember(4, Name = @"phase_type", IsRequired = true)] // battle_type
+            [global::ProtoBuf.ProtoMember(4, Name = @"battle_type", IsRequired = true)]
             public uint PhaseType { get; set; }
             
             [global::ProtoBuf.ProtoMember(5, Name = @"difficulty", IsRequired = true)]
@@ -121,7 +121,10 @@ public partial class Request
 
             [global::ProtoBuf.ProtoMember(26, Name = @"one_on_one_flag")]
             public uint p26 { get; set; }
-			            
+			
+			[global::ProtoBuf.ProtoMember(27, Name = @"battle_option")]
+            public global::System.Collections.Generic.List<uint> BattleOptions { get; } = new();
+			
             // [global::ProtoBuf.ProtoMember(36, Name = @"total_wanted_defeat_num", IsRequired = true)]
             // public uint TotalWantedDefeatNum { get; set; }
             // [global::ProtoBuf.ProtoMember(37, Name = @"link_num", IsRequired = true)]
@@ -132,7 +135,6 @@ public partial class Request
             // public uint GuardNum { get; set; }
             
             // 22 guest_nav_boost_flag
-            // 27 battle_option
             
             [global::ProtoBuf.ProtoContract()]
             public partial class GroupPartner : global::ProtoBuf.IExtensible

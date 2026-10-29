@@ -4,18 +4,11 @@ using ServerOver.Persistence;
 
 namespace ServerOver.Commands.LoadCard.MobileUser;
 
-public class LoadTriadPartnerCommand : ILoadCardMobileUserCommand
+public class LoadTriadPartnerCommand(ServerDbContext context) : ILoadCardMobileUserCommand
 {
-    private readonly ServerDbContext _context;
-
-    public LoadTriadPartnerCommand(ServerDbContext context)
-    {
-        _context = context;
-    }
-
     public void Fill(CardProfile cardProfile, Response.LoadCard.MobileUserGroup mobileUserGroup)
     {
-        var triadPartner = _context.TriadPartnerDbSet
+        var triadPartner = context.TriadPartnerDbSet
             .First(x => x.CardProfile == cardProfile);
 
         mobileUserGroup.MstMobileSuitId = triadPartner.MstMobileSuitId;
@@ -28,5 +21,14 @@ public class LoadTriadPartnerCommand : ILoadCardMobileUserCommand
         mobileUserGroup.BurstType = triadPartner.MstMobileSuitId > 0 ? triadPartner.BurstType : 0;
         mobileUserGroup.TriadTeamName = triadPartner.TriadTeamName;
         mobileUserGroup.TriadBackgroundPartsId = triadPartner.MstMobileSuitId > 0 ? triadPartner.TriadBackgroundPartsId : 0;
+
+        // ib
+        mobileUserGroup.BattleOption1 = triadPartner.MstMobileSuitId > 0 ? triadPartner.MsSkill1 : 0;
+        mobileUserGroup.BattleOption2 = triadPartner.MstMobileSuitId > 0 ? triadPartner.MsSkill2 : 0;
+        mobileUserGroup.BattleOption3 = triadPartner.MstMobileSuitId > 0 ? triadPartner.MsSkill3 : 0;
+        mobileUserGroup.TriadGroupPlateId = triadPartner.MstMobileSuitId > 0 ? triadPartner.GroupPlateId : 0;
+        mobileUserGroup.TriadGroupEmblemBaseId = triadPartner.MstMobileSuitId > 0 ? triadPartner.GroupEmblemBaseId : 0;
+        mobileUserGroup.TriadGroupEmblemPartsId = triadPartner.MstMobileSuitId > 0 ? triadPartner.GroupEmblemPartsId : 0;
+        mobileUserGroup.TriadGroupEmblemEffectId = triadPartner.MstMobileSuitId > 0 ? triadPartner.GroupEmblemEffectId : 0;
     }
 }

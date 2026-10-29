@@ -29,7 +29,7 @@ public partial class Request
         [global::ProtoBuf.ProtoMember(4, Name = @"result", IsRequired = true)]
         public PlayResultGroup Result { get; set; }
         
-        // gpu_health_check_report
+        // 5 gpu_health_check_report
         
         [global::ProtoBuf.ProtoContract()]
         public partial class PlayResultGroup : global::ProtoBuf.IExtensible
@@ -117,7 +117,6 @@ public partial class Request
 
             [global::ProtoBuf.ProtoMember(27, Name = @"battle_nav_id", IsRequired = true)] //--
             public uint BattleNavId { get; set; }
-
             [global::ProtoBuf.ProtoMember(28, Name = @"battle_nav_familiarity", IsRequired = true)] //--
             public uint BattleNavFamiliarity { get; set; }
 
@@ -217,10 +216,10 @@ public partial class Request
             [global::ProtoBuf.ProtoMember(53, Name = @"quick_start_info", IsRequired = true)]
             public QuickStartInfo QuickStartInfo { get; set; } = new();
 
-            //[global::ProtoBuf.ProtoMember(54, Name = @"group_tag_point")]
-            //public uint GroupTagPoint { get; set; }
-            //[global::ProtoBuf.ProtoMember(55, Name = @"group_id")]
-            //public uint GroupId { get; set; }
+            [global::ProtoBuf.ProtoMember(54, Name = @"group_tag_point")]
+            public uint group_tag_point { get; set; }
+            [global::ProtoBuf.ProtoMember(55, Name = @"group_id")]
+            public uint group_id { get; set; }
 
             [global::ProtoBuf.ProtoMember(56, Name = @"overlimit_flag", IsRequired = true)]
             public bool OverlimitFlag { get; set; }
@@ -230,8 +229,6 @@ public partial class Request
             [global::ProtoBuf.ProtoMember(58, Name = @"one_on_one_flag", IsRequired = true)]
             public bool OneOnOneFlag { get; set; }
 
-            // group_tag_point
-            // group_id
         }
     }
 }

@@ -72,8 +72,6 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(6, Name = "high_score_info")]
 			public global::System.Collections.Generic.List<HighScoreInfo> HighScoreInfos { get; } = new();
             
-
-
             [global::ProtoBuf.ProtoContract()]
             public partial class MSSkillGroup : global::ProtoBuf.IExtensible
             {
@@ -94,30 +92,32 @@ public partial class Response2
                 public uint TriadBuddyPoint { get; set; }
                 
             }
-
-            [global::ProtoBuf.ProtoContract()]
-            public partial class CpuSceneData : global::ProtoBuf.IExtensible
-            {
-                private global::ProtoBuf.IExtension __pbn__extensionData;
-                global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
-                    => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
-
-                [global::ProtoBuf.ProtoMember(1, Name = @"course_id", IsRequired = true)]
-                public uint CourseId { get; set; }
-
-                [global::ProtoBuf.ProtoMember(2, Name = @"released_at", IsRequired = true)]
-                public ulong ReleasedAt { get; set; }
-
-                [global::ProtoBuf.ProtoMember(3, Name = @"total_play_num", IsRequired = true)]
-                public uint TotalPlayNum { get; set; }
-
-                [global::ProtoBuf.ProtoMember(4, Name = @"total_clear_num", IsRequired = true)]
-                public uint TotalClearNum { get; set; }
-
-                [global::ProtoBuf.ProtoMember(5, Name = @"highscore", IsRequired = true)]
-                public uint Highscore { get; set; }
-
-            }
+            
+            #region -- CpuSceneData
+            // [global::ProtoBuf.ProtoContract()]
+            // public partial class CpuSceneData : global::ProtoBuf.IExtensible
+            // {
+            //     private global::ProtoBuf.IExtension __pbn__extensionData;
+            //     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            //         => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+            //
+            //     [global::ProtoBuf.ProtoMember(1, Name = @"course_id", IsRequired = true)]
+            //     public uint CourseId { get; set; }
+            //
+            //     [global::ProtoBuf.ProtoMember(2, Name = @"released_at", IsRequired = true)]
+            //     public ulong ReleasedAt { get; set; }
+            //
+            //     [global::ProtoBuf.ProtoMember(3, Name = @"total_play_num", IsRequired = true)]
+            //     public uint TotalPlayNum { get; set; }
+            //
+            //     [global::ProtoBuf.ProtoMember(4, Name = @"total_clear_num", IsRequired = true)]
+            //     public uint TotalClearNum { get; set; }
+            //
+            //     [global::ProtoBuf.ProtoMember(5, Name = @"highscore", IsRequired = true)]
+            //     public uint Highscore { get; set; }
+            //
+            // }
+            #endregion -- CpuSceneData
 
             [global::ProtoBuf.ProtoContract()]
             public partial class TrainingSettingGroup : global::ProtoBuf.IExtensible
@@ -147,20 +147,20 @@ public partial class Response2
                 [global::ProtoBuf.ProtoMember(7, Name = @"command_guide_display", IsRequired = true)]
                 public uint CommandGuideDisplay { get; set; } // 0=off; 1=键位; 2=操作名;
                 
-                [global::ProtoBuf.ProtoMember(8, Name = @"player1_hp_mode")] // armor
+                [global::ProtoBuf.ProtoMember(8, Name = @"armor", IsRequired = true)]
                 public uint Player1HpMode { get; set; } = 0;
                 
-                [global::ProtoBuf.ProtoMember(9, Name = @"cpu_hp_auto_regen")] // cpu_auto_heal
+                [global::ProtoBuf.ProtoMember(9, Name = @"cpu_auto_heal", IsRequired = true)]
                 public uint CpuHpAutoRegen { get; set; } = 0;
                 
-                [global::ProtoBuf.ProtoMember(10, Name = @"ex_over_limit")]
+                [global::ProtoBuf.ProtoMember(10, Name = @"ex_over_limit", IsRequired = true)]
                 public uint ExOverLimit { get; set; } = 0;
                 
-                [global::ProtoBuf.ProtoMember(11, Name = @"quick_fill")] // fast_reload
+                [global::ProtoBuf.ProtoMember(11, Name = @"fast_reload", IsRequired = true)]
                 public uint QuickFill { get; set; } = 0;
             }
 
-            #region // PilotClassMatch
+            #region -- PilotClassMatch
             // [global::ProtoBuf.ProtoContract()]
             // public partial class PilotClassMatch : global::ProtoBuf.IExtensible
             // {
@@ -193,7 +193,7 @@ public partial class Response2
             //     }
             //
             // }
-            #endregion // PilotClassMatch
+            #endregion -- PilotClassMatch
             
             [global::ProtoBuf.ProtoContract()]
             public partial class PracticeGroup : global::ProtoBuf.IExtensible
@@ -204,19 +204,14 @@ public partial class Response2
 
                 [global::ProtoBuf.ProtoMember(1, Name = "highscore_scene_1", IsRequired = true)]
 				public uint HighscoreScene1 { get; set; }
-
 				[global::ProtoBuf.ProtoMember(2, Name = "highscore_scene_2", IsRequired = true)]
 				public uint HighscoreScene2 { get; set; }
-
 				[global::ProtoBuf.ProtoMember(3, Name = "highscore_scene_3", IsRequired = true)]
 				public uint HighscoreScene3 { get; set; }
-
 				[global::ProtoBuf.ProtoMember(4, Name = "highscore_scene_4", IsRequired = true)]
 				public uint HighscoreScene4 { get; set; }
-
 				[global::ProtoBuf.ProtoMember(5, Name = "highscore_scene_5", IsRequired = true)]
 				public uint HighscoreScene5 { get; set; }
-
 				[global::ProtoBuf.ProtoMember(6, Name = "highscore_scene_6", IsRequired = true)]
 				public uint HighscoreScene6 { get; set; }
 
@@ -306,18 +301,18 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(8, Name = @"mst_mobile_suit_id", IsRequired = true)]
             public uint MstMobileSuitId { get; set; }
 
-            [global::ProtoBuf.ProtoMember(9, Name = @"armor_level", IsRequired = true)]
-            public uint ArmorLevel { get; set; }
-            [global::ProtoBuf.ProtoMember(10, Name = @"shoot_attack_level", IsRequired = true)]
-            public uint ShootAttackLevel { get; set; }
-            [global::ProtoBuf.ProtoMember(11, Name = @"infight_attack_level", IsRequired = true)]
-            public uint InfightAttackLevel { get; set; }
-            [global::ProtoBuf.ProtoMember(12, Name = @"booster_level", IsRequired = true)]
-            public uint BoosterLevel { get; set; }
-            [global::ProtoBuf.ProtoMember(13, Name = @"ex_gauge_level", IsRequired = true)]
-            public uint ExGaugeLevel { get; set; }
-            [global::ProtoBuf.ProtoMember(14, Name = @"ai_level", IsRequired = true)]
-            public uint AiLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(9, Name = @"armor_level", IsRequired = true)]
+            // public uint ArmorLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(10, Name = @"shoot_attack_level", IsRequired = true)]
+            // public uint ShootAttackLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(11, Name = @"infight_attack_level", IsRequired = true)]
+            // public uint InfightAttackLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(12, Name = @"booster_level", IsRequired = true)]
+            // public uint BoosterLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(13, Name = @"ex_gauge_level", IsRequired = true)]
+            // public uint ExGaugeLevel { get; set; }
+            // [global::ProtoBuf.ProtoMember(14, Name = @"ai_level", IsRequired = true)]
+            // public uint AiLevel { get; set; }
 
             [global::ProtoBuf.ProtoMember(15, Name = @"gamepad")]
             public GamepadGroup Gamepad { get; set; }
@@ -352,12 +347,8 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(29, Name = @"quick_start")]
             public QuickStartGroup QuickStart { get; set; }
             
-            [global::ProtoBuf.ProtoMember(10044, Name = @"triad_team_name", IsRequired = true)] // 44
-            public string TriadTeamName { get; set; }
-
-            [global::ProtoBuf.ProtoMember(10045, Name = @"triad_background_parts_id", IsRequired = true)] // 45
-            public uint TriadBackgroundPartsId { get; set; }
-
+            //[global::ProtoBuf.ProtoMember(10045, Name = @"triad_background_parts_id", IsRequired = true)] // 45
+            //public uint TriadBackgroundPartsId { get; set; }
             //[global::ProtoBuf.ProtoMember(10046, Name = @"class_match_title_customize", IsRequired = true)] // 46
             //public TitleCustomize ClassMatchTitleCustomize { get; set; }
             //[global::ProtoBuf.ProtoMember(10047, Name = @"triad_title_customize", IsRequired = true)] // 47
@@ -389,33 +380,30 @@ public partial class Response2
             public global::System.Collections.Generic.List<TagTeamGroup> TagTeams { get; } = new();
             
             [global::ProtoBuf.ProtoMember(37, Name = @"group_id", IsRequired = true)]
-            public uint group_id { get; set; } = 1;
-            [global::ProtoBuf.ProtoMember(38, Name = "group_name")]
-            public string p38 { get; set; } = "RE0-486";
+            public uint group_id { get; set; } = 486;
+            [global::ProtoBuf.ProtoMember(38, Name = "group_name")] // 44
+            public string TriadTeamName { get; set; }
             [global::ProtoBuf.ProtoMember(39, Name = "group_plate_id")]
-            public uint p39 { get; set; }
+            public uint TriadGroupPlateId { get; set; }
             [global::ProtoBuf.ProtoMember(40, Name = "group_emblem_base_id")]
-            public uint p40 { get; set; }
+            public uint TriadGroupEmblemBaseId { get; set; }
             [global::ProtoBuf.ProtoMember(41, Name = "group_emblem_parts_id")]
-            public uint p41 { get; set; }
+            public uint TriadGroupEmblemPartsId { get; set; }
             [global::ProtoBuf.ProtoMember(42, Name = "group_emblem_effect_id")]
-            public uint p42 { get; set; }
+            public uint TriadGroupEmblemEffectId { get; set; }
             
             [global::ProtoBuf.ProtoMember(43, Name = @"on_compe_user_info")]
             public OnCompeUserInfoGroup OnCompeUserInfo { get; set; }
             
             [global::ProtoBuf.ProtoMember(44, Name = @"battle_option_1")]
-            public uint battle_option_1 { get; set; } = 0;
+            public uint BattleOption1 { get; set; }
             [global::ProtoBuf.ProtoMember(45, Name = @"battle_option_2")]
-            public uint battle_option_2 { get; set; } = 0;
+            public uint BattleOption2 { get; set; }
             [global::ProtoBuf.ProtoMember(46, Name = @"battle_option_3")]
-            public uint battle_option_3 { get; set; } = 0;
+            public uint BattleOption3 { get; set; }
             
             [global::ProtoBuf.ProtoMember(47, Name = @"marker_color_id", IsRequired = true)]
             public uint marker_color_id { get; set; } = 0;
-            
-            [global::ProtoBuf.ProtoMember(486)]
-            public uint p486 { get; set; } = 486;
 
             [global::ProtoBuf.ProtoContract()]
             public partial class CustomizeGroup : global::ProtoBuf.IExtensible
@@ -440,7 +428,7 @@ public partial class Response2
                 public uint bgm_safe_mode { get; set; } = 0;
             }
 
-            #region // CommandMessageGroup
+            #region -- CommandMessageGroup
             // [global::ProtoBuf.ProtoContract()]
             // public partial class CommandMessageGroup : global::ProtoBuf.IExtensible
             // {
@@ -458,7 +446,7 @@ public partial class Response2
             //     public uint UniqueMessageId { get; set; }
             //
             // }
-            #endregion // CommandMessageGroup
+            #endregion -- CommandMessageGroup
 
             [global::ProtoBuf.ProtoContract()]
             public partial class CommandMessageData : global::ProtoBuf.IExtensible
@@ -538,7 +526,7 @@ public partial class Response2
 
             }
 
-            #region // OnlineTagInfo
+            #region -- OnlineTagInfo
             // [global::ProtoBuf.ProtoContract()]
             // public partial class OnlineTagInfo : global::ProtoBuf.IExtensible
             // {
@@ -633,7 +621,7 @@ public partial class Response2
             //     }
             //
             // }
-            #endregion // OnlineTagInfo
+            #endregion -- OnlineTagInfo
 
             [global::ProtoBuf.ProtoContract()]
             public partial class PlayerSticker : global::ProtoBuf.IExtensible
