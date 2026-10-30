@@ -20,7 +20,7 @@ public class CommonDataService : ICommonDataService
     private List<GeneralPreview> _sortedGaugeList = new();
     private List<GeneralPreview> _sortedStageList = new();
 
-    private ConfigsResponse _configs;
+    private ConfigsResponse _configs = default!;
     
     public CommonDataService(HttpClient client, IGeneralPreviewService generalPreviewService, ILogger<CommonDataService> logger)
     {

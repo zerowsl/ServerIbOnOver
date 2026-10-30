@@ -193,39 +193,42 @@
                             </MudItem>
                         </MudGrid>
                     </MudItem> *@
-                    <MudItem xs="12">
-                        <MudPaper Outlined="true" Class="pa-4" Style="border: 1px solid var(--mud-palette-gray-default);">
-                            <MudGrid>
-                                <MudItem xs="24" sm="12">
-                                    <MudText>以下4个选项, 可以使街机队名起效. 暂填数字, 0代表没效果..</MudText>
-                                </MudItem>
-                                <MudItem xs="6" sm="3">
-                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupPlateId" T="uint"
-                                                     Immediate="true" HideSpinButtons="true"
-                                                     Variant="Variant.Outlined"
-                                                     Label="plate" />
-                                </MudItem>
-                                <MudItem xs="6" sm="3">
-                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemBaseId" T="uint"
-                                                     Immediate="true" HideSpinButtons="true"
-                                                     Variant="Variant.Outlined"
-                                                     Label="emblem_base" />
-                                </MudItem>
-                                <MudItem xs="6" sm="3">
-                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemPartsId" T="uint"
-                                                     Immediate="true" HideSpinButtons="true"
-                                                     Variant="Variant.Outlined"
-                                                     Label="emblem_parts" />
-                                </MudItem>
-                                <MudItem xs="6" sm="3">
-                                    <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemEffectId" T="uint"
-                                                     Immediate="true" HideSpinButtons="true"
-                                                     Variant="Variant.Outlined"
-                                                     Label="emblem_effect" />
-                                </MudItem>
-                            </MudGrid>
-                        </MudPaper>
-                    </MudItem>
+                    @if (CommonDataService.GetConfigs().EnableTriadGroup)
+                    {
+                        <MudItem xs="12">
+                            <MudPaper Outlined="true" Class="pa-4" Style="border: 1px solid var(--mud-palette-gray-default);">
+                                <MudGrid>
+                                    <MudItem xs="24" sm="12">
+                                        <MudText>以下4个选项, 可以使街机队名起效. 暂填数字, 0代表没效果..</MudText>
+                                    </MudItem>
+                                    <MudItem xs="6" sm="3">
+                                        <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupPlateId" T="uint"
+                                                         Immediate="true" HideSpinButtons="true"
+                                                         Variant="Variant.Outlined"
+                                                         Label="plate" />
+                                    </MudItem>
+                                    <MudItem xs="6" sm="3">
+                                        <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemBaseId" T="uint"
+                                                         Immediate="true" HideSpinButtons="true"
+                                                         Variant="Variant.Outlined"
+                                                         Label="emblem_base" />
+                                    </MudItem>
+                                    <MudItem xs="6" sm="3">
+                                        <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemPartsId" T="uint"
+                                                         Immediate="true" HideSpinButtons="true"
+                                                         Variant="Variant.Outlined"
+                                                         Label="emblem_parts" />
+                                    </MudItem>
+                                    <MudItem xs="6" sm="3">
+                                        <MudNumericField @bind-Value="CustomizeCardContext.CpuTriadPartner.GroupEmblemEffectId" T="uint"
+                                                         Immediate="true" HideSpinButtons="true"
+                                                         Variant="Variant.Outlined"
+                                                         Label="emblem_effect" />
+                                    </MudItem>
+                                </MudGrid>
+                            </MudPaper>
+                        </MudItem>
+                    }
                 </MudStack>
             </MudCardContent>
         </MudCard>

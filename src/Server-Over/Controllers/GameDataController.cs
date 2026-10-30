@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
 using ServerOver.Caches;
 using ServerOver.Handlers.Game;
-using ServerOver.Mapper.Usage;
+using ServerOver.Mapper.Card.Setting;
 using ServerOver.Models.Config;
 using ServerOver.Utils;
 using System.Diagnostics;

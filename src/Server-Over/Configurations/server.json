@@ -80,6 +80,9 @@
         //2, 1
       ],
       
+      "Eab352": true, 
+      "Eab1z0": false, 
+      
       // 店外
       "ClassMatchG": {
         // 是否打开排位经验, 默认关闭.

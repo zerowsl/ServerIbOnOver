@@ -10,6 +10,8 @@ public sealed class CustomConfigs
     public bool ClearUpTooMuchBattleHistory { get; set; }
 
     public uint[]? p36_stages { get; set; } = null;
+	
+	public bool EabTriadGroup { get; set; } = false;
     
     public ClassMatchGConfigs ClassMatchG { get; set; } = new();
 
