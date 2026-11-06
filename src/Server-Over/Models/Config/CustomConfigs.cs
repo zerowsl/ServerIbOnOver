@@ -33,7 +33,7 @@ public sealed class CustomConfigs
         public GConfigs CustomSolo { get; set; } = new();
         public GConfigs CustomTeam { get; set; } = new();
         
-        public class GConfigs
+        public sealed class GConfigs
         {
             public uint ClassId { get; set; }
             public uint GradeId { get; set; }
@@ -50,10 +50,20 @@ public sealed class CustomConfigs
         public uint MatchingType { get; set; }
         public uint MatchingAttribute { get; set; } = 0;
         public uint[] SelectableMsIds { get; set; } = [];
+        public bool IsSelectableMsCostLte2000 { get; set; }
         public uint RuleType { get; set; } = 0;
         public bool RevengeFlag { get; set; }
         public uint Timer { get; set; } = 0;
         public uint WorldId => MatchingType == 1 ? 1013u : 1014u;
         public uint FesRuleType { get; set; } = 0;
+        public OnCompeConfigs? OnCompe { get; set; }
+        
+        public sealed class OnCompeConfigs
+        {
+            public bool Enable { get; set; }
+            public bool EnableSettlement { get; set; }
+            public uint rank_threshold_a { get; set; }
+            public uint rank_threshold_s { get; set; }
+        }
     }
 }

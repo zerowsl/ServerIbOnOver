@@ -46,13 +46,16 @@ namespace ServerOver.Persistence
         public DbSet<MobileSuitUsage> MobileSuitUsageDbSet { get; set; }
         public DbSet<FavouriteMobileSuit> FavouriteMobileSuitDbSet { get; set; }
 
-        [Obsolete("ob")] 
+        [Obsolete("ob")]
         public DbSet<SoloClassMatchRecord> SoloClassMatchRecordDbSet { get; set; }
-        [Obsolete("ob")] 
+        [Obsolete("ob")]
         public DbSet<TeamClassMatchRecord> TeamClassMatchRecordDbSet { get; set; }
+        
         public DbSet<SoloClassMatchGRecord> SoloClassMatchGRecordDbSet { get; set; }
         public DbSet<TeamClassMatchGRecord> TeamClassMatchGRecordDbSet { get; set; }
-
+        public DbSet<SoloOnCompeRecord> SoloOnCompeRecordDbSet { get; set; }
+        public DbSet<TeamOnCompeRecord> TeamOnCompeRecordDbSet { get; set; }
+        
         public DbSet<WinLossRecord> WinLossRecordDbSet { get; set; }
         public DbSet<LicenseScoreRecord> LicenseScoreRecordDbSet { get; set; }
         public DbSet<PlayerBurstStatistics> PlayerBurstStatisticsDbSet { get; set; }

@@ -87,6 +87,7 @@ public class SaveVsmOnResultCommandHandler(ILogger<SaveVsmOnResultCommandHandler
             // ib
             new SaveQuickStartInfoCommand(_context, playResultGroup.QuickStartInfo),
             new SaveClassMatchCommand(_context, _config, logger),
+            new SaveOnCompeCommand(_context, _config, logger),
             new SavePlayerBadgeCommand(_context, logger),
         };
 
@@ -142,7 +143,9 @@ public class SaveVsmOnResultCommandHandler(ILogger<SaveVsmOnResultCommandHandler
         battleResultContext.OnlineBattleDomain ??= new();
         battleResultContext.OnlineBattleDomain.OnlineMatchingMode = playResultGroup.OnlineMatchingMode;
         battleResultContext.OnlineBattleDomain.class_match_result = playResultGroup.class_match_result;
+        battleResultContext.OnlineBattleDomain.on_compe_result = playResultGroup.on_compe_result;
         battleResultContext.OnlineBattleDomain.TeamType = playResultGroup.QuickStartInfo.TeamType;
         battleResultContext.OnlineBattleDomain.IsShuffle = vsmOn.ShuffleFlag;
+        battleResultContext.OnlineBattleDomain.CustomRoomId = playResultGroup.on_compe_result == null ? 0u : (playResultGroup.MatchingTag?.Id ?? 0u);
     }
 }

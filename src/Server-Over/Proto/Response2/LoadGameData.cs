@@ -44,10 +44,10 @@ public partial class Response2
         //[global::ProtoBuf.ProtoMember(60, Name = @"release_cpu_course", IsRequired = true)] // 23
         //public global::System.Collections.Generic.List<ReleaseCpuCourse> ReleaseCpuCourses { get; } = new();
 
-        [global::ProtoBuf.ProtoMember(61, Name = @"release_cpu_scene")] // 24
+        [global::ProtoBuf.ProtoMember(10024, Name = @"release_cpu_scene")] // 24
         public uint[] ReleaseCpuScenes { get; set; }
 
-        [global::ProtoBuf.ProtoMember(62, Name = @"mst_mobile_suit_id")] // 25
+        [global::ProtoBuf.ProtoMember(10025, Name = @"mst_mobile_suit_id")] // 25
         public uint[] MstMobileSuitIds { get; set; }
 
         [global::ProtoBuf.ProtoMember(7)] // 27
@@ -149,7 +149,7 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(35, Name = @"root_difficulty_badge_bonus3", IsRequired = true)]
         public uint p35 { get; set; } = 0;
         
-        [global::ProtoBuf.ProtoMember(36, Name = @"stages", IsRequired = true)] // root_pattern_id
+		[global::ProtoBuf.ProtoMember(36, Name = @"root_pattern_id", IsRequired = true)]
         public uint[] Stages { get; set; }
 
         [global::ProtoBuf.ProtoMember(37, Name = @"on_compe_setting")]
@@ -423,18 +423,18 @@ public partial class Response2
             public uint MatchingType { get; set; }
             
             [global::ProtoBuf.ProtoMember(4, Name = @"modifier_value", IsRequired = true)]
-            public float ModifierValue { get; set; }
+            public float ModifierValue { get; set; } = 0f;
             
             [global::ProtoBuf.ProtoMember(5, Name = @"fixed_value", IsRequired = true)]
-            public uint FixedValue { get; set; }
+            public uint FixedValue { get; set; } = 1;
             
             [global::ProtoBuf.ProtoMember(6, Name = @"win1_value", IsRequired = true)]
-            public uint Win1Value { get; set; }
+            public uint Win1Value { get; set; } = 9;
             [global::ProtoBuf.ProtoMember(7, Name = @"win2_value", IsRequired = true)]
-            public uint Win2Value { get; set; }
+            public uint Win2Value { get; set; } = 6;
             
             [global::ProtoBuf.ProtoMember(8, Name = @"cutoff_value", IsRequired = true)]
-            public uint CutoffValue { get; set; }
+            public uint CutoffValue { get; set; } = 50000;
             
             [global::ProtoBuf.ProtoMember(9, Name = @"rank_threshold_a", IsRequired = true)]
             public uint rank_threshold_a { get; set; }

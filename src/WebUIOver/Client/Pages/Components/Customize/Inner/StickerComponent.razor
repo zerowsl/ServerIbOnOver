@@ -196,9 +196,9 @@
     {
         if (Scope == "DefaultSticker")
         {
-            return StickerService.GetTrackerTypesSortedById()
-                .Where(tracker => tracker.Category is "All" or "Pilot")
-                .ToList();
+            // return StickerService.GetTrackerTypesSortedById()
+            //     .Where(tracker => tracker.Category is "All" or "Pilot")
+            //     .ToList();
         }
 
         return StickerService.GetTrackerTypesSortedById();

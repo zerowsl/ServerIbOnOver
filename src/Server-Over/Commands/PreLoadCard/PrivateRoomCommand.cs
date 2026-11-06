@@ -3,6 +3,7 @@ using ServerOver.Models.Cards;
 using ServerOver.Models.Config;
 using ServerOver.Persistence;
 using ServerOver.Utils;
+using WebUIOver.Shared.Dto.Common;
 
 namespace ServerOver.Commands.PreLoadCard;
 
@@ -31,7 +32,23 @@ public class PrivateRoomCommand(ServerDbContext context, CardServerConfig config
             Timer = config.CustomConfigs.Room.Timer,
             FesRuleType = config.CustomConfigs.Room.FesRuleType
         };
-        var str = $"{preLoadCard.MatchingTag.TagName}:t{preLoadCard.MatchingTag.TagType}:m{preLoadCard.MatchingTag.MatchingType}";
+        
+        if (config.CustomConfigs.Room.IsSelectableMsCostLte2000)
+        {
+            preLoadCard.MatchingTag.SelectableMsIds = MyUtils.TryLoadFileJson<MobileSuit[]>(GlobalVars.MsDataJsonFile).GetAwaiter().GetResult()
+                .Where(x => x.Id > 0 && x.Id < 50000 && x.Cost > 0 && x.Cost <= 2000)
+                .Select(x => x.Id)
+                .Where(x => preLoadCard.MatchingTag.SelectableMsIds?.Length > 0 ? preLoadCard.MatchingTag.SelectableMsIds.Contains(x) : true)
+                .ToArray();
+        }
+        
+        if (config.CustomConfigs.Room.OnCompe?.Enable == true)
+        {
+            preLoadCard.MatchingTag.TagType = 1;
+            preLoadCard.MatchingTag.OncompeMatchingFlag = 1;
+        }
+        
+        var str = $"{preLoadCard.MatchingTag.TagName}:t{preLoadCard.MatchingTag.TagType}:m{preLoadCard.MatchingTag.MatchingType}:c{preLoadCard.MatchingTag.OncompeMatchingFlag}";
         preLoadCard.MatchingTag.Id = preLoadCard.MatchingTag.WorldId = MyUtils.ToUintByCrc32(str);
         if (preLoadCard.MatchingTag.Id <= 100) 
         {

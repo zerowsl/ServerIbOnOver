@@ -43,7 +43,7 @@ public partial class MatchingTag : global::ProtoBuf.IExtensible
     // private uint? __pbn__TagMatchingNum;
 
     [global::ProtoBuf.ProtoMember(7, Name = @"selectable_ms_id")]
-    public uint[] SelectableMsIds { get; set; }
+    public uint[] SelectableMsIds { get; set; } = [];
 
     [global::ProtoBuf.ProtoMember(8, Name = @"rule_type")] // 8
     public uint RuleType
@@ -71,7 +71,7 @@ public partial class MatchingTag : global::ProtoBuf.IExtensible
     public uint randomstage_only_flag { get; set; } = 0;
     
     [global::ProtoBuf.ProtoMember(14, Name = @"oncompe_matching_flag", IsRequired = true)]
-    public uint oncompe_matching_flag { get; set; } = 0;
+    public uint OncompeMatchingFlag { get; set; } = 0;
     
     [global::ProtoBuf.ProtoMember(15, Name = @"mobile_suit_blocklist", IsRequired = true)]
     public uint[] MobileSuitBlocklist { get; set; } = [];

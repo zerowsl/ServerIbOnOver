@@ -35,16 +35,13 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(2, Name = @"ms_skills")]
             public global::System.Collections.Generic.List<MSSkillGroup> MsSkills { get; } = new();
             
-            //[global::ProtoBuf.ProtoMember(13, Name = @"tag_teams")] // 3
+            //[global::ProtoBuf.ProtoMember(1013, Name = @"tag_teams")] // 3
             //public global::System.Collections.Generic.List<TagTeamGroup2> TagTeams { get; } = new();
-
-            //[global::ProtoBuf.ProtoMember(50, Name = @"cpu_scenes")] // 4
+            //[global::ProtoBuf.ProtoMember(1004, Name = @"cpu_scenes")] // 4
             //public global::System.Collections.Generic.List<CpuSceneData> CpuScenes { get; } = new();
-
-            //[global::ProtoBuf.ProtoMember(51, Name = @"cpu_ribbons")] // 5
+            //[global::ProtoBuf.ProtoMember(1005, Name = @"cpu_ribbons")] // 5
             //public uint[] CpuRibbons { get; set; }
-
-            //[global::ProtoBuf.ProtoMember(10006, Name = @"total_triad_score", IsRequired = true)] // 6
+            //[global::ProtoBuf.ProtoMember(1006, Name = @"total_triad_score", IsRequired = true)] // 6
             //public uint TotalTriadScore { get; set; }
 
             [global::ProtoBuf.ProtoMember(1017, Name = @"total_triad_wanted_defeat_num", IsRequired = true)]
@@ -56,13 +53,11 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(1009, Name = @"total_triad_scene_play_num", IsRequired = true)]
             public uint TotalTriadScenePlayNum { get; set; }
 
-            //[global::ProtoBuf.ProtoMember(10)]
+            //[global::ProtoBuf.ProtoMember(1010)]
             //public PilotClassMatch pilot_class_match { get; set; }
 
             [global::ProtoBuf.ProtoMember(1011, Name = @"last_obtained_score", DataFormat = global::ProtoBuf.DataFormat.ZigZag)]
-            //[global::ProtoBuf.ProtoMember(11, Name = @"last_obtained_score")]
             public int LastObtainedScore { get; set; }
-
             [global::ProtoBuf.ProtoMember(1012, Name = @"license_tracker_score", IsRequired = true)]
             public uint LicenseTrackerScore { get; set; }
 
@@ -373,7 +368,7 @@ public partial class Response2
             [global::ProtoBuf.ProtoMember(34, Name = @"command_message_auto_flag", IsRequired = true)]
             public uint p34 { get; set; } = 0;
             
-            [global::ProtoBuf.ProtoMember(35, Name = "vs_route_battle_data")] // save_data_info
+            [global::ProtoBuf.ProtoMember(35, Name = "save_data_info")]
             public VsRouteBattleDataGroup VsRouteBattleData { get; set; }
             
             [global::ProtoBuf.ProtoMember(36, Name = @"tag_teams")]
@@ -381,7 +376,7 @@ public partial class Response2
             
             [global::ProtoBuf.ProtoMember(37, Name = @"group_id", IsRequired = true)]
             public uint group_id { get; set; } = 486;
-            [global::ProtoBuf.ProtoMember(38, Name = "group_name")] // 44
+            [global::ProtoBuf.ProtoMember(38, Name = "group_name")]
             public string TriadTeamName { get; set; }
             [global::ProtoBuf.ProtoMember(39, Name = "group_plate_id")]
             public uint TriadGroupPlateId { get; set; }
@@ -787,10 +782,10 @@ public partial class Response2
                     => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
                 [global::ProtoBuf.ProtoMember(1, Name = "on_compe_point", IsRequired = true)]
-                public uint on_compe_point { get; set; }
+                public uint OnCompePoint { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(2, Name = "current_rank", IsRequired = true)]
-                public uint current_rank { get; set; }
+                public uint CurrentRank { get; set; }
                 
             }
             

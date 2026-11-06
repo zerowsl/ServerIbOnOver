@@ -272,10 +272,10 @@ public partial class Request
             [global::ProtoBuf.ProtoMember(70, Name = @"quick_start_info", IsRequired = true)]
             public QuickStartInfo QuickStartInfo { get; set; } = new();
 
-            //[global::ProtoBuf.ProtoMember(71, Name = @"group_tag_point")]
-            //public uint GroupTagPoint { get; set; }
-            //[global::ProtoBuf.ProtoMember(72, Name = @"group_id")]
-            //public uint GroupId { get; set; }
+            [global::ProtoBuf.ProtoMember(71, Name = @"group_tag_point")]
+            public uint GroupTagPoint { get; set; }
+            [global::ProtoBuf.ProtoMember(72, Name = @"group_id")]
+            public uint GroupId { get; set; }
 
             [global::ProtoBuf.ProtoMember(73, Name = @"overlimit_flag", IsRequired = true)]
             public bool OverlimitFlag { get; set; }
@@ -284,10 +284,9 @@ public partial class Request
 
             [global::ProtoBuf.ProtoMember(75, Name = @"one_on_one_flag", IsRequired = true)]
             public bool OneOnOneFlag { get; set; }
-
-            // 71 group_tag_point
-            // 72 group_id
-            //? 76 on_compe_result
+            
+            [global::ProtoBuf.ProtoMember(76, Name = @"on_compe_result")]
+            public OnCompeResult on_compe_result { get; set; }
 
             [global::ProtoBuf.ProtoContract()]
             public partial class ClassMatchResult : global::ProtoBuf.IExtensible
@@ -338,19 +337,19 @@ public partial class Request
                     => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
                 [global::ProtoBuf.ProtoMember(1, Name = @"before_oncompe_point", IsRequired = true)]
-                public uint before_oncompe_point { get; set; }
+                public uint BeforeOncompePoint { get; set; }
 
                 [global::ProtoBuf.ProtoMember(2, Name = @"after_oncompe_point", IsRequired = true)]
-                public uint after_oncompe_point { get; set; }
+                public uint AfterOncompePoint { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(3, Name = @"before_partner_oncompe_point", IsRequired = true)]
-                public uint before_partner_oncompe_point { get; set; }
+                public uint BeforePartnerOncompePoint { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(4, Name = @"before_foe1_oncompe_point", IsRequired = true)]
-                public uint before_foe1_oncompe_point { get; set; }
+                public uint BeforeFoe1OncompePoint { get; set; }
                 
                 [global::ProtoBuf.ProtoMember(5, Name = @"before_foe2_oncompe_point", IsRequired = true)]
-                public uint before_foe2_oncompe_point { get; set; }
+                public uint BeforeFoe2OncompePoint { get; set; }
                 
             }
 

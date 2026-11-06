@@ -89,7 +89,7 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
                 DownDefaultRate = 0
             });
         }
-        for (var iClassId = 1u; iClassId <= 53u; iClassId++)
+        for (var iClassId = 1u; iClassId <= 55u; iClassId++)
         {
             r.ClassChangeInitialRates.Add(new()
             {
@@ -109,7 +109,7 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
                 DownDefaultRate = 0
             });
         }
-        for (var iClassId = 1u; iClassId <= 53u; iClassId++)
+        for (var iClassId = 1u; iClassId <= 55u; iClassId++)
         {
             r.ClassChangeInitialRates.Add(new()
             {
@@ -187,9 +187,9 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
         
         r.ConsecutiveLoseGrades.Add(new()
         {
-            ConsecutiveNumStart = 2, 
+            ConsecutiveNumStart = 1, 
             ConsecutiveNumEnd = uint.MaxValue, 
-            GradeNum = 1
+            GradeNum = 0
         });
     }
     

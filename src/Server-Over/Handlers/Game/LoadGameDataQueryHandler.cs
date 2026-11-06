@@ -36,7 +36,8 @@ public class LoadGameDataQueryHandler : IRequestHandler<LoadGameDataQuery, Respo
             LoadGameDataVer = GlobalVars.LoadGameDataVer,
         };
         
-        var loadGameDataCommands = new List<ILoadGameDataCommand>{
+        var loadGameDataCommands = new List<ILoadGameDataCommand>
+        {
             new ReleasedContentCommand(_config),
             new PlayerLevelSettingCommand(),
             new VersusInfoCommand(),
@@ -92,6 +93,17 @@ public class LoadGameDataQuery2Handler(IMediator mediator, IOptions<CardServerCo
             r2.load_game_data.FesSetting.PlayableEndDate = r2.load_game_data.FesSetting.EndDate;
         }
         
+        if (_config.CustomConfigs?.Room?.Enable == true && _config.CustomConfigs?.Room?.OnCompe?.Enable == true)
+        {
+            r2.load_game_data.on_compe_setting = new()
+            {
+                PlayableStartDate = (ulong)DateTimeOffset.Parse("2026-01-01").ToUnixTimeSeconds(), 
+                PlayableEndDate = (ulong)DateTimeOffset.Parse("2099-12-31 23:59:59").ToUnixTimeSeconds(),
+                MatchingType = _config.CustomConfigs.Room.MatchingType, 
+                rank_threshold_a = _config.CustomConfigs.Room.OnCompe.rank_threshold_a, 
+                rank_threshold_s = _config.CustomConfigs.Room.OnCompe.rank_threshold_s
+            };
+        }
 
         return r2;
     }

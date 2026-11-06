@@ -4,7 +4,7 @@ namespace ServerOver;
 
 internal static partial class GlobalVars
 {
-	internal const string Version = "1.4.0.120";
+	internal const string Version = "1.4.1.352";
     internal const string Title0 = $"ServerIbOnOver v{Version}";
     internal const string Title = $"ib刷卡服务魔改ob系列.单机有限版.v{Version} - 自由软件,免费使用,提防倒卖,小心受骗";
 	internal const string LogFangDaoMai = "自由軟件，免費使用，提防倒賣，小心受騙 !!!";
@@ -23,12 +23,16 @@ internal static partial class GlobalVars
 	internal static uint RateDiff { get; private set; }
 	internal const uint MinClassGradeMinRate1 = 16;
     internal const uint MinClassGradeMinRate2 = DefaultRateRange * 10 + 16;
+    internal const uint DefaultOnCompePoint = 100;
+	internal const uint DefaultOnCompeRank = 86477;
 
 #if DEBUG
     internal static readonly string VsRouteBattleSaveDataDir = Path.Combine(Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule!.FileName)!, "savedatas/vsrb").Replace('\\', '/').TrimEnd('/');
 #else
 	internal static readonly string VsRouteBattleSaveDataDir = Path.Combine(Directory.GetCurrentDirectory(), "savedatas/vsrb").Replace('\\', '/').TrimEnd('/');
 #endif
+
+	internal static readonly string MsDataJsonFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/data/MobileSuits.json").Replace('\\', '/').TrimEnd('/');
 
 	internal static readonly bool CanUpPlayerBadgeExp = true;
     internal const int DefaultPlayerBadgeMaxExp = 5000000;

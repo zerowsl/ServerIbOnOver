@@ -20,17 +20,5 @@ public class TriadCourseDataCommand : IPilotDataCommand
             .Where(x => x.CardProfile == cardProfile)
             .ToList()
             .ForEach(triadCourseData => pilotDataGroup.CpuScenes.Add(triadCourseData.ToCpuSceneData()));
-
-        if (pilotDataGroup.CpuScenes.Count == 0)
-        {
-            pilotDataGroup.CpuScenes.Add(new() 
-            {
-                CourseId = 0,
-                ReleasedAt = (ulong)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                TotalPlayNum = 0,
-                TotalClearNum = 0,
-                Highscore = 0
-            });
-        }
     }
 }

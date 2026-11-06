@@ -141,6 +141,7 @@ public class LoadCardQuery2Handler(ILogger<LoadCardQuery2Handler> _logger, Serve
             // mobile_user_group
             new LoadIbVsRouteBattleDataCommand(baseAddress, _context), // 加载ib街机模式中断再开的(ui)数据
             new LoadQuickStartInfoCommand(_context), // load快速启动
+            new LoadOnCompeUserInfoCommand(_context, _configs.CustomConfigs)
         ];
         foreach (var command in cmds2)
         {

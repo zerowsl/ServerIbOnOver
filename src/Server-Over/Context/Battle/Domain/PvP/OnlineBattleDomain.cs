@@ -11,5 +11,7 @@ public class OnlineBattleDomain
     public int LicenseScoreChange { get; set; } = 0;
 	
 	public Request.SaveVsmOnResult.PlayResultGroup.ClassMatchResult? class_match_result { get; set; }
-	public uint TeamType { get; set; }
+    public Request.SaveVsmOnResult.PlayResultGroup.OnCompeResult? on_compe_result { get; set; }
+    public uint TeamType { get; set; }
+    public uint CustomRoomId { get; set; }
 }

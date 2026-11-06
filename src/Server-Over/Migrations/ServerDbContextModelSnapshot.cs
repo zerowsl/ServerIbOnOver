@@ -15,7 +15,7 @@ namespace ServerOver.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.12");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.14");
 
             modelBuilder.Entity("ServerOver.Models.Boot.InvalidVisit", b =>
                 {
@@ -649,6 +649,42 @@ namespace ServerOver.Migrations
                     b.ToTable("exvs2ob_battle_solo_class_record");
                 });
 
+            modelBuilder.Entity("ServerOver.Models.Cards.Battle.SoloOnCompeRecord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CardId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsOutdated")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("Point")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("Rank")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("RoomId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CardId");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("djyx_ib_battle_solo_oncompe_record");
+                });
+
             modelBuilder.Entity("ServerOver.Models.Cards.Battle.TeamClassMatchGRecord", b =>
                 {
                     b.Property<int>("Id")
@@ -750,6 +786,42 @@ namespace ServerOver.Migrations
                     b.HasIndex("Id");
 
                     b.ToTable("exvs2ob_battle_team_class_record");
+                });
+
+            modelBuilder.Entity("ServerOver.Models.Cards.Battle.TeamOnCompeRecord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CardId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsOutdated")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("Point")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("Rank")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<uint>("RoomId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CardId");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("djyx_ib_battle_team_oncompe_record");
                 });
 
             modelBuilder.Entity("ServerOver.Models.Cards.Battle.WinLossRecord", b =>

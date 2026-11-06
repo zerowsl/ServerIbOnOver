@@ -8355,6 +8355,10 @@ namespace nue.protocol.exvs
         OmmFes = 4,
         [global::ProtoBuf.ProtoEnum(Name = @"OMM_PRIVATE")]
         OmmPrivate = 5,
+        [global::ProtoBuf.ProtoEnum(Name = @"OMM_PUB")]
+        OmmPub = 6,
+        [global::ProtoBuf.ProtoEnum(Name = @"OMM_EVENT")]
+        OmmEvent = 7,
     }
 
     [global::ProtoBuf.ProtoContract()]
