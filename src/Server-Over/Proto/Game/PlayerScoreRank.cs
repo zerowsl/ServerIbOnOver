@@ -126,6 +126,8 @@ public partial class PlayerScoreRank2 : global::ProtoBuf.IExtensible
         [global::ProtoBuf.ProtoMember(27, Name = @"top_point_rank_team", IsRequired = true)]
         public uint TopPointRankTeam { get; set; }
         
+        [global::ProtoBuf.ProtoMember(28, Name = @"top_point_double_num", IsRequired = true)]
+        public uint TopPointDoubleNum { get; set; }
     }
 
 }

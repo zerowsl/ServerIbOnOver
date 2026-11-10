@@ -241,10 +241,10 @@ public partial class Response2
                 => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
             [global::ProtoBuf.ProtoMember(1, Name = @"weekly_rank_no", IsRequired = true)]
-            public uint WeeklyRankNo { get; set; }
+            public uint WeeklyRankNo { get; set; } = 1;
 
             [global::ProtoBuf.ProtoMember(2, Name = @"weekly_rank_course_id", IsRequired = true)]
-            public uint WeeklyRankCourseId { get; set; }
+            public uint WeeklyRankCourseId { get; set; } = 1;
 
         }
 

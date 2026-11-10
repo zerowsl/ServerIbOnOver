@@ -17,8 +17,9 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
 
         LoadPlayerScoreRank(loadRanking, loadRankingRequest);
         LoadClassMatch(loadRanking, loadRankingRequest);
+        LoadVsRouteBattle(loadRanking, loadRankingRequest);
         //...
-        
+
         return Task.FromResult(new Response2
         {
             Type = request.Request.Type,
@@ -65,7 +66,7 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
                     MsUsedNum = 1,
                     HomeLocName = "EXTREME",
                     HomeLocPref = 1,
-                    OpenRecord = 6,
+                    OpenRecord = 1,
                     PlayNum = 100,
                     WinNum = 100,
                     ClassIdSolo = 4,
@@ -75,6 +76,7 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
                     GradeTeam = 11, 
                     TopPointRankSolo = 1, 
                     TopPointRankTeam = 1, 
+                    TopPointDoubleNum = 120, 
                 });
             }
             
@@ -114,7 +116,7 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
                     MsUsedNum = 1,
                     HomeLocName = "EXTREME",
                     HomeLocPref = 1,
-                    OpenRecord = 6,
+                    OpenRecord = 1,
                     PlayNum = 100,
                     WinNum = 100,
                     ClassIdSolo = 1,
@@ -125,6 +127,7 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
                     OpenPlayerLevel = 1, 
                     TopPointRankSolo = 0, 
                     TopPointRankTeam = 0, 
+                    TopPointDoubleNum = 352, 
                 });
             }
             
@@ -132,4 +135,86 @@ public class LoadRankingQuery2Handler(ILogger<LoadRankingQuery2Handler> logger)
         }
     }
 
+    private void LoadVsRouteBattle(Response2.LoadRanking loadRanking, Request.LoadRanking loadRankingRequest)
+    {
+        if (loadRankingRequest.RankType == RankMessageType.LmMonthlyCountryRouteBattleScore && loadRankingRequest.CurrentFlag == true)
+        {
+            loadRanking.RankType = loadRankingRequest.RankType;
+
+            var liveRankingTime = LiveRankingTimeUtil.Get();
+
+            loadRanking.Timestamp = liveRankingTime.CurrentTimeStamp;
+
+            var rank = new RouteBattleScoreRank();
+            rank.SumStart = liveRankingTime.MonthStartTimeStamp;
+            rank.SumEnd = liveRankingTime.MonthEndTimeStamp;
+
+            for (uint i = 1; i < 11; i++)
+            {
+                rank.Rows.Add(new()
+                {
+                    RankNo = i,
+                    PrevRankNo = i,
+                    PilotId = i,
+                    PlayerName = "Player" + i.ToString(),
+                    Score = 88000 - i * 50,
+                    PlayerLevelId = 1000,
+                    BadgeId = 53,
+                    TitleTextId = 0,
+                    CustomTxt = "486",
+                    GroupName = "486",
+                    FavMsId = 129,
+                    MsUsedNum = 1,
+                    HomeLocName = "EXTREME",
+                    HomeLocPref = 1,
+                    SkinId = 0,
+                    OpenPlayerLevel = true,
+                    BattleClearNum = 486,
+                    AllStageClearNum = 864,
+                });
+            }
+
+            loadRanking.RouteBattleScoreRank = rank;
+        }
+
+        if (loadRankingRequest.RankType == RankMessageType.LmMonthlyCountryRouteBattleTime && loadRankingRequest.CurrentFlag == true)
+        {
+            loadRanking.RankType = loadRankingRequest.RankType;
+
+            var liveRankingTime = LiveRankingTimeUtil.Get();
+
+            loadRanking.Timestamp = liveRankingTime.CurrentTimeStamp;
+
+            var rank = new RouteBattleTimeRank();
+            rank.SumStart = liveRankingTime.MonthStartTimeStamp;
+            rank.SumEnd = liveRankingTime.MonthEndTimeStamp;
+
+            for (uint i = 1; i < 11; i++)
+            {
+                rank.Rows.Add(new()
+                {
+                    RankNo = i,
+                    PrevRankNo = i,
+                    PilotId = i,
+                    PlayerName = "Player" + i.ToString(),
+                    ClearTime = 1413,
+                    PlayerLevelId = 1000,
+                    BadgeId = 53,
+                    TitleTextId = 0,
+                    CustomTxt = "486",
+                    GroupName = "486",
+                    FavMsId = 99,
+                    MsUsedNum = 1,
+                    HomeLocName = "EXTREME",
+                    HomeLocPref = 1,
+                    SkinId = 0,
+                    OpenPlayerLevel = true,
+                    BattleClearNum = 486,
+                    AllStageClearNum = 864,
+                });
+            }
+
+            loadRanking.RouteBattleTimeRank = rank;
+        }
+    }
 }

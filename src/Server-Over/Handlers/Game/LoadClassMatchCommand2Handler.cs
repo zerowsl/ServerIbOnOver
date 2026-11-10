@@ -164,7 +164,7 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
         {
             ConsecutiveNumStart = 1, 
             ConsecutiveNumEnd = 1, 
-            GradeNum = 1
+            GradeNum = 0
         });
         r.ConsecutiveWinGrades.Add(new()
         {
@@ -187,16 +187,13 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
         
         r.ConsecutiveLoseGrades.Add(new()
         {
-            ConsecutiveNumStart = 1, 
+            ConsecutiveNumStart = 3, 
             ConsecutiveNumEnd = uint.MaxValue, 
-            GradeNum = 0
+            GradeNum = -1
         });
     }
     
     private void LoadSearchRatios(Response2.LoadClassMatch r)
     {
-        // r.SearchRatios.SearchRatioSolo.Add(new()
-        // {
-        // });
     }
 }

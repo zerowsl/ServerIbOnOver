@@ -295,19 +295,21 @@ public partial class Response2
 
             [global::ProtoBuf.ProtoMember(8, Name = @"mst_mobile_suit_id", IsRequired = true)]
             public uint MstMobileSuitId { get; set; }
-
-            // [global::ProtoBuf.ProtoMember(9, Name = @"armor_level", IsRequired = true)]
-            // public uint ArmorLevel { get; set; }
-            // [global::ProtoBuf.ProtoMember(10, Name = @"shoot_attack_level", IsRequired = true)]
-            // public uint ShootAttackLevel { get; set; }
-            // [global::ProtoBuf.ProtoMember(11, Name = @"infight_attack_level", IsRequired = true)]
-            // public uint InfightAttackLevel { get; set; }
-            // [global::ProtoBuf.ProtoMember(12, Name = @"booster_level", IsRequired = true)]
-            // public uint BoosterLevel { get; set; }
-            // [global::ProtoBuf.ProtoMember(13, Name = @"ex_gauge_level", IsRequired = true)]
-            // public uint ExGaugeLevel { get; set; }
-            // [global::ProtoBuf.ProtoMember(14, Name = @"ai_level", IsRequired = true)]
-            // public uint AiLevel { get; set; }
+            
+            #region v1.04
+            [global::ProtoBuf.ProtoMember(9, Name = @"armor_level", IsRequired = true)]
+            public uint ArmorLevel { get; set; }
+            [global::ProtoBuf.ProtoMember(10, Name = @"shoot_attack_level", IsRequired = true)]
+            public uint ShootAttackLevel { get; set; }
+            [global::ProtoBuf.ProtoMember(11, Name = @"infight_attack_level", IsRequired = true)]
+            public uint InfightAttackLevel { get; set; }
+            [global::ProtoBuf.ProtoMember(12, Name = @"booster_level", IsRequired = true)]
+            public uint BoosterLevel { get; set; }
+            [global::ProtoBuf.ProtoMember(13, Name = @"ex_gauge_level", IsRequired = true)]
+            public uint ExGaugeLevel { get; set; }
+            [global::ProtoBuf.ProtoMember(14, Name = @"ai_level", IsRequired = true)]
+            public uint _AiLevel { get; set; } = 8;
+            #endregion v1.04
 
             [global::ProtoBuf.ProtoMember(15, Name = @"gamepad")]
             public GamepadGroup Gamepad { get; set; }

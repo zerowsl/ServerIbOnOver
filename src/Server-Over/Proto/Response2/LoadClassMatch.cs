@@ -129,8 +129,8 @@ public partial class Response2
             public uint ConsecutiveNumStart { get; set; }
             [global::ProtoBuf.ProtoMember(2, Name = @"consecutive_num_end", IsRequired = true)]
             public uint ConsecutiveNumEnd { get; set; }
-            [global::ProtoBuf.ProtoMember(3, Name = @"grade_num", IsRequired = true)]
-            public uint GradeNum { get; set; }
+            [global::ProtoBuf.ProtoMember(3, Name = @"grade_num", DataFormat = global::ProtoBuf.DataFormat.ZigZag, IsRequired = true)]
+            public int GradeNum { get; set; }
         }
 
         [global::ProtoBuf.ProtoContract()]

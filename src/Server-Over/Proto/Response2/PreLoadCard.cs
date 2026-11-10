@@ -255,7 +255,6 @@ public partial class Response2
 
                 [global::ProtoBuf.ProtoMember(2, Name = @"mst_mobile_suit_id", IsRequired = true)]
                 public uint MstMobileSuitId { get; set; }
-
                 [global::ProtoBuf.ProtoMember(3, Name = @"ms_skill1", IsRequired = true)]
                 public uint MsSkill1 { get; set; }
                 [global::ProtoBuf.ProtoMember(4, Name = @"ms_skill2", IsRequired = true)]

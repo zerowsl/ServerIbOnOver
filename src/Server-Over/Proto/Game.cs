@@ -8038,9 +8038,10 @@ namespace nue.protocol.exvs
     public enum SystemConstant
     {
         [global::ProtoBuf.ProtoEnum(Name = @"PROTOBUF_MESSAGE_REVISION")]
-        ProtobufMessageRevision = 114,
+        ProtobufMessageRevision = 141,
     }
-
+    
+    #region MethodType
     //[global::ProtoBuf.ProtoContract()]
     //public enum MethodType
     //{
@@ -8127,6 +8128,7 @@ namespace nue.protocol.exvs
     //    [global::ProtoBuf.ProtoEnum(Name = @"MTHD_CHECK_RESOURCE_DATA")]
     //    MthdCheckResourceData = 503,
     //}
+    #endregion MethodType
 
     [global::ProtoBuf.ProtoContract()]
     public enum Error
@@ -8265,8 +8267,10 @@ namespace nue.protocol.exvs
         ChrgPlay = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"CHRG_RENTAL")]
         ChrgRental = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"CHRG_EXTRA")]
+        ChrgExtra = 3,
         [global::ProtoBuf.ProtoEnum(Name = @"CHRG_RESERVE")]
-        ChrgReserve = 3,
+        ChrgReserve = 4, // 3
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -8371,83 +8375,85 @@ namespace nue.protocol.exvs
         [global::ProtoBuf.ProtoEnum(Name = @"TM_ON")]
         TmOn = 2,
     }
-
-    [global::ProtoBuf.ProtoContract()]
-    public enum RankMessageType
-    {
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_PLAYER_NAVI_POINT")]
-        MsMonthlyCountryPlayerNaviPoint = 4644,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED")]
-        CmnWeeklyCountryMsUsed = 24869,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED")]
-        MsWeeklyDistrictMsUsed = 20805,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED3000")]
-        CmnWeeklyCountryMsUsed3000 = 41253,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED3000")]
-        MsWeeklyDistrictMsUsed3000 = 37189,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED2500")]
-        CmnWeeklyCountryMsUsed2500 = 74021,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED2500")]
-        MsWeeklyDistrictMsUsed2500 = 69957,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED2000")]
-        CmnWeeklyCountryMsUsed2000 = 139557,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED2000")]
-        MsWeeklyDistrictMsUsed2000 = 135493,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED1500")]
-        CmnWeeklyCountryMsUsed1500 = 270629,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED1500")]
-        MsWeeklyDistrictMsUsed1500 = 266565,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_PLAYER_MS_USED")]
-        MsMonthlyCountryPlayerMsUsed = 4646,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_TRIAD_SCORE")]
-        CmnWeeklyCountryTriadScore = 8489,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_TRIAD_SCORE")]
-        MsMonthlyDistrictTriadScore = 4681,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_TRIAD_SCORE")]
-        MsWeeklyDistrictTriadScore = 4425,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_TRIAD_SCORE")]
-        MsMonthlySpotTriadScore = 4745,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_SPOT_TRIAD_SCORE")]
-        MsWeeklySpotTriadScore = 4489,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_COUNTRY_TRIAD_COURSE_SCORE")]
-        MsWeeklyCountryTriadCourseScore = 4394,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_COUNTRY_TRIAD_COURSE_TIME")]
-        MsWeeklyCountryTriadCourseTime = 4395,
-        [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_WEEKLY_TRIAD")]
-        CmnWeeklyCountryWeeklyTriad = 8492,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_SPOT_PLAYER_SCORE")]
-        LmMonthlySpotPlayerScore = 19085,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_PLAYER_SCORE")]
-        MsMonthlySpotPlayerScore = 21133,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_SPOT_TAG_PLAYER_SCORE")]
-        LmMonthlySpotTagPlayerScore = 19086,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_TAG_PLAYER_SCORE")]
-        MsMonthlySpotTagPlayerScore = 21134,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_CLASS_MATCH")]
-        LmMonthlyCountryClassMatch = 18991,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_CLASS_MATCH")]
-        MsMonthlyCountryClassMatch = 21039,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_CLASS_MATCH")]
-        MsMonthlyDistrictClassMatch = 21071,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TAG_CLASS_MATCH")]
-        LmMonthlyCountryTagClassMatch = 18992,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TAG_CLASS_MATCH")]
-        MsMonthlyCountryTagClassMatch = 21040,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_TAG_CLASS_MATCH")]
-        MsMonthlyDistrictTagClassMatch = 21072,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TOP_POINT_SOLO")]
-        LmMonthlyCountryTopPointSolo = 18993,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TOP_POINT_SOLO")]
-        MsMonthlyCountryTopPointSolo = 21041,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_SEASON_COUNTRY_TOP_POINT_SOLO")]
-        MsSeasonCountryTopPointSolo = 21553,
-        [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TOP_POINT_TEAM")]
-        LmMonthlyCountryTopPointTeam = 18994,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TOP_POINT_TEAM")]
-        MsMonthlyCountryTopPointTeam = 21042,
-        [global::ProtoBuf.ProtoEnum(Name = @"MS_SEASON_COUNTRY_TOP_POINT_TEAM")]
-        MsSeasonCountryTopPointTeam = 21554,
-    }
+    
+    #region RankMessageType
+    // [global::ProtoBuf.ProtoContract()]
+    // public enum RankMessageType
+    // {
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_PLAYER_NAVI_POINT")]
+    //     MsMonthlyCountryPlayerNaviPoint = 4644,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED")]
+    //     CmnWeeklyCountryMsUsed = 24869,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED")]
+    //     MsWeeklyDistrictMsUsed = 20805,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED3000")]
+    //     CmnWeeklyCountryMsUsed3000 = 41253,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED3000")]
+    //     MsWeeklyDistrictMsUsed3000 = 37189,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED2500")]
+    //     CmnWeeklyCountryMsUsed2500 = 74021,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED2500")]
+    //     MsWeeklyDistrictMsUsed2500 = 69957,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED2000")]
+    //     CmnWeeklyCountryMsUsed2000 = 139557,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED2000")]
+    //     MsWeeklyDistrictMsUsed2000 = 135493,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_MS_USED1500")]
+    //     CmnWeeklyCountryMsUsed1500 = 270629,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_MS_USED1500")]
+    //     MsWeeklyDistrictMsUsed1500 = 266565,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_PLAYER_MS_USED")]
+    //     MsMonthlyCountryPlayerMsUsed = 4646,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_TRIAD_SCORE")]
+    //     CmnWeeklyCountryTriadScore = 8489,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_TRIAD_SCORE")]
+    //     MsMonthlyDistrictTriadScore = 4681,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_DISTRICT_TRIAD_SCORE")]
+    //     MsWeeklyDistrictTriadScore = 4425,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_TRIAD_SCORE")]
+    //     MsMonthlySpotTriadScore = 4745,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_SPOT_TRIAD_SCORE")]
+    //     MsWeeklySpotTriadScore = 4489,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_COUNTRY_TRIAD_COURSE_SCORE")]
+    //     MsWeeklyCountryTriadCourseScore = 4394,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_WEEKLY_COUNTRY_TRIAD_COURSE_TIME")]
+    //     MsWeeklyCountryTriadCourseTime = 4395,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"CMN_WEEKLY_COUNTRY_WEEKLY_TRIAD")]
+    //     CmnWeeklyCountryWeeklyTriad = 8492,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_SPOT_PLAYER_SCORE")]
+    //     LmMonthlySpotPlayerScore = 19085,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_PLAYER_SCORE")]
+    //     MsMonthlySpotPlayerScore = 21133,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_SPOT_TAG_PLAYER_SCORE")]
+    //     LmMonthlySpotTagPlayerScore = 19086,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_SPOT_TAG_PLAYER_SCORE")]
+    //     MsMonthlySpotTagPlayerScore = 21134,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_CLASS_MATCH")]
+    //     LmMonthlyCountryClassMatch = 18991,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_CLASS_MATCH")]
+    //     MsMonthlyCountryClassMatch = 21039,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_CLASS_MATCH")]
+    //     MsMonthlyDistrictClassMatch = 21071,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TAG_CLASS_MATCH")]
+    //     LmMonthlyCountryTagClassMatch = 18992,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TAG_CLASS_MATCH")]
+    //     MsMonthlyCountryTagClassMatch = 21040,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_DISTRICT_TAG_CLASS_MATCH")]
+    //     MsMonthlyDistrictTagClassMatch = 21072,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TOP_POINT_SOLO")]
+    //     LmMonthlyCountryTopPointSolo = 18993,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TOP_POINT_SOLO")]
+    //     MsMonthlyCountryTopPointSolo = 21041,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_SEASON_COUNTRY_TOP_POINT_SOLO")]
+    //     MsSeasonCountryTopPointSolo = 21553,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"LM_MONTHLY_COUNTRY_TOP_POINT_TEAM")]
+    //     LmMonthlyCountryTopPointTeam = 18994,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_MONTHLY_COUNTRY_TOP_POINT_TEAM")]
+    //     MsMonthlyCountryTopPointTeam = 21042,
+    //     [global::ProtoBuf.ProtoEnum(Name = @"MS_SEASON_COUNTRY_TOP_POINT_TEAM")]
+    //     MsSeasonCountryTopPointTeam = 21554,
+    // }
+    #endregion RankMessageType
 
     [global::ProtoBuf.ProtoContract()]
     public enum RankBaseType
@@ -8478,6 +8484,10 @@ namespace nue.protocol.exvs
         TopPointSolo = 17,
         [global::ProtoBuf.ProtoEnum(Name = @"TOP_POINT_TEAM")]
         TopPointTeam = 18,
+        [global::ProtoBuf.ProtoEnum(Name = @"ROUTE_BATTLE")]
+        RouteBattle = 19,
+        [global::ProtoBuf.ProtoEnum(Name = @"GROUP_POINT")]
+        GroupPoint = 20,
     }
 
     [global::ProtoBuf.ProtoContract()]
