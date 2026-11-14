@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
 using ServerOver.Caches;
+using ServerOver.Commands.SaveBattle.Triad;
 using ServerOver.Handlers.Game;
 using ServerOver.Mapper.Card.Setting;
 using ServerOver.Models.Config;
@@ -51,6 +52,12 @@ public class GameDataController(IMediator mediator, IVsrbStageDataCache vsrbStag
 
                 item.Data = s.ToArray();
                 await vsrbStageDataCache.Add(item);
+            }
+            if (item?.IsTimeRental == true)
+            {
+                // 30min包时的情况下，好像游戏不会弹出中断选项，这里也提前保存下..
+                
+                await new SaveIbVsRouteBattleStageTrueDataCommand(vsrbStageDataCache).HandleSave(cardId);
             }
         }
 

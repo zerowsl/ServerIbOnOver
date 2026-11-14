@@ -36,6 +36,6 @@ public class SaveIbVsRouteBattleStageUiDataCommand(ServerDbContext context, IVsr
         else context.VsRouteBattleStageDataInfoDbSet.Update(m);
         context.SaveChanges();
 
-        vsrbStageDataCache.Add(new(cardId, domain.StageId)).GetAwaiter().GetResult();
+        vsrbStageDataCache.Add(new(cardId, domain.StageId, domain.PlayResult.TimeRentalFlag)).GetAwaiter().GetResult();
     }
 }

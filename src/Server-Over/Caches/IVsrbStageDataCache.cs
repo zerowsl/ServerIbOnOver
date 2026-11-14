@@ -9,10 +9,10 @@ public interface IVsrbStageDataCache
     Task Remove(uint cardId);
 }
 
-public class VsrbStageDataCacheItem(uint cardId, uint stageId)
+public class VsrbStageDataCacheItem(uint cardId, uint stageId, bool isTimeRental)
 {
     public uint CardId { get; } = cardId;
     public uint StageId { get; } = stageId;
-    
+    public bool IsTimeRental { get; } = isTimeRental;
     public byte[]? Data { get; set; }
 }

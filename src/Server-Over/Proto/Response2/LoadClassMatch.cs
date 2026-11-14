@@ -62,7 +62,6 @@ public partial class Response2
             
             [global::ProtoBuf.ProtoMember(3, Name = @"up_default_rate", IsRequired = true)]
             public uint UpDefaultRate { get; set; }
-            
             [global::ProtoBuf.ProtoMember(4, Name = @"down_default_rate", IsRequired = true)]
             public uint DownDefaultRate { get; set; }
         }

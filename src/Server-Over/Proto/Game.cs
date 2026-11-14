@@ -8038,7 +8038,7 @@ namespace nue.protocol.exvs
     public enum SystemConstant
     {
         [global::ProtoBuf.ProtoEnum(Name = @"PROTOBUF_MESSAGE_REVISION")]
-        ProtobufMessageRevision = 141,
+        ProtobufMessageRevision = 114,
     }
     
     #region MethodType

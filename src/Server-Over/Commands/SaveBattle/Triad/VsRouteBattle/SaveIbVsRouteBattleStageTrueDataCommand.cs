@@ -11,10 +11,10 @@ public class SaveIbVsRouteBattleStageTrueDataCommand(IVsrbStageDataCache vsrbSta
     public void Save(CardProfile cardProfile, BattleResultContext battleResultContext)
     {
         var cardId = (uint)cardProfile.Id;
-        HandleWhenIsGameOver(cardId).GetAwaiter().GetResult();
+        HandleSave(cardId).GetAwaiter().GetResult();
     }
 
-    private async Task HandleWhenIsGameOver(uint cardId)
+    internal async Task HandleSave(uint cardId)
     {
         var item = await vsrbStageDataCache.Get(cardId);
         if (item?.Data == null) return;

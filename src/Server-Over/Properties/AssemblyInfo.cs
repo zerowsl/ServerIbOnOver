@@ -8,7 +8,7 @@ using ServerOver;
 [assembly: AssemblyDescription("ServerIbOnOver")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Git search ServerIbOnOver to find more informations")]
 [assembly: AssemblyCopyright(GlobalVars.LogFangDaoMai)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

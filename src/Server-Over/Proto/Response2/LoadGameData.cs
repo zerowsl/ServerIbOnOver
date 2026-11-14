@@ -29,7 +29,7 @@ public partial class Response2
         [global::ProtoBuf.ProtoMember(4, Name = @"release_guest_nav_id")]
         public uint[] ReleaseGuestNavIds { get; set; }
 
-        [global::ProtoBuf.ProtoMember(58, Name = @"release_game_rule")] // 7
+        [global::ProtoBuf.ProtoMember(10007, Name = @"release_game_rule")] // 7
         public uint[] ReleaseGameRules { get; set; }
 
         [global::ProtoBuf.ProtoMember(5, IsRequired = true)] // 18
@@ -165,16 +165,16 @@ public partial class Response2
             global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
                 => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
-            [global::ProtoBuf.ProtoMember(1, Name = @"rule_time_limit_class")] // 1
+            [global::ProtoBuf.ProtoMember(1, Name = @"rule_time_limit_class")]
             public uint RuleTimeLimitClass { get; set; }
 
-            [global::ProtoBuf.ProtoMember(2, Name = @"rule_time_limit_free")] // 2
+            [global::ProtoBuf.ProtoMember(2, Name = @"rule_time_limit_free")]
             public uint RuleTimeLimitFree { get; set; }
 
-            [global::ProtoBuf.ProtoMember(3, Name = @"rule_damage_level_team")] // 3
+            [global::ProtoBuf.ProtoMember(3, Name = @"rule_damage_level_team")]
             public uint RuleDamageLevelTeam { get; set; }
 
-            [global::ProtoBuf.ProtoMember(4, Name = @"rule_damage_level_shuffle")] // 4
+            [global::ProtoBuf.ProtoMember(4, Name = @"rule_damage_level_shuffle")]
             public uint RuleDamageLevelShuffle { get; set; }
             
         }

@@ -92,7 +92,7 @@ public partial class Request
             public uint p20 { get; set; } // == p6
             
             [global::ProtoBuf.ProtoMember(21, Name = @"time_rental_flag", IsRequired = true)]
-            public uint TimeRentalFlag { get; set; }
+            public bool TimeRentalFlag { get; set; }
             
             [global::ProtoBuf.ProtoMember(22, Name = @"mst_mobile_suit_id", IsRequired = true)]
             public uint MsId { get; set; }
