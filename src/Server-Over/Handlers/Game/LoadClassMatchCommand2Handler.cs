@@ -45,8 +45,8 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
         LoadChangeInitRates(r);
         LoadGradeThresholds(r);
         LoadConsecutives(r);
-        LoadSearchRatios(r);
         LoadMatching(r);
+        LoadSearchRatios(r);
         
         var response = new Response2
         {
@@ -67,12 +67,8 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
             EndAt = (ulong)(DateTimeOffset.Now + TimeSpan.FromDays(365)).ToUnixTimeSeconds(),
             PatternId = GlobalVars.PatternId
         });
-
-        r.ClassMatchingPatternTables.Add(new()
-        {
-            PatternId = GlobalVars.PatternId
-            //...
-        });
+        
+        LoadClassMatchingPatternTables(r);
 
     }
     
@@ -193,7 +189,51 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
         });
     }
     
+    private void LoadClassMatchingPatternTables(Response2.LoadClassMatch r)
+    {
+        r.ClassMatchingPatternTables.Add(new() { PatternId = GlobalVars.PatternId });
+        var pattern = r.ClassMatchingPatternTables[0];
+        var grades = new (uint, uint, uint)[] { (1, 1, 3), (2, 4, 6), (3, 7, 9), (4, 10, uint.MaxValue), (1, 0, 0) };
+        for (var classId = 1u; classId <= 4u; classId++)
+        {
+            foreach (var (level, start, end) in grades)
+            {
+                pattern.ClassMatchingSoloes.Add(new()
+                {
+                    ClassId = classId, LevelId = level, GradeIdStart = start, GradeIdEnd = end
+                });
+                if (classId >= 2u)
+                {
+                    pattern.ClassMatchingTeams.Add(new()
+                    {
+                        ClassId = classId, LevelId = level, GradeIdStart = start, GradeIdEnd = end
+                    });
+                }
+            }
+        }
+    }
+    
     private void LoadSearchRatios(Response2.LoadClassMatch r)
     {
+        var maxLv = Math.Max(
+            r.ClassMatchingPatternTables.SelectMany(p => p.ClassMatchingSoloes.Select(x => x.LevelId)).Max(), 
+            r.ClassMatchingPatternTables.SelectMany(p => p.ClassMatchingTeams.Select(x => x.LevelId)).Max());
+        for (var classId = 1u; classId <= 4u; classId++)
+        {
+            for (var level = 1u; level <= maxLv; level++)
+            {
+                r.SearchRatios.SearchRatioSolo.Add(new()
+                {
+                    ClassId = classId, LevelId = level, Num = 1, Ratio = 1
+                });
+                if (classId >= 2u)
+                {
+                    r.SearchRatios.SearchRatioTeam.Add(new()
+                    {
+                        ClassId = classId, LevelId = level, Num = 1, Ratio = 1
+                    });
+                }
+            }
+        }
     }
 }

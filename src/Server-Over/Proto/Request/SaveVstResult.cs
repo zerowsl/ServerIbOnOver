@@ -26,7 +26,7 @@ public partial class Request
         [global::ProtoBuf.ProtoMember(3, Name = @"player_level_id", IsRequired = true)]
         public uint PlayerLevelId { get; set; }
 
-        [global::ProtoBuf.ProtoMember(4, Name = @"prestige_id", IsRequired = true)]
+        [global::ProtoBuf.ProtoMember(4, Name = @"prestige_id", IsRequired = true)] //--
         public uint PrestigeId { get; set; }
 
         [global::ProtoBuf.ProtoMember(5, Name = @"last_mobile_suit_id")]

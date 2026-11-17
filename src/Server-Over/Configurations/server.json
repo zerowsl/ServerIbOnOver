@@ -84,7 +84,7 @@
         "EnableRate": false, 
         
         // 以下这3个原ob的数值可能影响经验赢加多少输减多少...
-        "ConstantRate": 1, // 10
+        "ConstantRate": 10, // 10
         "WinScoreCoefficient": 20002, // 25000
         "InitialRate": 1, // 1500
         
