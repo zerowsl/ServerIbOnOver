@@ -193,10 +193,11 @@ public partial class LoadClassMatchCommand2Handler(ServerDbContext _context, IOp
     {
         r.ClassMatchingPatternTables.Add(new() { PatternId = GlobalVars.PatternId });
         var pattern = r.ClassMatchingPatternTables[0];
-        var grades = new (uint, uint, uint)[] { (1, 1, 3), (2, 4, 6), (3, 7, 9), (4, 10, uint.MaxValue), (1, 0, 0) };
+        var gradeLvs = _config.CustomConfigs?.ClassMatchG?.GradeLevels?.Select(x => (x.Level, x.Start, x.End ?? uint.MaxValue))?.ToArray();
+        gradeLvs = gradeLvs?.Length > 0 ? gradeLvs : new (uint, uint, uint)[] { (1, 1, 3), (2, 4, 6), (3, 7, 9), (4, 10, uint.MaxValue), (1, 0, 0) };
         for (var classId = 1u; classId <= 4u; classId++)
         {
-            foreach (var (level, start, end) in grades)
+            foreach (var (level, start, end) in gradeLvs)
             {
                 pattern.ClassMatchingSoloes.Add(new()
                 {

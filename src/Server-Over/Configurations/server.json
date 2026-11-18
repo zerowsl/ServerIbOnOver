@@ -77,6 +77,7 @@
       
       "Eab352": true, 
       "Eab1z0": false, 
+      "Eab976": false, 
       
       // 店外
       "ClassMatchG": {
@@ -119,7 +120,15 @@
           
           // Ex段无限之后是否显示随机排位，默认显示
           "EnableRndNumOnExx": true
-        }
+        }, 
+        
+        "GradeLevels": [
+          { "level": 1, "start": 0, "end": 0 }, 
+          { "level": 1, "start": 1, "end": 3 }, 
+          { "level": 2, "start": 4, "end": 6 }, 
+          { "level": 3, "start": 7, "end": 9 }, 
+          { "level": 4, "start": 10, "end": null }
+        ]
       },
       
       // 'Custom Match'与(简易)房间
@@ -147,7 +156,7 @@
         "Timer": 230, 
         // 活动fes编号
         "FesRuleType": 0, 
-        // event-match
+        // and event-match
         "OnCompe": {
           "Enable": false,
           "EnableSettlement": false, 

@@ -56,7 +56,7 @@
           //    0 is no limit as default
           //    1 is same classId
           //    2 is same classId and levelId
-          // 其中这里'levelId'指的是: grade10-8为1, grade7-5为2, grade4-2为3, grade1-无限为4, 其余为1
+          // 其中这里'levelId'指的是例如: grade10-8为1, grade7-5为2, grade4-2为3, grade1-无限为4, 其余为1
           "ClassMatchMode": 0
         }
         

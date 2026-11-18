@@ -33,11 +33,20 @@ public sealed class CustomConfigs
         public GConfigs CustomSolo { get; set; } = new();
         public GConfigs CustomTeam { get; set; } = new();
         
+        public GradeLevelsGroup[] GradeLevels { get; set; } = [];
+        
         public sealed class GConfigs
         {
             public uint ClassId { get; set; }
             public uint GradeId { get; set; }
             public bool EnableRndNumOnExx { get; set; } = true;
+        }
+        
+        public sealed class GradeLevelsGroup
+        {
+            public uint Level { get; set; }
+            public uint Start { get; set; }
+            public uint? End { get; set; }
         }
     }
     
