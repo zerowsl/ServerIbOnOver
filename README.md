@@ -4,7 +4,7 @@
 
 下载地址以下任选其一:
 - (bd) /s/1e-Hjw2Edb-54XlAxWiLwcQ?pwd=djyx
-- [Mediafire](https://www.mediafire.com/file/lumvc5pvbikcf44/ServerIbOnOver_v1.4.1.654.7z/file)
+- [Mediafire](https://www.mediafire.com/file/kyhf34pdtx9w3r4/ServerIbOnOver_v1.4.3.976.7z/file)
 
 data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 不带图包，图包都比程序大，图包请自行另外下载... <br/>
@@ -15,7 +15,7 @@ data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
 * 如果你同时也游玩ob或者有多款ib刷卡，为避免刷卡页面冲突，那么你需要在‘kestrel.json’里改端口..<br/>
   并可能需要[清理缓存](./图文仅供参考/清理浏览器缓存.txt)..
 
-# 查看最近 [v1.4.1.654](./history/v1.4.1.654/发布说明.v1.4.1.654.md) 更新
+# 查看最近 [v1.4.3.976](./history/v1.4.3.976/发布说明.v1.4.3.976.md) 更新
 
 <b>旧功能具体描述请查看历史更新</b>
 
@@ -75,7 +75,7 @@ data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
   4.开启本地点内外，并选择了自定义对战，是可以连战或GameOver的..只是会卡几秒..
   5.根据room的配置情况，有可能对战记录页面没时间线..LM开启录像功能时，也能记录到包括本地点内外的自定义对战..
   6.可以设置可用机体为cost限制不超过2000
-  7.a little implementation for one of event-match ...
+  7.a little implementation for one kind of event-match ...
   8.LM中选‘カスタムマッチ ル一ム検索’后再刷卡，可以显示房间demo数据(没实际作用)...
 
 * LM
@@ -97,7 +97,7 @@ data里的json文件为页面基础数据，感谢各路群友整理!! <br/>
   2.需要LM开启店外，需要stun激活，需要修改server.json，具体看参考..
   3.match2的功能也是包括在此功能里, 默认关闭.
   4.此功能下店外菜单里面2人选择组队模式(包括急募)是可以连战和GameOver的.但是2人各自选择单人模式是无法2v2cpu和不能连战的...
-  5.Match3服务是独立发布的，不查数据库，所以没实现匹配段级限制...
+  5.Match3服务是独立发布的，不查数据库，没监控页显示用户名等，默认匹配无段级限制...
 ```
 
 # 结尾
