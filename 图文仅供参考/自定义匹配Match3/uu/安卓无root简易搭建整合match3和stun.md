@@ -16,8 +16,8 @@
 # 其中 /mnt/downloads/ 是共享你手机的Download目录
 cd /mnt/downloads/exvs2-match3
 
-# 启动前注意yaml文件里镜像的版本号，如有新版要替换成新版
-docker compose up -f docker-compose-arm64v8-with-match3-stun.yaml -d
+# 运行
+docker compose up -f docker-compose.yaml -d
 ```
 
 5. 以上是第一次安装，后续启动就是直接启动app和app里面启动环境就是了... <br>

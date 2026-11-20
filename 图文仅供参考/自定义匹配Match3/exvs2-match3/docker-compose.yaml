@@ -1,6 +1,5 @@
-# 运行: cd "目录"; docker compose up -f docker-compose-x64-with-match3-stun.yaml -d
-# 适用于x64(pc)作为服务器的docker-compose部署，整合match3和stun
-# 镜像默认就是最新版本号...
+# 运行: cd "目录"; docker compose up -f docker-compose.yaml -d
+# 已整合match3和stun. 默认就是最新版本号, 会自动根据当前平台下载相应的镜像..
 
 version: "3"
 
