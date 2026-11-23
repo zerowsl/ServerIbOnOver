@@ -34,9 +34,10 @@ public partial class Request
 
         [global::ProtoBuf.ProtoMember(6, Name = @"network_report", IsRequired = true)]
         public NetworkReport NetworkReport { get; set; }
-        
-        // 7 gpu_health_check_report
-        
+
+        [global::ProtoBuf.ProtoMember(7, Name = @"gpu_health_check_report")]
+        public GpuHealthCheckReport gpu_health_check_report { get; set; }
+
         [global::ProtoBuf.ProtoContract()]
         public partial class PlayResultGroup : global::ProtoBuf.IExtensible
         {

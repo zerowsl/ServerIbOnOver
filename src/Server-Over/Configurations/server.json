@@ -79,6 +79,12 @@
       "Eab1z0": false, 
       "Eab976": false, 
       
+      // 是否在保存快速启动时并且gamemode为训练场时，强制保存为单人出击.
+      //  目前发现单人在玩(别的大佬做的)'Training-2v2'时，保存下来的快速启动信息是团体出击的，
+      //  这样下次test重启游戏进入并选择了快速启动后，你就会卡在一个店内选人界面几十秒或无限秒(用了mod)...
+      //  开启此选项后在保存时会强制变成单人，避免出现上述情况...
+      "EnableForceToSoloWhenSaveQuickStartInfoIfGameModeIs7": false, 
+      
       // 店外
       "ClassMatchG": {
         // 是否打开排位经验, 默认关闭.
@@ -123,11 +129,22 @@
         }, 
         
         "GradeLevels": [
-          { "level": 1, "start": 0, "end": 0 }, 
-          { "level": 1, "start": 1, "end": 3 }, 
-          { "level": 2, "start": 4, "end": 6 }, 
-          { "level": 3, "start": 7, "end": 9 }, 
-          { "level": 4, "start": 10, "end": null }
+          { "c": 1, "level": 1, "start": 0, "end": 3 }, 
+          { "c": 1, "level": 2, "start": 4, "end": 6 }, 
+          { "c": 1, "level": 3, "start": 7, "end": 8 }, 
+          { "c": 1, "level": 4, "start": 9, "end": null }, 
+          { "c": 2, "level": 1, "start": 0, "end": 3 }, 
+          { "c": 2, "level": 2, "start": 4, "end": 6 }, 
+          { "c": 2, "level": 3, "start": 7, "end": 8 }, 
+          { "c": 2, "level": 4, "start": 9, "end": null }, 
+          { "c": 3, "level": 1, "start": 0, "end": 3 }, 
+          { "c": 3, "level": 2, "start": 4, "end": 6 }, 
+          { "c": 3, "level": 3, "start": 7, "end": 8 }, 
+          { "c": 3, "level": 4, "start": 9, "end": null }, 
+          { "c": 4, "level": 1, "start": 0, "end": 3 }, 
+          { "c": 4, "level": 2, "start": 4, "end": 6 }, 
+          { "c": 4, "level": 3, "start": 7, "end": 9 }, 
+          { "c": 4, "level": 4, "start": 10, "end": null }
         ]
       },
       
@@ -174,7 +191,7 @@
        */
       "RemoteCardServerConfigs": {
         "Enable": false, 
-        "Address": "http://"
+        "Address": "http://172.19.163.2:28080"
       },
 
       /** 试验功能：自定义本地对战匹配规则

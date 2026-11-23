@@ -12,6 +12,7 @@ public sealed class CustomConfigs
     public uint[]? p36_stages { get; set; } = null;
 	
 	public bool EabTriadGroup { get; set; } = false;
+	public bool EnableForceToSoloWhenSaveQuickStartInfoIfGameModeIs7 { get; set; } = false;
     
     public ClassMatchGConfigs ClassMatchG { get; set; } = new();
 
@@ -44,6 +45,7 @@ public sealed class CustomConfigs
         
         public sealed class GradeLevelsGroup
         {
+            public uint C { get; set; } = 1;
             public uint Level { get; set; }
             public uint Start { get; set; }
             public uint? End { get; set; }
