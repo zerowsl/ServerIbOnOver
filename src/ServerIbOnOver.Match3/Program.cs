@@ -30,11 +30,9 @@ try
 
     builder.Configuration.AddJsonFile($"{configurationsDirectory}/kestrel.json", optional: false)
         .AddJsonFile($"{configurationsDirectory}/log.json", optional: false)
-        .AddJsonFile($"{configurationsDirectory}/server.json", optional: false);
+        .AddJsonFile($"{configurationsDirectory}/server.json", optional: false, reloadOnChange: true);
 
-    builder.Services.AddOptions<CardServerConfig>()
-        .Bind(builder.Configuration.GetSection(CardServerConfig.CARD_SERVER_SECTION))
-        .ValidateOnStart();
+    builder.Services.Configure<CardServerConfig>(builder.Configuration.GetSection(CardServerConfig.CARD_SERVER_SECTION));
 
     // Add services to the container.
     builder.Host.UseSerilog((context, configuration) =>

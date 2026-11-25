@@ -4,11 +4,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using ServerOver;
 
-[assembly: AssemblyTitle("ServerIbOnOver.Match")]
-[assembly: AssemblyDescription("ServerIbOnOver.Match")]
+[assembly: AssemblyTitle("ServerIbOnOver.Match3")]
+[assembly: AssemblyDescription("ServerIbOnOver.Match3")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Git search ServerIbOnOver to find more informations")]
 [assembly: AssemblyCopyright(GlobalVars.LogFangDaoMai)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
