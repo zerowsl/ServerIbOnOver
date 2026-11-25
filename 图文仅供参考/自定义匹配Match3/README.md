@@ -11,6 +11,7 @@
 
 # 其他参考
 - [单人店外ClassMatchG下的1(+cpu)vs1(+cpu)](./media/单人店外ClassMatchG下的1(+cpu)vs1(+cpu).png)
+- [单人店外EventMatch下的1vs1](./media/单人店外eventmatch-1v1.png)
 - [双人店外ClassMatchG下的2v2cpu](./media/双人店外ClassMatchG下的2v2cpu.png)
 - <details>
     <summary>...</summary>
