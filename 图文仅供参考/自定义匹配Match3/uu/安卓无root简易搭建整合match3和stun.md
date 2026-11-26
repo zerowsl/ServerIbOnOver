@@ -5,7 +5,8 @@
 1. 安卓无root的容器app，可以安装这个[Podroid](https://github.com/ExTV/Podroid)最新版 <br>
    安装后自带docker和docker-compose ..
 
-2. 安装app后设置，记得[打开端口和打开下载文件夹共享](../../stun/适配安卓arm64架构下的docker容器版/Podroid打开端口.jpg)
+2. 安装app后设置，记得[打开端口和打开下载文件夹共享](../../stun/适配安卓arm64架构下的docker容器版/Podroid打开端口.jpg) <br>
+   注意如果安卓版本<=11，建议不要打开UML模式, 用自动模式即可...
 
 3. 可选修改‘exvs2-match3’文件夹里面的配置文件 <br>
    并把‘exvs2-match3’文件夹放到 手机的Download目录(一般是/sdcard/Download) 里去
@@ -21,7 +22,7 @@ docker compose up -f docker-compose.yaml -d
 ```
 
 5. 以上是第一次安装，后续启动就是直接启动app和app里面启动环境就是了... <br>
-   如要关闭app，可以在app内点停止，或者直接划走app就可以了...
+   如要关闭app，可以在app内先点停止，再划走app就可以了...
 
 6. 下载并安装[uu安卓版手机app](https://uu.163.com/), 官网点手游加速会看到安卓版下载...
 
