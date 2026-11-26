@@ -52,7 +52,6 @@ public class CheckMatchingCommand2Handler(IMatchingCache matchingCache,
             if (clientInfo?.Client?.PcbSerial is null) 
                 break;
 		
-            
             // try匹配cpu
             result = await DoMatchingWithCpu(matching, clientInfo);
             if (result != null) break;
@@ -61,7 +60,6 @@ public class CheckMatchingCommand2Handler(IMatchingCache matchingCache,
 	    }
 	    return result;
 	}
-    
     
     // 匹配cpu
     async Task<Response.CheckMatching?> DoMatchingWithCpu(Request.CheckMatching matching, MatchingClientInfo clientInfo)

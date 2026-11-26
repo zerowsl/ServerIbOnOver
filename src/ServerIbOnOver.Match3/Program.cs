@@ -114,7 +114,7 @@ try
 
 	app.MapControllers();
     app.UseStaticFiles();
-    app.MapFallbackToFile("test/index");
+    //app.MapFallbackToFile("test/index");
     //app.UseWhen(
     //    context => context.Request.Path.StartsWithSegments("/sys/servlet/PowerOn", StringComparison.InvariantCulture),
     //    applicationBuilder => applicationBuilder.UseAllNetRequestMiddleware());
